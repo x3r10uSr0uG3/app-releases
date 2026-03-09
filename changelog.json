@@ -1,5 +1,21 @@
 [
   {
+    "version": "1.1.14",
+    "date": "2026-03-07",
+    "changes": [
+      "[Nuevo] Cap Table y Precio por Acción en Retornos al Inversor — tabla de accionistas editable con cálculo de propiedad %, valor por acción, y equity value basado en EV descontado menos deuda",
+      "[Nuevo] Dilución Post-Money por estructura de deal — para cada tipo (LBO, MBO, Mayoritaria, Minoritaria) muestra acciones nuevas emitidas, precio por acción post-money, ownership % diluido con barras visuales",
+      "[Nuevo] Importar costos desde Excel/CSV en Clasificación de Costos (Ec. Unitaria) — mapea Categoría, Monto Mensual, % Variable, y Notas con aliases en español e inglés. Normaliza % automáticamente",
+      "[Nuevo] Exportar y Plantilla en Clasificación de Costos — descarga plantilla pre-formateada con 6 categorías ejemplo, o exporta la clasificación actual a Excel",
+      "[Bug] PayoutPeriod perdía inversiones al cambiar de pestaña — solo tenía guardado manual sin auto-save",
+      "[Corrección] PayoutPeriod ahora usa useAutoSave con delay 1.5s y flush al desmontar. Datos persisten al cambiar tabs",
+      "[Bug] FundingDecision reseteaba 'Objetivo de Crecimiento' a 20% en cada recarga — targetGrowth nunca se guardaba a BD",
+      "[Corrección] targetGrowth se persiste en kyc_responses (question_key='funding_target_growth') con auto-save de 1s",
+      "[Bug] StressTestDashboard perdía notas del analista al cambiar tabs — solo guardado manual",
+      "[Corrección] Notas y Concentración de Ingresos ahora usan useAutoSave con delay 2s y flush al desmontar"
+    ]
+  },
+  {
     "version": "1.1.13",
     "date": "2026-03-07",
     "changes": [
