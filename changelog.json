@@ -1,0 +1,132 @@
+[
+  {
+    "version": "1.1.9",
+    "date": "2026-03-08",
+    "changes": [
+      "La app se reabre automáticamente después de actualizar",
+      "Corrección del relanzamiento post-actualización"
+    ]
+  },
+  {
+    "version": "1.1.8",
+    "date": "2026-03-07",
+    "changes": [
+      "Verificación de actualizaciones ahora evita caché del CDN",
+      "Mejor manejo de errores al verificar actualizaciones"
+    ]
+  },
+  {
+    "version": "1.1.7",
+    "date": "2026-03-07",
+    "changes": [
+      "Generador PPTX rediseñado: tema profesional blanco, tipografía Calibri",
+      "Logo oficial completo 'Asanoski & Co.' en presentaciones",
+      "Gráficas y tablas usan el ancho completo del slide (13.33\")",
+      "Soporte de marca del cliente: logo personalizado, colores, nombre",
+      "Slide de portada con fondo navy y datos del cliente"
+    ]
+  },
+  {
+    "version": "1.1.6",
+    "date": "2026-03-07",
+    "changes": [
+      "Nuevo generador de presentaciones PPTX (Resumen Financiero)",
+      "Modo estándar (4 slides) y modo cherry-pick de KPIs",
+      "Exportación desde pestaña Dashboard del cliente"
+    ]
+  },
+  {
+    "version": "1.1.5",
+    "date": "2026-03-06",
+    "changes": [
+      "Corrección del montaje de DMG en actualizador (hdiutil)",
+      "Fallback a instalación manual vía Finder si falla la copia"
+    ]
+  },
+  {
+    "version": "1.1.4",
+    "date": "2026-03-06",
+    "changes": [
+      "Mejoras en descarga de actualizaciones con barra de progreso",
+      "Manejo de redirecciones HTTP de GitHub (302 → S3)"
+    ]
+  },
+  {
+    "version": "1.1.3",
+    "date": "2026-03-06",
+    "changes": [
+      "Sistema de actualización in-app: descarga DMG, monta, copia y relanza",
+      "Ventana de progreso visual durante la actualización",
+      "Remoción automática de cuarentena (xattr) post-actualización"
+    ]
+  },
+  {
+    "version": "1.1.2",
+    "date": "2026-03-06",
+    "changes": [
+      "Verificación silenciosa de actualizaciones al iniciar (5s después del arranque)",
+      "Banner de actualización en la interfaz (UpdateBanner.jsx)",
+      "IPC handlers para descarga e instalación desde el frontend"
+    ]
+  },
+  {
+    "version": "1.1.1",
+    "date": "2026-03-05",
+    "changes": [
+      "Primera versión con sistema de actualizaciones automáticas",
+      "Verificación de versión contra update.json en GitHub",
+      "Menú 'Buscar Actualizaciones…' en barra de la app"
+    ]
+  },
+  {
+    "version": "1.0.4",
+    "date": "2026-03-02",
+    "changes": [
+      "Auto-guardado global en 14 componentes de entrada de datos",
+      "Hook reutilizable useAutoSave con indicador 'Guardado'",
+      "Tecla Delete habilitada en menú Edición"
+    ]
+  },
+  {
+    "version": "1.0.3",
+    "date": "2026-03-02",
+    "changes": [
+      "Corrección de Copiar/Pegar (Cmd+C/V/X/A ahora funciona)",
+      "Menú de aplicación macOS completo (Edición, Vista, Ventana)",
+      "Auto-guardado en Configuración de Firma (cuentas bancarias)"
+    ]
+  },
+  {
+    "version": "1.0.2",
+    "date": "2026-03-02",
+    "changes": [
+      "Nuevo ícono de app: monograma ACo blanco sobre fondo navy",
+      "Renombrado de 'Asanoski Co' a 'Analyst Workstation'"
+    ]
+  },
+  {
+    "version": "1.0.1",
+    "date": "2026-03-02",
+    "changes": [
+      "Corrección de crash al iniciar (EXC_BREAKPOINT en macOS 26.3)",
+      "Actualización a Electron 40.6.1 y electron-builder 26.8.1",
+      "Build output movido a /tmp para evitar conflictos con iCloud"
+    ]
+  },
+  {
+    "version": "1.0.0",
+    "date": "2026-03-01",
+    "changes": [
+      "Lanzamiento inicial de Analyst Workstation",
+      "Paleta de colores profesional basada en Navy #1E3A5F",
+      "Distribución macOS (.dmg) con ícono personalizado",
+      "Exportación PDF con branding de la firma",
+      "Dashboard de portafolio, benchmarks de industria, proyección de flujo de efectivo",
+      "Motor de alertas automáticas, log de actividades, rastreador de horas",
+      "Panel de administración: equipo, asignaciones, gestión de clientes",
+      "Documentos de onboarding, módulo de operaciones (TOC), escalas de tiempo",
+      "Análisis de valuación (DCF + Múltiplos + WACC), análisis de inversores",
+      "Plataforma base: Electron + React + Vite + Tailwind + Supabase + Claude"
+    ]
+  }
+]
