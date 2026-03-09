@@ -1,5 +1,17 @@
 [
   {
+    "version": "1.1.13",
+    "date": "2026-03-07",
+    "changes": [
+      "[Nuevo] Selector de tasa impositiva con 3 modos: Histórica (calculada de datos P&L), País (tasa legal del país), y Manual — disponible en Crecimiento, Presupuesto, y Valuación",
+      "[Nuevo] Función computeEffectiveTaxRate() calcula la tasa efectiva promedio ponderada de todos los períodos históricos con datos fiscales (tax_expense / EBT), cap 50%",
+      "[Corrección] Proyecciones usaban tasa fija de 25% hardcodeada — ahora projectFinancials() y projectFinancialsAnnual() aceptan parámetro taxRate configurable",
+      "[Corrección] Presupuesto (projectBudgetPeriods) también usaba 25% fijo — ahora respeta la tasa seleccionada por el usuario",
+      "[Mejora] Valuación DCF ahora muestra la tasa impositiva activa en el resumen y en Kd(1-t), en vez de siempre usar la tasa del país",
+      "[Mejora] Cambiar país/industria en Valuación ya no sobreescribe la tasa si el usuario eligió Histórica o Manual"
+    ]
+  },
+  {
     "version": "1.1.12",
     "date": "2026-03-09",
     "changes": [
