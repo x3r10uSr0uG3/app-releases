@@ -3,139 +3,159 @@
     "version": "1.1.10",
     "date": "2026-03-08",
     "changes": [
-      "Historial de versiones: ventana estilizada con todas las versiones y cambios",
-      "Actualización muestra changelog detallado entre versión actual y nueva",
-      "Nuevo menú Help → 'Historial de Versiones…'"
+      "[Nuevo] Historial de versiones completo accesible desde Help → 'Historial de Versiones…'",
+      "[Nuevo] Al detectar una actualización, se muestra ventana estilizada con lista detallada de cambios entre la versión actual y la nueva",
+      "[Nuevo] Changelog centralizado (changelog.json) publicado en GitHub junto con cada release",
+      "[Mejora] Script de release ahora publica changelog.json automáticamente"
     ]
   },
   {
     "version": "1.1.9",
     "date": "2026-03-08",
     "changes": [
-      "La app se reabre automáticamente después de actualizar",
-      "Corrección del relanzamiento post-actualización"
+      "[Bug] La app no se reabría después de instalar una actualización — se quedaba cerrada",
+      "[Corrección] Reemplazo de app.relaunch() (inestable cuando el .app fue reemplazado) por comando detached 'open' con retardo de 1.5s que abre la app nueva después de que el proceso anterior termine"
     ]
   },
   {
     "version": "1.1.8",
     "date": "2026-03-07",
     "changes": [
-      "Verificación de actualizaciones ahora evita caché del CDN",
-      "Mejor manejo de errores al verificar actualizaciones"
+      "[Bug] El verificador de actualizaciones mostraba 'Estás al día' incluso cuando había una versión nueva — causado por caché CDN de GitHub (max-age=300s) sirviendo update.json desactualizado",
+      "[Corrección] Parámetro cache-busting (?_t=timestamp) añadido a todas las solicitudes de fetchJSON, evitando respuestas cacheadas del CDN",
+      "[Bug] Errores de red (timeout, DNS) mostraban falsamente 'Estás al día' en vez de un mensaje de error",
+      "[Corrección] El bloque catch ahora muestra 'No se pudo verificar actualizaciones' con detalle del error, en vez de confundir al usuario"
     ]
   },
   {
     "version": "1.1.7",
     "date": "2026-03-07",
     "changes": [
-      "Generador PPTX rediseñado: tema profesional blanco, tipografía Calibri",
-      "Logo oficial completo 'Asanoski & Co.' en presentaciones",
-      "Gráficas y tablas usan el ancho completo del slide (13.33\")",
-      "Soporte de marca del cliente: logo personalizado, colores, nombre",
-      "Slide de portada con fondo navy y datos del cliente"
+      "[Bug] Presentación PPTX usaba tema oscuro (#0F172A) con baja legibilidad y fuente Arial",
+      "[Bug] Logo incorrecto: se usaba el ícono compacto 'A&Co.' en vez del wordmark oficial 'Asanoski & Co.'",
+      "[Bug] Las gráficas y tablas solo usaban ~10\" del ancho del slide, desperdiciando 3+ pulgadas en un layout WIDE de 13.33\"",
+      "[Corrección] Reescritura completa de pptx-generator.cjs: tema blanco profesional, fuente Calibri, ancho completo del slide (12.1\"), KPI values 26-30pt, tablas con encabezado navy",
+      "[Nuevo] Slide de portada con fondo navy: 'RESUMEN FINANCIERO', nombre del cliente, fecha, 'CONFIDENCIAL'",
+      "[Nuevo] Soporte de marca del cliente: toggle entre marca Asanoski y marca personalizada con logo, colores primario/acento, y nombre de empresa — guardado por cliente",
+      "[Nuevo] Diálogo nativo para seleccionar logo del cliente (PNG/JPG/SVG)"
     ]
   },
   {
     "version": "1.1.6",
     "date": "2026-03-07",
     "changes": [
-      "Nuevo generador de presentaciones PPTX (Resumen Financiero)",
-      "Modo estándar (4 slides) y modo cherry-pick de KPIs",
-      "Exportación desde pestaña Dashboard del cliente"
+      "[Nuevo] Generador de presentaciones PPTX — exporta 'Resumen Financiero' desde la pestaña Dashboard",
+      "[Nuevo] Modo estándar: 4 slides (P&L y Crecimiento, Flujo de Efectivo, Retornos y Balance, Valuación)",
+      "[Nuevo] Modo cherry-pick: selección individual de KPIs por categoría, generación automática de slides",
+      "[Nuevo] Guardado/carga de selección de KPIs por cliente para reutilización"
     ]
   },
   {
     "version": "1.1.5",
     "date": "2026-03-06",
     "changes": [
-      "Corrección del montaje de DMG en actualizador (hdiutil)",
-      "Fallback a instalación manual vía Finder si falla la copia"
+      "[Bug] El montaje del DMG durante la actualización fallaba porque hdiutil no encontraba la ruta del volumen",
+      "[Corrección] Parseo mejorado de la salida de hdiutil con escaneo fallback en /Volumes/",
+      "[Nuevo] Si la copia automática del .app falla por permisos, se abre el volumen montado en Finder con instrucciones para arrastrar manualmente"
     ]
   },
   {
     "version": "1.1.4",
     "date": "2026-03-06",
     "changes": [
-      "Mejoras en descarga de actualizaciones con barra de progreso",
-      "Manejo de redirecciones HTTP de GitHub (302 → S3)"
+      "[Nuevo] Ventana de progreso visual durante la descarga de actualizaciones — muestra porcentaje y MB transferidos",
+      "[Bug] La descarga de DMG desde GitHub fallaba porque las URLs usan redirecciones 302 a S3",
+      "[Corrección] Función downloadFile() ahora sigue redirecciones HTTP automáticamente"
     ]
   },
   {
     "version": "1.1.3",
     "date": "2026-03-06",
     "changes": [
-      "Sistema de actualización in-app: descarga DMG, monta, copia y relanza",
-      "Ventana de progreso visual durante la actualización",
-      "Remoción automática de cuarentena (xattr) post-actualización"
+      "[Nuevo] Actualizador in-app completo: descarga DMG a carpeta temporal, monta con hdiutil, copia .app sobre la instalación actual, desmonta, limpia archivos temporales",
+      "[Nuevo] Remoción automática de cuarentena macOS (xattr -cr) después de copiar el .app, para que Gatekeeper no bloquee la versión actualizada"
     ]
   },
   {
     "version": "1.1.2",
     "date": "2026-03-06",
     "changes": [
-      "Verificación silenciosa de actualizaciones al iniciar (5s después del arranque)",
-      "Banner de actualización en la interfaz (UpdateBanner.jsx)",
-      "IPC handlers para descarga e instalación desde el frontend"
+      "[Nuevo] Verificación silenciosa de actualizaciones: checkForUpdatesSilently() se ejecuta 5 segundos después del arranque, solo muestra diálogo si hay actualización",
+      "[Nuevo] Banner de actualización en la interfaz React (UpdateBanner.jsx) — barra navy superior cuando se detecta una nueva versión",
+      "[Nuevo] Handlers IPC desde el frontend para descargar e instalar actualizaciones (app:download-update, app:install-update, app:download-and-install)"
     ]
   },
   {
     "version": "1.1.1",
     "date": "2026-03-05",
     "changes": [
-      "Primera versión con sistema de actualizaciones automáticas",
-      "Verificación de versión contra update.json en GitHub",
-      "Menú 'Buscar Actualizaciones…' en barra de la app"
+      "[Nuevo] Sistema de verificación de actualizaciones: compara versión local contra update.json publicado en GitHub",
+      "[Nuevo] Menú 'Buscar Actualizaciones…' en la barra de aplicación para verificación manual",
+      "[Nuevo] Comparador semántico de versiones isNewerVersion() (major.minor.patch)",
+      "[Nuevo] Función fetchJSON() con soporte de redirecciones y timeout de 8 segundos",
+      "[Nuevo] URLs de descarga separadas para ARM64 (Apple Silicon) e Intel x64"
     ]
   },
   {
     "version": "1.0.4",
     "date": "2026-03-02",
     "changes": [
-      "Auto-guardado global en 14 componentes de entrada de datos",
-      "Hook reutilizable useAutoSave con indicador 'Guardado'",
-      "Tecla Delete habilitada en menú Edición"
+      "[Nuevo] Auto-guardado global implementado en 14 componentes de entrada de datos usando hook reutilizable useAutoSave — debounce configurable (1.5-2s), indicador 'Guardado', protección contra guardado-al-cargar",
+      "[Nuevo] Tecla Delete habilitada en menú Edición de macOS"
     ]
   },
   {
     "version": "1.0.3",
     "date": "2026-03-02",
     "changes": [
-      "Corrección de Copiar/Pegar (Cmd+C/V/X/A ahora funciona)",
-      "Menú de aplicación macOS completo (Edición, Vista, Ventana)",
-      "Auto-guardado en Configuración de Firma (cuentas bancarias)"
+      "[Bug] Copiar/Pegar no funcionaba en toda la app — Cmd+C/V/X/A no tenían efecto",
+      "[Corrección] Menú de aplicación macOS completo añadido (Edición con Cortar/Copiar/Pegar/Seleccionar Todo, Vista, Ventana)",
+      "[Bug] Cuentas bancarias en Configuración de Firma no se guardaban automáticamente — requería clic manual en 'Guardar Cambios'",
+      "[Corrección] Auto-guardado con debounce de 1.5s añadido a FirmSettings con indicador verde 'Guardado'"
     ]
   },
   {
     "version": "1.0.2",
     "date": "2026-03-02",
     "changes": [
-      "Nuevo ícono de app: monograma ACo blanco sobre fondo navy",
-      "Renombrado de 'Asanoski Co' a 'Analyst Workstation'"
+      "[Cambio] Ícono de app reemplazado: monograma ACo blanco sobre fondo navy #1E3A5F (antes usaba logo incorrecto)",
+      "[Cambio] App renombrada de 'Asanoski Co' a 'Analyst Workstation' en productName, título DMG, y update.json"
     ]
   },
   {
     "version": "1.0.1",
     "date": "2026-03-02",
     "changes": [
-      "Corrección de crash al iniciar (EXC_BREAKPOINT en macOS 26.3)",
-      "Actualización a Electron 40.6.1 y electron-builder 26.8.1",
-      "Build output movido a /tmp para evitar conflictos con iCloud"
+      "[Bug] App crasheaba al iniciar con EXC_BREAKPOINT en macOS 26.3 — causado por el carácter '&' en el nombre del producto que rompía la resolución de rutas de Electron helpers, y por atributos extendidos de iCloud (com.apple.provenance) que bloqueaban la firma de código",
+      "[Corrección] Electron actualizado de v33 a v40.6.1 para compatibilidad con macOS 26.3",
+      "[Corrección] electron-builder actualizado de v25 a v26.8.1",
+      "[Corrección] Directorio de build movido de release/ a /tmp/asanoski-release para evitar conflictos con atributos extendidos de iCloud Drive"
     ]
   },
   {
     "version": "1.0.0",
     "date": "2026-03-01",
     "changes": [
-      "Lanzamiento inicial de Analyst Workstation",
-      "Paleta de colores profesional basada en Navy #1E3A5F",
-      "Distribución macOS (.dmg) con ícono personalizado",
-      "Exportación PDF con branding de la firma",
-      "Dashboard de portafolio, benchmarks de industria, proyección de flujo de efectivo",
-      "Motor de alertas automáticas, log de actividades, rastreador de horas",
-      "Panel de administración: equipo, asignaciones, gestión de clientes",
-      "Documentos de onboarding, módulo de operaciones (TOC), escalas de tiempo",
-      "Análisis de valuación (DCF + Múltiplos + WACC), análisis de inversores",
-      "Plataforma base: Electron + React + Vite + Tailwind + Supabase + Claude"
+      "[Lanzamiento] Analyst Workstation — plataforma de consultoría CFO fraccional para PYMEs en LATAM",
+      "[Nuevo] Paleta de colores profesional auditorada: familia navy derivada de #1E3A5F en 13 archivos",
+      "[Nuevo] Distribución macOS (.dmg) con ícono personalizado (.icns) via electron-builder",
+      "[Nuevo] Exportación PDF con branding de la firma (pdf-generator.cjs)",
+      "[Nuevo] Dashboard de portafolio: heatmap cross-client, gráfico de sectores, concentración de ingresos",
+      "[Nuevo] Benchmarks de industria: ratios del cliente vs. medianas Damodaran (60+ industrias)",
+      "[Nuevo] Proyección de flujo de efectivo: 6 meses con gráfico waterfall, 3 escenarios",
+      "[Nuevo] Motor de alertas automáticas: umbrales de ratios, datos obsoletos, advertencias de efectivo",
+      "[Nuevo] Log de actividades: timeline de reuniones, llamadas, tareas, seguimientos por cliente",
+      "[Nuevo] Rastreador de horas: horas facturables por cliente con grilla semanal y resumen mensual",
+      "[Nuevo] 5 plantillas de análisis pre-construidas para consultoría",
+      "[Nuevo] Panel de administración: carga de equipo, reasignación de clientes, cierre y borrado suave",
+      "[Nuevo] Documentos de onboarding: Calificación, Ficha Cliente, Roadmap, Cotización, NDA, Facturación",
+      "[Nuevo] Módulo de operaciones: ciclo TOC de 7 pasos con importación CSV/Excel, unidades configurables, vínculo financiero-ops, exportación Excel, gestión de ciclos",
+      "[Nuevo] Escalas de tiempo: MoM/QoQ/YoY en P&L, Dashboard, Proyecciones de crecimiento",
+      "[Nuevo] Dashboard de valuación: DCF + Múltiplos + WACC con 60 industrias Damodaran y 22 países LATAM",
+      "[Nuevo] Análisis de inversores: Scorecard, EBITDA Ajustado, Checklist Due Diligence, Retornos con descuentos PYME",
+      "[Nuevo] Crecimiento y analítica: Supuestos de crecimiento, Matriz DuPont, Dashboard Financiero con contexto AI",
+      "[Nuevo] Entrada de datos financieros: P&L + Balance con validación, Dashboard MoM",
+      "[Nuevo] Plataforma base: Electron + React + Vite + Tailwind CSS + Supabase + Anthropic Claude"
     ]
   }
 ]
