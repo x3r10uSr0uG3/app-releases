@@ -1,5 +1,25 @@
 [
   {
+    "version": "1.1.12",
+    "date": "2026-03-09",
+    "changes": [
+      "[Nuevo] 46 países angloparlantes añadidos: Reino Unido, Australia, India, Sudáfrica, Jamaica, Trinidad y Tobago, Nigeria, Kenia, y 38 más — con banderas, monedas, y datos financieros completos",
+      "[Nuevo] 37 nuevas monedas: GBP, AUD, NZD, INR, ZAR, NGN, KES, JMD, TTD, SGD, PHP, y más — con símbolo, nombre, y escala de ingresos",
+      "[Nuevo] Datos de valuación (WACC/DCF) para todos los países nuevos: inflación, tasa libre de riesgo, prima de riesgo país, beta, tasa impositiva, tipo de cambio",
+      "[Nuevo] Tasas de IVA/VAT/GST para todos los países nuevos (de Bahamas 10% a Irlanda 23%)",
+      "[Nuevo] 8 estructuras legales angloparlantes: Ltd., PLC, Pty Ltd, Sole Trader, Partnership, LLP, NGO — mapeadas a cada país",
+      "[Bug] Ficha de Cliente solo mostraba 16 monedas LATAM hardcodeadas — monedas de países nuevos no aparecían en el dropdown",
+      "[Corrección] Dropdown de moneda en Ficha de Cliente ahora importa las 58 monedas de constants.js con símbolo y nombre",
+      "[Bug] Facturación solo permitía USD y GTQ como moneda de cobro — 2 opciones hardcodeadas",
+      "[Corrección] Dropdown de moneda en Facturación ahora muestra todas las 58 monedas disponibles",
+      "[Bug] Flujo de Efectivo Proyectado mostraba '$' para todas las monedas — ignoraba la moneda del cliente",
+      "[Corrección] Flujo de Efectivo ahora usa el símbolo correcto de la moneda del cliente (Q, €, £, ₹, R, etc.)",
+      "[Bug] DuPont y Variación crasheaban con períodos trimestrales (2025-Q1) o anuales (2025) — Number('Q1') = NaN",
+      "[Corrección] Reemplazo de shortPeriod() con formatPeriodLabel() que maneja todos los formatos de período",
+      "[Mejora] Texto en inglés en Red Flags traducido a español para consistencia de la interfaz"
+    ]
+  },
+  {
     "version": "1.1.11",
     "date": "2026-03-09",
     "changes": [
