@@ -1,5 +1,16 @@
 [
   {
+    "version": "1.1.11",
+    "date": "2026-03-09",
+    "changes": [
+      "[Mejora] Ruta del preload más robusta usando app.getAppPath() en vez de __dirname (previene fallas en paquetes ASAR)",
+      "[Nuevo] Log de diagnóstico persistente en ~/Documents/Asanoski/app.log — registra arranque, estado del preload, solicitudes de red, y errores",
+      "[Nuevo] Health check automático al cargar la página: verifica que electronAPI y proxyFetch estén disponibles",
+      "[Nuevo] Logs del renderer capturados en el proceso principal para depuración de la app empaquetada",
+      "[Mejora] Historial de versiones ahora muestra descripciones completas de bugs, correcciones y cambios — no solo nuevas funcionalidades"
+    ]
+  },
+  {
     "version": "1.1.10",
     "date": "2026-03-08",
     "changes": [
