@@ -1,5 +1,19 @@
 [
   {
+    "version": "1.1.15",
+    "date": "2026-03-09",
+    "changes": [
+      "[Bug] Flujo Proyectado no mostraba datos cuando existían snapshots proyectados/presupuesto — limit(12) cortaba los datos históricos",
+      "[Corrección] Removido limit(12) en CashFlowForecast, ahora carga todos los snapshots con fallback al más reciente",
+      "[Bug] Red Flags no auto-seleccionaba la industria del cliente — matching exacto fallaba con nombres libres",
+      "[Bug] Benchmark tampoco auto-seleccionaba la industria — mismo problema de matching + limit(12) cortaba datos",
+      "[Corrección] Matching de industria robusto en Red Flags y Benchmark: búsqueda bidireccional + prefijo 6-char + fallback a 'Servicios Profesionales'",
+      "[Bug] Dashboard mostraba texto codificado 'Presentaci\\u00f3n' en vez de 'Presentación' — escape Unicode literal en JSX",
+      "[Bug] P&L mostraba botón 'Plantilla' duplicado y botones de import/export aparecían incorrectamente en Dashboard",
+      "[Corrección] Reestructurados botones: Plantilla solo en Presupuesto/KPIs (P&L tiene el suyo), Import/Export en P&L/Presupuesto/KPIs, removidos del Dashboard"
+    ]
+  },
+  {
     "version": "1.1.14",
     "date": "2026-03-07",
     "changes": [
