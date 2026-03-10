@@ -1,5 +1,14 @@
 [
   {
+    "version": "1.1.22",
+    "date": "2026-03-10",
+    "changes": [
+      "[Bug] Datos fantasma en P&L — períodos de Presupuesto (data_type='projected') aparecían en la grilla de P&L/Balance como si fueran datos ingresados manualmente. FinancialDataEntry ahora detecta y distingue registros históricos vs presupuesto",
+      "[Nuevo] Badge 'PRESUPUESTO' en columnas — las columnas que contienen datos del módulo de Presupuesto ahora muestran un badge amarillo 'PRESUPUESTO' en el encabezado con fondo tintado, más un banner informativo en la parte superior",
+      "[Mejora] Eliminación de presupuesto desde P&L — al eliminar un período presupuestado, el diálogo de confirmación indica claramente que los datos provienen del módulo de Presupuesto. Si existen ambos (histórico y presupuesto), se prioriza el registro histórico"
+    ]
+  },
+  {
     "version": "1.1.21",
     "date": "2026-03-10",
     "changes": [
