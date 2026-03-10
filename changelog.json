@@ -1,5 +1,14 @@
 [
   {
+    "version": "1.1.25",
+    "date": "2026-03-10",
+    "changes": [
+      "[UI] Sub-pestañas Financiero con colores por grupo — Datos (azul), Planificación (ámbar), Analítica (teal), Estrategia (violeta), Inversor (rosa). Botón activo resalta claramente vs. inactivos con tintes suaves",
+      "[UI] Sub-pestañas Operaciones con colores por paso — cada uno de los 7 pasos TOC tiene su propio color para mejor navegación visual",
+      "[UI] Sub-pestañas Ec. Unitaria con colores por vista — Unidad (azul), Equilibrio (esmeralda), Inversiones (ámbar), Apalancamiento (violeta)"
+    ]
+  },
+  {
     "version": "1.1.22",
     "date": "2026-03-10",
     "changes": [
