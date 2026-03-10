@@ -1,5 +1,17 @@
 [
   {
+    "version": "1.1.19",
+    "date": "2026-03-09",
+    "changes": [
+      "[Bug] Capacidad efectiva en Operaciones no descontaba tasa de scrap — fórmula corregida: capacidad y minutos efectivos ahora aplican (1 - scrap%) después del downtime",
+      "[Bug] DSO/DPO/DIO siempre usaban 30 días sin importar el período — ahora ajusta automáticamente: 30 días (mensual), 90 (trimestral), 365 (anual) según _monthCount",
+      "[Bug] Proyecciones anuales explotaban si revenue anterior era cero — ratio de AR/inventario/AP usaba divisor fallback de 1 causando valores absurdos. Ahora conserva el valor anterior cuando revenue = 0",
+      "[Bug] Cambiar de cliente no reseteaba sub-tabs ni cache — visitedTabs, financialSubTab, docSubTab y opsSubTab se resetean al cambiar effectiveClientId",
+      "[Bug] InvestorAnalysis guardaba silenciosamente sin notificar errores — ahora muestra showNotification('error') si el upsert falla",
+      "[Bug] Nuevo ciclo TOC no incluía todas las métricas en scorecard pre-llenado — solo rellenaba métricas que tenían valor 'after'. Ahora incluye todas las AUDIT_MEASURES con 'before' del ciclo anterior"
+    ]
+  },
+  {
     "version": "1.1.17",
     "date": "2026-03-09",
     "changes": [
