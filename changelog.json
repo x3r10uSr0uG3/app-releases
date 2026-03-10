@@ -1,5 +1,29 @@
 [
   {
+    "version": "1.1.21",
+    "date": "2026-03-10",
+    "changes": [
+      "[Nuevo] Auditoría completa de modificaciones — cada guardado de datos (financiero, operaciones, ingresos, nómina, costos, inversor, presupuesto, etc.) genera un registro en audit_log con usuario, acción, cliente y timestamp",
+      "[Nuevo] Auditoría de descargas — cada exportación de documento (Excel, PDF, DOCX, PPTX) se registra en audit_log con tipo de documento y nombre de archivo",
+      "[Nuevo] Tab 'Auditoría' en Panel de Admin — tabla paginada con filtros por fecha, usuario y tipo de acción, badges color-coded (azul=datos, púrpura=descargas, verde/rojo=ciclo de vida)",
+      "[Nuevo] Carpetas por cliente en descargas — todos los documentos exportados se guardan en ~/Documents/Asanoski/{NombreCliente}/ en vez de carpeta plana",
+      "[Nuevo] Indicador de datos obsoletos en P&L — banner ámbar muestra quién modificó los datos por última vez y cuándo, advierte si otro usuario cambió los datos",
+      "[Seguridad] Shell injection eliminado en app:install-update — execSync con interpolación de strings reemplazado por execFileSync con arrays de argumentos",
+      "[Seguridad] XSS eliminado en ventana de changelog — datos remotos ahora se escapan con HTML entities antes de renderizar, CSP meta-tag agregado",
+      "[Seguridad] Validación de URL en actualizaciones — app:download-update y app:download-and-install ahora solo aceptan URLs de origins permitidos (github.com/x3r10uSr0uG3)",
+      "[Seguridad] Path traversal corregido en file:upload-signed — parámetro docType ahora se sanitiza con regex whitelist igual que clientName",
+      "[Seguridad] Validación de ruta en app:install-update — dmgPath debe estar dentro del directorio temporal del sistema",
+      "[Bug] Detección de moneda en P&L ignoraba moneda guardada — setCurrency nunca aplicaba la moneda del snapshot porque el estado inicial 'GTQ' siempre era truthy. Ahora detecta correctamente la moneda almacenada",
+      "[Bug] NaN podía guardarse en datos financieros — campo individual permitía Number('abc') = NaN. Ahora valida con isNaN() y convierte a null",
+      "[Bug] StressTestDashboard crasheaba si user era null — user.id sin optional chaining. Corregido a user?.id",
+      "[Bug] fetchAuditLogs ignoraba errores de Supabase — mostraba tabla vacía sin notificación. Ahora muestra error al usuario",
+      "[Bug] Exportaciones del mismo día sobreescribían archivos — timestamps solo incluían fecha (YYYY-MM-DD). Ahora incluyen hora (YYYY-MM-DD_HH-MM-SS)",
+      "[Mejora] AdminPanel: 3 llamadas directas a supabase.rpc('log_audit') reemplazadas por wrapper logAudit() con detalles de cliente y manejo de errores",
+      "[Mejora] ACTION_LABELS movido a scope de módulo para evitar recreación en cada render",
+      "[Mejora] 7 componentes sin auditoría ahora registran sus operaciones: Qualification, ClientSheet, BillingTracker, BottomUpProjection, CotizacionView (save), OpsToolbar (archive), OpsSettingsBar"
+    ]
+  },
+  {
     "version": "1.1.19",
     "date": "2026-03-09",
     "changes": [
