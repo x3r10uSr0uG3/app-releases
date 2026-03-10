@@ -1,5 +1,18 @@
 [
   {
+    "version": "1.1.17",
+    "date": "2026-03-09",
+    "changes": [
+      "[Seguridad] Shell injection eliminado en auto-updater — execSync con interpolación reemplazado por execFileSync con arrays de argumentos. Validación de nombre .app antes de ejecutar",
+      "[Seguridad] XSS en PDFs — clientName y reportTitle ahora se escapan con HTML entities antes de insertar en templates de header/footer",
+      "[Seguridad] BrowserWindow hardened — sandbox:true, webSecurity:true, allowRunningInsecureContent:false agregados explícitamente",
+      "[Bug] Crash en importador de Operaciones — crypto.randomUUID() fallaba porque el módulo crypto no estaba importado",
+      "[Bug] Pérdida de datos en Ingresos/Nómina/Ubicaciones — patrón delete-before-insert reemplazado por insert-first-then-delete. Si el insert falla, los datos anteriores se preservan",
+      "[Bug] Race condition en InvestorAnalysis — dos useEffects duplicados guardaban deal_params a 1200ms y 1500ms simultáneamente. Consolidados en uno solo con ref de timer",
+      "[Bug] ValuationDashboard auto-save con dependencia faltante — persistAssumptions no estaba en el array de dependencias del useEffect, causando closures con datos obsoletos"
+    ]
+  },
+  {
     "version": "1.1.15",
     "date": "2026-03-09",
     "changes": [
