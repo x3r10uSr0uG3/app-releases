@@ -1,5 +1,19 @@
 [
   {
+    "version": "1.1.26",
+    "date": "2026-03-10",
+    "changes": [
+      "[UI] Colores en TODAS las pestañas y sub-pestañas de la app — cada botón de pestaña tiene su propio color activo/inactivo para mejor legibilidad y navegación visual",
+      "[UI] Pestañas principales de cliente con bordes coloreados — Info (azul), KYC (índigo), Documentos (ámbar), Financiero (teal), Operaciones (violeta), Análisis (rosa)",
+      "[UI] Sub-pestañas Documentos con colores — Cualificación (esmeralda), Ficha (azul), Roadmap (índigo), Cotización (ámbar), NDA (rosa), Facturación (violeta)",
+      "[UI] Sub-vistas Valuación con colores — Resumen (teal), DCF (azul), Múltiplos (violeta), uFCFF/FCFE (ámbar)",
+      "[UI] Sub-vistas Inversor con colores — Scorecard (azul), EBITDA Ajustado (ámbar), Due Diligence (esmeralda), Retornos (violeta), Costo Capital (rosa)",
+      "[UI] Sub-vistas Estrés con colores — Costos (rojo), Supervivencia (naranja), Escenarios (ámbar), Sensibilidad (rosa), Resumen (slate)",
+      "[UI] Vistas Crecimiento con colores — Supuestos (azul), Proyecciones (esmeralda), Bottom-Up (violeta), Financiamiento (ámbar)",
+      "[UI] Toggles coloreados en Ingresos, Nómina, Variación, Métricas, Panel Admin y vista de Análisis"
+    ]
+  },
+  {
     "version": "1.1.25",
     "date": "2026-03-10",
     "changes": [
