@@ -1,7 +1,7 @@
 {
-  "version": "1.1.26",
+  "version": "1.1.27",
   "releaseDate": "2026-03-10",
-  "notes": "v1.1.26 — Colores en todas las pestañas y sub-pestañas de la app.",
-  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.1.26/Analyst.Workstation-1.1.26-arm64.dmg",
-  "downloadUrlX64": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.1.26/Analyst.Workstation-1.1.26.dmg"
+  "notes": "v1.1.27 — Mejoras y correcciones.",
+  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.1.27/Analyst.Workstation-1.1.27-arm64.dmg",
+  "downloadUrlX64": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.1.27/Analyst.Workstation-1.1.27.dmg"
 }

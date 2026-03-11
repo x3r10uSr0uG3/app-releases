@@ -1,5 +1,18 @@
 [
   {
+    "version": "1.1.27",
+    "date": "2026-03-10",
+    "changes": [
+      "[Motor IA v4.0] Cambio 1: Separación de tono por fase — Parte 1 (panel interno) usa registro sin filtro para diagnóstico preciso, Parte 2 (informe cliente) mantiene tono coaching con disciplina. Regla de Oro: misma urgencia, idioma diferente",
+      "[Motor IA v4.0] Cambio 2: Paso 0 — Diagnóstico de Dominio Real. Panel fijo de 5 voces (Buffett, Porter, Christensen, Brown, Hormozi) verifica si el dominio declarado es el dominio raíz antes de seleccionar panelistas",
+      "[Motor IA v4.0] Cambio 3: Memoria Longitudinal y Accountability — Sección 1.0 con baseline (mes 1) o revisión de período anterior (mes 2+). Compromisos, métricas de seguimiento, y patrón de ejecución alimentan al panel",
+      "[Motor IA v4.0] Cambio 4: Steve Jobs añadido como panelista #18 — El Arquitecto del Enfoque. Simplificación radical, el NO estratégico, experiencia como ventaja. Con tensiones documentadas vs Porter, Graziosi, Haroun, Hormozi. Excluido de CASH y RAISING",
+      "[Motor IA v4.0] Cambio 5: Filtro de Contexto — Mercados en Desarrollo (Sección 1.8). 7 filtros universales: acceso a capital, formal-informal, capital relacional, capacidad organizacional, riesgo macro, concentración de mercado, dueño como variable sistémica",
+      "[Motor IA] Panelista Watson-Hemphill renombrada a Kimberly Watson-Hemphill",
+      "[Motor IA] Panel expandido de 16 a 18 panelistas (+ Steve Jobs + total consolidado)"
+    ]
+  },
+  {
     "version": "1.1.26",
     "date": "2026-03-10",
     "changes": [
