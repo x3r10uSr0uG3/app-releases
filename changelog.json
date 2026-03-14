@@ -1,5 +1,17 @@
 [
   {
+    "version": "1.1.29",
+    "date": "2026-03-14",
+    "changes": [
+      "[Holding] Base de Datos de Tasas de Cambio — nueva pestaña 'Tasas FX' para registrar tasas de cierre y promedio por par de monedas y período. Soporta monedas fijas (PAB, BZD, NIO). Reglas NIC 21/IAS 21",
+      "[Holding] Diagnóstico de Consolidación — nueva pestaña 'Consolidación' permite seleccionar subsidiarias, convertir a moneda de reporte con tasas duales (cierre para BS, promedio para P&L), sumar y comparar vs estados reportados de la matriz",
+      "[Holding] Conciliación Intercompañía — nueva pestaña 'Intercompañía' para registrar posiciones entre subsidiarias, detección automática de discrepancias, dashboard de conciliación con conteo y montos",
+      "[Holding] Detección CTA — alerta automática cuando subsidiarias operan en monedas distintas a la matriz. Banner de advertencia + anotaciones en deltas de consolidación",
+      "[Holding] Librería holding-utils.js — funciones puras para lookupRate(), convertSnapshotWithRateDB(), buildComparison(), reconcilePositions(), detectCTAExposure() con lógica IFRS dual-rate",
+      "[UI] Las 3 nuevas pestañas (Tasas FX, Consolidación, Intercompañía) solo aparecen cuando el cliente tiene sucursales registradas (emerald color group)"
+    ]
+  },
+  {
     "version": "1.1.28",
     "date": "2026-03-13",
     "changes": [
