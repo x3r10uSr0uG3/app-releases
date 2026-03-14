@@ -1,5 +1,17 @@
 [
   {
+    "version": "1.1.28",
+    "date": "2026-03-13",
+    "changes": [
+      "[Bug Fix] Financiamiento (Crecimiento) — corregida carga de datos que no encontraba snapshots históricos; mensajes de error más claros cuando faltan datos",
+      "[Bug Fix] Costos F/V (Estrés) — corregida carga de datos financieros que no populaba montos desde el P&L reportado",
+      "[Bug Fix] Estrés — fallback a primer snapshot disponible si todos son proyectados, evitando falso 'sin datos'",
+      "[UI] Costos F/V — nueva barra de referencia muestra período de análisis y totales P&L (COGS, Personal, SG&A, D&A) para verificación cruzada",
+      "[UI] Costos F/V — columna 'Sección' con badges de color (COGS rojo, Personal azul, SG&A púrpura) para cada categoría de costo",
+      "[UI] Costos F/V — alerta clara cuando no hay datos financieros disponibles para auto-popular"
+    ]
+  },
+  {
     "version": "1.1.27",
     "date": "2026-03-10",
     "changes": [
