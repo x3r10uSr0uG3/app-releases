@@ -1,5 +1,13 @@
 [
   {
+    "version": "1.1.30",
+    "date": "2026-03-15",
+    "changes": [
+      "[CRM] Corregido error 'Could not find contact_email column' al crear prospecto — los campos email y teléfono se almacenan correctamente en las notas del cliente",
+      "[CRM] El formulario Nuevo Prospecto ahora funciona sin errores de esquema"
+    ]
+  },
+  {
     "version": "1.1.29",
     "date": "2026-03-14",
     "changes": [
