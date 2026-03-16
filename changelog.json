@@ -1,5 +1,13 @@
 [
   {
+    "version": "1.1.32",
+    "date": "2026-03-16",
+    "changes": [
+      "[UI] Corregido bug de caracteres Unicode escapados (\\u00f3, \\u00e1, etc.) que se mostraban como texto literal en el diálogo de exportación PPTX y en el generador de presentaciones",
+      "[PPTX] Todos los textos en español ahora muestran caracteres acentuados correctamente (Presentación, Estándar, métricas, Valuación, etc.)"
+    ]
+  },
+  {
     "version": "1.1.30",
     "date": "2026-03-15",
     "changes": [
