@@ -1,5 +1,19 @@
 [
   {
+    "version": "1.1.38",
+    "date": "2026-03-17",
+    "changes": [
+      "[CRM] Split into two sections: Sales Pipeline (Kanban board for prospects) and Under Service (card grid for active clients)",
+      "[CRM] Pipeline/Service/All view toggle to focus on the section you need",
+      "[CRM] CLV (Customer Lifetime Value) badge on every client card — calculated from billing profile (monthly fee × 24-month projected engagement)",
+      "[CRM] Under Service cards show domain, industry, analyst, monthly fee, and CLV at a glance",
+      "[CRM] Active clients 'graduate' from pipeline to Under Service when moved to Cerrado-Ganado",
+      "[CRM] Metrics bar now includes MRR (monthly recurring revenue) and ARR for the service portfolio",
+      "[i18n] Fixed 27 CRM translation key mismatches (dragProspectsHere, company, contact, activity, note, type, etc.)",
+      "[i18n] Fixed 186 additional translation key mismatches from v1.1.37 (clientProfile, financialEntry, timeTracker, pptxExport, cotizacionView, ndaView)"
+    ]
+  },
+  {
     "version": "1.1.37",
     "date": "2026-03-16",
     "changes": [
