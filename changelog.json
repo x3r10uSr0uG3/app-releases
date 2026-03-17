@@ -1,5 +1,13 @@
 [
   {
+    "version": "1.1.46",
+    "date": "2026-03-17",
+    "changes": [
+      "[Admin] Fixed trash button showing 'Papelera ()' — now shows 'Enviar a papelera' label correctly",
+      "[Admin] Permanent delete now works after RLS DELETE policies were added to Supabase"
+    ]
+  },
+  {
     "version": "1.1.45",
     "date": "2026-03-17",
     "changes": [
