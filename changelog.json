@@ -1,5 +1,16 @@
 [
   {
+    "version": "1.1.43",
+    "date": "2026-03-17",
+    "changes": [
+      "[CRM] Cerrado-Ganado NO LONGER auto-activates clients — clients stay as prospects until onboarding is complete (NDA signed)",
+      "[CRM] Clients can now be dragged BACKWARD to any earlier stage to fix mistakes (no more terminal-stage lock)",
+      "[CRM] Undo support: amber banner appears after every stage move with an 'Undo (⌘Z)' button — 30-second window",
+      "[CRM] Cmd+Z / Ctrl+Z keyboard shortcut works anywhere in the CRM to undo the last stage move",
+      "[CRM] Moving a client back from a closed stage automatically restores prospect status"
+    ]
+  },
+  {
     "version": "1.1.41",
     "date": "2026-03-17",
     "changes": [
