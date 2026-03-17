@@ -1,5 +1,17 @@
 [
   {
+    "version": "1.1.39",
+    "date": "2026-03-17",
+    "changes": [
+      "[Dashboard] Split into two sections: 'Under Service' (active/closed clients) and 'Pipeline' (prospects) — clear visual separation with colored section headers",
+      "[Dashboard] CLV badge on every client row — green 'CLV $36.0k' badge next to the View button, calculated as monthly fee × 24-month projected engagement",
+      "[Dashboard] Minimum CLV floor of $4,500 (1,500 USD/mo × 3-month minimum engagement) — applies even without billing profile",
+      "[Dashboard] New stats cards: MRR (monthly recurring revenue) and Portfolio CLV alongside Active/Prospects/Closed/Total",
+      "[CRM] CLV now always visible on every card (was hidden when no billing profile existed) — uses $1,500/mo floor",
+      "[CRM] Under Service cards also show CLV badge at bottom-right"
+    ]
+  },
+  {
     "version": "1.1.38",
     "date": "2026-03-17",
     "changes": [
