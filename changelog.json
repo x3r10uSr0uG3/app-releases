@@ -1,5 +1,16 @@
 [
   {
+    "version": "1.1.37",
+    "date": "2026-03-16",
+    "changes": [
+      "[i18n] Fixed 186 key-name mismatches causing raw key strings in the UI (e.g., 'clientProfile.company', 'FINANCIALENTRY.CONCEPT', 'clientProfile.finLocationCosts', 'clientProfile.branch')",
+      "[i18n] ClientProfile: 73 missing keys — company info fields, branch management, status labels, ops sub-tabs, analysis history, export/import messages",
+      "[i18n] FinancialDataEntry: 31 missing keys — concept, income statement, balance sheet, cash flow, save/delete messages, budget banner, FX rate prompts",
+      "[i18n] TimeTracker: 11 keys, PPTX Export: 15 keys, Cotización: 18 keys, NDA: 8 keys, Activity Log, Metricas Dashboard, Unit Economics, Industry Benchmark, Payout Period",
+      "[i18n] Full ES/EN parity maintained — all new keys added to both locale files"
+    ]
+  },
+  {
     "version": "1.1.35",
     "date": "2026-03-16",
     "changes": [
