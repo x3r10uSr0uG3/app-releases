@@ -1,5 +1,13 @@
 [
   {
+    "version": "1.1.45",
+    "date": "2026-03-17",
+    "changes": [
+      "[Admin] Fixed permanent delete — now shows actual error if RLS blocks DELETE, with guidance on adding the missing policy",
+      "[Admin] Cascade deletes run sequentially with per-table error collection instead of silent Promise.all"
+    ]
+  },
+  {
     "version": "1.1.44",
     "date": "2026-03-17",
     "changes": [
