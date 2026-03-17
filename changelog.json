@@ -1,5 +1,16 @@
 [
   {
+    "version": "1.1.34",
+    "date": "2026-03-16",
+    "changes": [
+      "[i18n] Full English translation of the entire app — language toggle (🇬🇧 EN / 🇪🇸 ES) in the title bar next to font/print controls",
+      "[i18n] i18next + react-i18next infrastructure with localStorage persistence — language preference survives restarts",
+      "[i18n] ~1,500+ strings translated across all 69 components: Login, Dashboard, Sidebar, Client Profile, Financial tabs (P&L, Budget, Variance, Dashboard, Indicators, Red Flags, DuPont, Unit Economics, Growth, Valuation, Stress, Investor, Cash Forecast, Benchmark), Operations (7 TOC steps), Admin Panel, CRM, Metrics, Documents (Qualification, Client Sheet, Roadmap, Quotation, NDA, Billing), Activity Log, Time Tracker, and more",
+      "[i18n] Comprehensive locale files: src/locales/es.json (Spanish) and src/locales/en.json (English) with organized namespaces per component",
+      "[Geo] Added 42 European countries with full Damodaran WACC data, flags, currencies, and FX rates — supporting clients across all of Europe including Sweden, Switzerland, Germany, France, UK, and more"
+    ]
+  },
+  {
     "version": "1.1.32",
     "date": "2026-03-16",
     "changes": [
