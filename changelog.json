@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.1.47",
+    "date": "2026-03-17",
+    "changes": [
+      "[i18n] Fixed {{count}} and {{unit}} raw interpolation placeholders showing in the UI — 3 instances fixed:",
+      "[i18n] Consolidated dropdown: was showing 'Consolidado ({{count}} {{unit}})' — now uses consolidatedLabel",
+      "[i18n] Analyses tab: was showing 'Análisis ({{count}}) (2)' (double count) — now passes count param properly",
+      "[i18n] Investor Analysis table header: was showing 'EV de Entrada ({{multiple}}x)' — now uses plain label"
+    ]
+  },
+  {
     "version": "1.1.46",
     "date": "2026-03-17",
     "changes": [
