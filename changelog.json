@@ -1,5 +1,16 @@
 [
   {
+    "version": "1.1.49",
+    "date": "2026-03-17",
+    "changes": [
+      "[Dashboard] 3 sections now: Under Service (active only), Pipeline (prospects), Closed/Inactive (indigo section) — closed clients no longer mixed with active",
+      "[CLV] Closed clients with no invoices = CLV $0 (not $4,500) — CLV is strictly realized billing",
+      "[CLV] Active clients with no invoices yet = $4,500 committed (amber badge) — represents minimum engagement",
+      "[CLV] Active clients with invoices = sum of all invoiced amounts (green badge)",
+      "[CRM] Same CLV logic applied — closed clients show actual billed amount, not artificial floor"
+    ]
+  },
+  {
     "version": "1.1.48",
     "date": "2026-03-17",
     "changes": [
