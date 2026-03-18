@@ -1,5 +1,17 @@
 [
   {
+    "version": "1.1.52",
+    "date": "2026-03-17",
+    "changes": [
+      "[Sidebar] Client list now grouped by analyst — each analyst is a collapsible header with avatar and client count",
+      "[Sidebar] Under each analyst: 3 collapsible status categories — 'Under Service' (green), 'Pipeline' (amber), 'Closed' (indigo) — each toggleable",
+      "[Sidebar] Sort clients by Name (Aa) / Date (⏱) / Code (#) using mini toggle next to the + button",
+      "[Sidebar] Non-admin users see a flat sorted list (no analyst grouping)",
+      "[UI] Boosted header bar color intensity — gradient alpha 0.06→0.14, border 0.15→0.30 for much more visible tinting",
+      "[UI] Sidebar nav active states use /15 opacity and -700 text for bolder color contrast"
+    ]
+  },
+  {
     "version": "1.1.51",
     "date": "2026-03-17",
     "changes": [
