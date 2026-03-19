@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.1.59",
+    "date": "2026-03-19",
+    "changes": [
+      "[Security] CRITICAL: Removed hardcoded Supabase service_role key from electron/main.cjs — now loaded from environment variable (SUPABASE_SERVICE_ROLE_KEY)",
+      "[Security] CRITICAL: Replaced 11 USING(true) RLS policies with analyst-scoped policies — crm_pipeline, crm_activities, revenue_lines, workforce, location_costs, billing_profiles, invoices, ops_settings, ops_cycles, investor_analysis now scoped via client_assignments",
+      "[Security] kpi_goals (firm-wide table) restricted to authenticated analysts/admins only",
+      "[Security] Service role key rotated — old key invalidated, new key loaded from env"
+    ]
+  },
+  {
     "version": "1.1.57",
     "date": "2026-03-19",
     "changes": [
