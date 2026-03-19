@@ -1,5 +1,18 @@
 [
   {
+    "version": "1.1.53",
+    "date": "2026-03-19",
+    "changes": [
+      "[Whitelabel] New 'Branding' tab in Documents — toggle whitelabel mode, set display name, upload client logo, pick primary/secondary colors, set custom footer text, hide 'Powered by Asanoski'",
+      "[Whitelabel] Live preview strip shows how the report header will look with current branding settings",
+      "[PDF Export] Now accepts per-client branding — logo, display name, colors, and footer text replace Asanoski branding when whitelabel mode is ON",
+      "[DOCX Export] Now accepts per-client branding — heading colors, footer text, and display name are fully customizable",
+      "[PPTX Export] Enhanced with footerText and hidePoweredBy support — slide master, metadata, and footer now use client branding",
+      "[Sidebar] Green 'WL' badge appears next to whitelabeled clients for instant visibility",
+      "[Hook] New useBranding.js — loads/saves branding config from kyc_responses, provides getBrandingConfig() for export functions"
+    ]
+  },
+  {
     "version": "1.1.52",
     "date": "2026-03-17",
     "changes": [
