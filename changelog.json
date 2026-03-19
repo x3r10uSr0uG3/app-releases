@@ -1,5 +1,20 @@
 [
   {
+    "version": "1.1.56",
+    "date": "2026-03-19",
+    "changes": [
+      "[CLV] Complete CLV engine rewrite — probability-weighted pipeline CLV, realized + projected for active clients, actual-only for closed",
+      "[CLV] Formula: Prospects = MonthlyRate × AvgMonths × StageProbability × (1 - ChurnDiscount). Active = Realized + Remaining × (1 - Churn). Closed = Total Billed",
+      "[CLV] Pipeline probabilities: Nuevo 5%, Contactado 15%, Calificado 35%, Propuesta 55%, Negociación 75%, Cerrado-Ganado 100%",
+      "[CLV] CRM cards now show probability badge (e.g., '55% CLV $12.6k') with detailed tooltip (Gross, Probability, Adjusted)",
+      "[CLV] Dashboard CLV badges: green for active (realized + remaining), amber for prospects (probability-weighted), gray for closed (actual)",
+      "[Admin] New 'CLV' tab in Admin Panel — configure Tier 1/2 rates, engagement months, churn %, stage probabilities",
+      "[Admin] All CLV settings stored as firm-level config (kyc_responses JSONB)",
+      "[CLV] Central useCLV.js hook — single source of truth used by CRM, Dashboard, and all CLV displays",
+      "[CLV] Portfolio aggregation: Pipeline CLV + Committed CLV + Closed CLV with avg CLV per active client"
+    ]
+  },
+  {
     "version": "1.1.55",
     "date": "2026-03-19",
     "changes": [
