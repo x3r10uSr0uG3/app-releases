@@ -1,5 +1,18 @@
 [
   {
+    "version": "1.1.54",
+    "date": "2026-03-19",
+    "changes": [
+      "[CRM] New 'Sources' view — manage referral partners as first-class entities with name, company, relationship type, contact info",
+      "[CRM] Referral Source Detail — 4 metric cards (total referrals, active clients, CLV, avg conversion days), referred clients table, relationship timeline",
+      "[CRM] New Prospect form now links referral source — when lead source is 'Referido', a searchable dropdown appears to pick the referrer + add a note",
+      "[CRM] Log Contact feature — record calls, meetings, emails, messages with referral partners; updates last-contact date automatically",
+      "[CRM] Nurture Alert — amber warning when a referral source hasn't been contacted in 60+ days but has active clients",
+      "[Alerts] New 'referral_nurture' alert type in the alert engine — surfaces in AlertBanner across the app",
+      "[Hook] New useReferralSources.js — full CRUD for referral entities stored in kyc_responses JSONB"
+    ]
+  },
+  {
     "version": "1.1.53",
     "date": "2026-03-19",
     "changes": [
