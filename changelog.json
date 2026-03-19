@@ -1,5 +1,19 @@
 [
   {
+    "version": "1.1.57",
+    "date": "2026-03-19",
+    "changes": [
+      "[Engagement] Engagement Health Score — composite 0-100 signal from 5 dimensions: Report Delivery (25%), Data Freshness (25%), Meeting Frequency (20%), Client Responsiveness (20%), Onboarding (10%)",
+      "[Engagement] Health badge in client profile header — colored pill (Excellent/Good/At Risk/Critical) with click-to-expand breakdown panel",
+      "[Engagement] Breakdown panel shows each dimension with score bar, detail text, and priority action suggestions",
+      "[Engagement] Portfolio Health view in Firm Metrics — sortable table with per-client health scores, dimension breakdowns, and weakest dimension indicator",
+      "[Engagement] Summary cards: Average Score, Healthy Clients, At-Risk Clients, Critical Clients",
+      "[Activity Log] New 'Direction' field — outbound (analyst→client), inbound (client→analyst), bilateral (both) — powers responsiveness scoring",
+      "[Alerts] Churn risk alerts: critical when health <40, warning when <60. Renewal window alert when onboarding complete but meetings declining",
+      "[DB] Migration v4: direction column on client_activities table"
+    ]
+  },
+  {
     "version": "1.1.56",
     "date": "2026-03-19",
     "changes": [
