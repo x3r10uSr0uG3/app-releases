@@ -1,5 +1,26 @@
 [
   {
+    "version": "1.1.61",
+    "date": "2026-03-19",
+    "changes": [
+      "[Security] Fixed open RLS on alert_rules and analysis_templates — restricted to analyst+ roles",
+      "[Security] Portal users can no longer read all analyst profiles — scoped to assigned analysts only",
+      "[Security] Closed client portal access now enforced — is_active check on all portal policies",
+      "[Security] Admin-only guard on create_portal_user() function — prevents privilege escalation",
+      "[Security] handle_new_user() role assignment restricted to analyst/client only — blocks admin self-registration",
+      "[Security] Added CSP and security headers to Client Portal (X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy)",
+      "[Security] Portal no longer exposes raw Supabase error messages to users",
+      "[Security] Console logging of user IDs/query results gated to development mode only",
+      "[Security] Source maps explicitly disabled in both Workstation and Portal production builds",
+      "[Security] Created .gitignore for Analyst Workstation — prevents env files and secrets from being committed",
+      "[Security] Added .env to Client Portal .gitignore",
+      "[Security] Hardcoded admin email removed from AuthContext — now uses env variable",
+      "[Security] Dev password cleared from .env.development.local",
+      "[Security] Data request form now has maxLength=2000 to prevent abuse",
+      "[Security] Admin password rotated"
+    ]
+  },
+  {
     "version": "1.1.59",
     "date": "2026-03-19",
     "changes": [
