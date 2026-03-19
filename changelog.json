@@ -1,5 +1,20 @@
 [
   {
+    "version": "1.1.55",
+    "date": "2026-03-19",
+    "changes": [
+      "[CRM] Prospect ROI Estimator — embedded value calculator for diagnostic calls (available for Calificado, Propuesta, Negociación stages)",
+      "[CRM] 10 input fields: revenue, margins, employees, pain points, finance staff, owner hours, current costs, retainer tier — all optional",
+      "[CRM] 5 value calculation cards: Margin Recovery, Owner Time Liberation, Cash Efficiency, Cost Comparison, ROI Summary",
+      "[CRM] Pain Point → Deliverable mapping table auto-populates based on checked boxes (7 pain points → 7 CFO deliverables)",
+      "[CRM] ROI Summary card: Total Value, Annual Retainer, Net Value, ROI Multiple, Payback months — navy hero card",
+      "[CRM] Editable assumptions (margin %, hours freed, hourly divisor) via collapsible panel",
+      "[CRM] Generate Value Case button for PDF export",
+      "[CRM] All inputs auto-saved to Supabase (kyc_responses JSONB, question_key='roi_estimator')",
+      "[CRM] Prospect detail modal now wider (max-w-3xl) with Activity / Estimated Value tabs"
+    ]
+  },
+  {
     "version": "1.1.54",
     "date": "2026-03-19",
     "changes": [
