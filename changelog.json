@@ -1,5 +1,207 @@
 [
   {
+    "version": "1.2.17",
+    "date": "2026-03-19",
+    "changes": [
+      "PPTXExportDialog now passes language: i18n.language in the generatePPTX payload",
+      "Destructured i18n from useTranslation() hook",
+      "PPTX filename now language-aware: _Financial_Summary_ (EN) / _Resumen_Financiero_ (ES)",
+      "Added makeT(lang) inline translator and makeFmt(lang) locale-aware format helpers",
+      "Cover slide: \"RESUMEN FINANCIERO\"→\"FINANCIAL SUMMARY\", \"CONFIDENCIAL\"→\"CONFIDENTIAL\", date locale",
+      "Slide 1 (P&L): All card labels, chart titles (\"Tendencia de Ingresos\"→\"Revenue Trend\"), pie chart title, series names",
+      "Slide 2 (Cash Flow): All 6 table row labels, chart titles (\"Capital de Trabajo\"→\"Working Capital\"), bar labels, fallback message",
+      "Slide 3 (Returns): All 4 mini card labels, balance sheet legend labels, chart titles",
+      "Slide 4 (Valuation): All valuation table labels, chart titles, comparison table headers (\"Empresa\"→\"Company\"), fallback message",
+      "KPI_LABELS: All 31 KPI labels now bilingual via makeKPILabels(t)",
+      "KPI_CAT_LABELS: All 8 category labels now bilingual via makeKPICatLabels(t)",
+      "Cherry-pick mode: Slide titles, metrics count label",
+      "addCard(): \"vs anterior\" → \"vs prior\" (EN)",
+      "addDataTable(): \"Métrica\"/\"Valor\" headers → \"Metric\"/\"Value\" (EN)",
+      "resolveBrand(): \"CONFIDENCIAL\" footer → \"CONFIDENTIAL\" (EN)",
+      "fmt()/date: es-MX locale → language-aware (en-US / es-MX)",
+      "N/A labels: \"N/D\" (ES) → \"N/A\" (EN)",
+      "PPTX metadata (author, subject, title) now bilingual",
+      "Added 8 missing pptxExport.cat* keys to both en.json and es.json (catProfitability, catReturns, catLiquidity, catLeverage, catGrowth, catValuation, catCashflow, catOperations)"
+    ]
+  },
+  {
+    "version": "1.2.15",
+    "date": "2026-03-19",
+    "changes": [
+      "Split 21 slash-delimited bilingual check names into proper name (ES) + name_en (EN) fields in redFlagsCalcs.js",
+      "Component now shows single-language check names based on active language (was showing both)",
+      "Explanation text now shows only the active language (was always showing both ES and EN lines)",
+      "Overall classification label (\"Datos Confiables\" / \"Reliable Data\") now uses label_en",
+      "Added label_en to INVESTMENT_READINESS categories (5 items: Financial Strength, Operations, Market, Team, Legal/Governance)",
+      "Added label_en to INVESTMENT_READINESS criteria",
+      "Added category_en to DUE_DILIGENCE_ITEMS (4 categories: Financial, Legal, Operational, Commercial)",
+      "computePYMEDiscounts() already had label_en / description_en — verified",
+      "Added getLabel() import from i18nHelpers",
+      "Replaced 3 direct .label accesses on RATIO_CATEGORIES with getLabel() for proper EN rendering"
+    ]
+  },
+  {
+    "version": "1.2.13",
+    "date": "2026-03-19",
+    "changes": [
+      "Generated audit/TRANSLATION_AUDIT.md — comprehensive scan of all translation issues",
+      "Categorized 3 violation types: A (hardcoded strings), B (constants missing EN), C (components ignoring EN fields)",
+      "Triaged Category B into Skip (proper nouns), Deferred (analyst-only), Fix Now (client-facing)",
+      "New src/utils/i18nHelpers.js — getLocalizedField(), getLabel(), getDescription(), getFormula(), and 12 more convenience functions for language-aware field access from constants",
+      "New src/utils/validateI18nConstants.js — dev-only validation that warns on missing _en variants",
+      "Supports both field_en (new convention) and en_field (legacy convention)",
+      "ratio-definitions.js — Added label_en to all 41 ratios across 7 categories + 3 Altman variants + component labels",
+      "constants.js — Added label_en/formula_en to DUPONT_TREE (6), label_en/description_en to DEAL_STRUCTURES (5), EBITDA_ADJUSTMENTS (6), label_en/formula_en to KPI_DEFINITIONS (10)",
+      "Total: ~105 new _en fields across ~80 objects",
+      "InvestorAnalysis.jsx — Replaced 6 direct .label/.description accesses with getLabel()/getDescription()/getLocalizedField() from i18nHelpers",
+      "Fixed hardcoded Spanish in 7 components: CotizacionView (/mes→/mo), RoadmapView (Cliente→Client), HoldingComparison (3 strings), ChecklistPanel (2 strings), AutoSaveStatus, TotalCostOfCapital, InvestorAnalysis",
+      "Added ~15 new translation keys to both en.json and es.json (holding, checklist, common.saveError, investor namespaces)",
+      "Layer 1: RoadmapView + CotizacionView now pass language: i18n.language in IPC calls",
+      "Layer 2: IPC handlers forward language via data object (no changes needed)",
+      "Layer 3: docx-generator.cjs — Added l() helper for bilingual field resolution",
+      "DOCX exports now render in English or Spanish based on app language setting",
+      "New CONTRIBUTING.md with 5 translation rules for future development",
+      "Documents the _en suffix convention, i18nHelpers usage, and generator l() pattern",
+      "ops-constants.js (18 arrays, ~90 objects) — TOC tab, internal use only",
+      "CRM/onboarding/qualification constants — internal workflows",
+      "PPTX generator — analyst-facing exports"
+    ]
+  },
+  {
+    "version": "1.2.11",
+    "date": "2026-03-19",
+    "changes": [
+      "Fixed negative survival days when cash_balance is negative (bank overdraft) — now correctly clamps to 0 days with a visible \"Saldo de caja negativo (sobregiro bancario)\" warning card",
+      "The DownsideScenarios chart no longer shows negative bar values",
+      "Removed the scenario toggle — all 3 scenarios (Conservative / Base / Optimistic) now display simultaneously as columns in a single grid",
+      "Each growth category has 3 input fields side-by-side, color-coded by scenario",
+      "Scenario selector remains available only for the Projections/Bottom-Up/Funding sub-tabs",
+      "Category labels and descriptions fully bilingual (EN/ES)",
+      "Each WACC value (Rf, CRP, ERP, Beta, Ke, Kd(1-t), WACC) now shows a small bilingual description below the value",
+      "Descriptions appear in both the Summary view banner and the DCF view's WACC section",
+      "The DCF projection table's \"Terminal\" column now shows actual terminal values instead of \"—\"",
+      "Terminal FCF = Last Year FCF × (1 + g), Terminal PV = present value of terminal cash flow",
+      "Revenue growth terminal rate also displayed",
+      "SurvivalIndex.jsx — fully internationalized (was 100% hardcoded Spanish)",
+      "DownsideScenarios.jsx — fully internationalized (was 100% hardcoded Spanish)",
+      "SensitivityAnalysis.jsx — fully internationalized (was 100% hardcoded Spanish)",
+      "PerUnitPL.jsx — fully internationalized (was 100% hardcoded Spanish)",
+      "BreakevenChart.jsx — fully internationalized (was 100% hardcoded Spanish)",
+      "OperatingLeverage.jsx — fully internationalized (was 100% hardcoded Spanish)",
+      "ValuationDashboard.jsx — fixed hardcoded \"COGS / Ventas\" and \"SG&A / Ventas\" labels",
+      "StressTestTab.jsx — added missing translation keys: scenarios, sensitivity, summary tab labels",
+      "Added 100+ translation keys to both es.json and en.json across stressTest, perUnitPL, breakevenChart, operatingLeverage, and valuationDashboard namespaces",
+      "src/lib/stressTestCalcs.js — survival days clamped to 0",
+      "src/components/GrowthAssumptions.jsx — 3-column layout, i18n labels",
+      "src/components/ValuationDashboard.jsx — WACC descriptions, terminal FCF, hardcoded text fixes",
+      "src/components/SurvivalIndex.jsx — full i18n",
+      "src/components/DownsideScenarios.jsx — full i18n",
+      "src/components/SensitivityAnalysis.jsx — full i18n",
+      "src/components/PerUnitPL.jsx — full i18n",
+      "src/components/BreakevenChart.jsx — full i18n",
+      "src/components/OperatingLeverage.jsx — full i18n",
+      "src/locales/es.json — 100+ new keys",
+      "src/locales/en.json — 100+ new keys"
+    ]
+  },
+  {
+    "version": "1.2.10",
+    "date": "2026-03-19",
+    "changes": [
+      "AI playbook badge on financial tab strip — shows which AI playbooks consume data from the currently selected tab (e.g., P&L/Balance feeds all 5 playbooks)",
+      "AI pre-flight checklist in Analysis Wizard — \"Data Readiness\" panel shows green/yellow/red status for each data source before running a playbook analysis",
+      "Data completeness context injected into AI prompt payload so the AI acknowledges data gaps rather than hallucinating completeness",
+      "New constants: aiPlaybookRequirements.js (tab→playbook mapping, data thresholds)",
+      "New hook: useDataCompleteness.js (queries client data state, returns getTabStatus(), getPlaybookReadiness(), buildCompletenessContext())",
+      "Moved cost classifications from Stress Test sub-view to P&L/Balance tab — new collapsible \"Estructura de Costos\" section with 6 pre-populated cost lines, % Variable sliders, and fixed/variable split display",
+      "Stress Test now shows read-only cost summary card with \"Editar en P&L / Balance →\" link (removed sub-view 'a')",
+      "Unit Economics now shows pre-flight warning with \"Configurar en P&L / Balance →\" link when cost classifications not set",
+      "Added addon_bottomup (Proyección Bottom-Up por Segmento, $250/mo) to Cotización recurring add-ons",
+      "DataCompletenessBanner component — reusable banner showing partial data warnings with progress bars per data source",
+      "DuPont equity check — warns when equity fields (common_stock, retained_earnings, other_equity) are missing; shows \"N/D\" in red for Equity Multiplier instead of silently wrong ROE",
+      "Red Flags period count — each of 8 checks now shows how many periods were used and minimum required for SKIP checks",
+      "AI-suggested scores now extract 7 qualitative KYC/KYB fields (business_model, competitive_advantage, team_background, etc.) for better Market Opportunity and Team scoring",
+      "Yellow warning banner when <3 KYC fields populated: \"Contexto de negocio limitado\"",
+      "Growth assumptions sentence added to Cotización T1 and T2 service descriptions",
+      "Roadmap Phase 1 now includes 5th task: \"Definición de supuestos de crecimiento por escenario\"",
+      "Scenario status pill on Growth Assumptions tab: red (0) → amber (1-2) → green (3 complete)",
+      "Verified actual tab count: 17 base + 3 conditional holding company = 20 total",
+      "Updated all stale references across CHANGELOG, APP_DESCRIPTION, HELP_PROMPT, APP_DOCUMENTATION, MEMORY",
+      "Verified Damodaran counts: 62 industries, 110 countries, 21 Spanish-speaking — corrected all \"60\"/\"63\"/\"22\" references",
+      "Created damodaranCounts.js with verified constants",
+      "src/lib/aiPlaybookRequirements.js — Tab→playbook mapping + data requirements",
+      "src/hooks/useDataCompleteness.js — Client data completeness hook",
+      "src/components/DataCompletenessBanner.jsx — Reusable completeness banner",
+      "src/lib/damodaranCounts.js — Verified Damodaran/country counts",
+      "src/pages/ClientProfile.jsx — AI playbook badge, navigation props for StressTest/UnitEconomics",
+      "src/components/FinancialDataEntry.jsx — Added Estructura de Costos collapsible section",
+      "src/components/StressTestTab.jsx — Removed cost sub-view, added read-only summary card",
+      "src/components/UnitEconomicsTab.jsx — Updated cost classification warning with navigation link",
+      "src/components/DuPontMatrix.jsx — Added equity field check and N/D display",
+      "src/components/RedFlagsScorecard.jsx — Added period count per check",
+      "src/components/GrowthAssumptions.jsx — Added scenario status pill",
+      "src/components/InvestorAnalysis.jsx — Added KYC context warning",
+      "src/components/workflow/AnalysisWizard.jsx — Added data readiness pre-flight panel",
+      "src/lib/constants.js — Added addon_bottomup, growth assumptions text, Phase 1 task, KYC context in computeSuggestedScores",
+      "src/locales/en.json — 17 new translation keys",
+      "src/locales/es.json — 17 new translation keys"
+    ]
+  },
+  {
+    "version": "1.2.8",
+    "date": "2026-03-19",
+    "changes": [
+      "CotizacionView full rebuild — New add-ons system with three sections:",
+      "RoadmapView rebuild — Full bilingual support using en_* fields from constants:",
+      "useCotizacion hook — New hook exposing cotización state (baseFee, recurringAddons, premiumAddons, totals, activeKeys) for cross-tab consumption by Roadmap",
+      "New constants — COTIZACION_BASE_T1, COTIZACION_BASE_T2, COTIZACION_RECURRING_ADDONS (4), COTIZACION_PREMIUM_ADDONS (6), ROADMAP_ADDON_CALLOUT, ROADMAP_TIER2_PHASE2, ROADMAP_TIER2_PHASE3",
+      "src/hooks/useCotizacion.js — Cotización state hook for cross-tab consumption",
+      "src/components/CotizacionView.jsx — Complete rebuild with add-ons system (~860 lines)",
+      "src/components/RoadmapView.jsx — Rebuild with bilingual support + add-on callout (~404 lines)",
+      "src/lib/constants.js — Added 7 new constant exports + en_* fields on existing COTIZACION/ROADMAP constants"
+    ]
+  },
+  {
+    "version": "1.2.6",
+    "date": "2026-03-20",
+    "changes": [
+      "Bug fixes and stability improvements"
+    ]
+  },
+  {
+    "version": "1.2.5",
+    "date": "2026-03-19",
+    "changes": [
+      "Qualification Engine bilingual — All hardcoded Spanish text now switches to English when app language is EN. Uses en_* fields from constants (HARD_GATES, TIER_QUESTIONS, REVENUE_RANGE_OPTIONS, etc.) and bilingual inline text for all UI labels, stage headings, result cards, next steps, weight indicators, and toggle buttons.",
+      "Cotización Tier 2 defaults — Fixed race condition where autoTier hadn't resolved when loadData() ran, causing Tier 1 defaults ($1,500) to always apply. Now waits for useTier() to finish loading before initializing defaults.",
+      "OnboardingStatus tier mismatch warning — Fixed detection logic: added Number() coercion to handle string vs number comparison, added fallback to useTier() hook when qualification data lacks assigned_tier, made warning message bilingual.",
+      "NDA international firm paragraph — International templates (Panama, Mexico, US, UK, Neutral) no longer show Guatemala-specific legal formalities (NIT, DPI/CUI, Registro Mercantil). New buildNDAFirmParagraph_international() produces simplified party paragraph matching the DOCX generator output."
+    ]
+  },
+  {
+    "version": "1.2.3",
+    "date": "2026-03-19",
+    "changes": [
+      "Bug fixes and stability improvements"
+    ]
+  },
+  {
+    "version": "1.2.1",
+    "date": "2026-03-19",
+    "changes": [
+      "QualificationEngine — Complete replacement of Qualification component with 4-stage routing engine:",
+      "useTier() hook — Single source of truth for client tier, propagates to all Documents sub-tabs",
+      "Tier 2 support throughout:",
+      "International NDA templates — useNDA() hook with 6 jurisdiction profiles:",
+      "nda-international.cjs — New DOCX generator for all international NDA profiles",
+      "ClientSheet additions: client_tier dropdown (auto-fills from Qualification), assigned_analyst display, subsidiary banner",
+      "OnboardingStatus: First Invoice upgraded to Critical onboarding step, subsidiary-aware (shows 3 steps only)",
+      "BrandingTab: PPTX color swatch preview added below PDF preview",
+      "Qualification data structure now stores hard_gates, routing, tier-specific questions, and result as structured JSON",
+      "NDA generation now routes through template selection (Guatemala vs International) in main.cjs IPC handler"
+    ]
+  },
+  {
     "version": "1.1.61",
     "date": "2026-03-19",
     "changes": [
