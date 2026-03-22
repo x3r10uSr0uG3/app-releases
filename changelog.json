@@ -1,5 +1,32 @@
 [
   {
+    "version": "1.2.23",
+    "date": "2026-03-22",
+    "changes": [
+      "Full investment research workstation for one-time M&A/PE analysis targets (separate from recurring CFO clients)",
+      "Sidebar nav entry \"Investments\" visible to all roles",
+      "List view with status filter, create form, progress dots, delete confirmation",
+      "Profile shell with 6-section nav, top bar (rating picker, progress bar, save indicator), AI Panel toggle",
+      "investment_targets table with JSONB columns for kyc_responses, analyst_notes, ai_panel_cache, financial_model",
+      "investment_personas table with 10 seeded AI personas (Schwarzman, Wasserstein, Chanos, Porter, Christensen, Buffett, Drucker, Martin, Deming, Watson-Hemphill)",
+      "Auto-update trigger on updated_at, GIN index on kyc_responses",
+      "investment:list, get, create, saveFields, saveNote, completeSection, updateMeta, cacheAiPanel, saveFinancials, delete, getPersonas",
+      "Preload bridge: window.electronAPI.investment.*",
+      "useInvestmentStore.jsx — React Context + useReducer with 13 action types",
+      "useInvestment() hook with 15 actions + 3 getters + completionPct",
+      "Section 1: Company Overview — identity, leadership, ownership, business model, strategy",
+      "Section 2: Market Analysis — TAM (3 products), growth, share (5 competitors), geography (5 markets), customer unit economics",
+      "Section 3: Competitive Position — Porter's 5 Forces, SWOT, peer benchmarking (3 metrics × 4 companies), moat, catalysts",
+      "Section 4: Operations & Risk — customer concentration (5-row table), suppliers (3-row table), people, legal/regulatory, production",
+      "Section 5: Financial Analysis — historical IS (13 lines × 5 years), revenue forecast (8 lines × 3 years), balance sheet, cash flow, ratios, audit red flags",
+      "Section 6: Investment Thesis — bull/base/bear case, valuation (entry + exit), risk matrix (6 risks), final recommendation",
+      "FieldText (auto-save on blur), FieldNumber, FieldSelect, FieldGrid (2-col layout)",
+      "AnalystNoteBlock (navy callout, auto-save), RepeatTable (editable row table)",
+      "SectionHeading, SubHeading — consistent styling across all sections",
+      "Brand colors: Navy #1E3A5F, Gray #5A5A5A, Jade #2D6B5A, Granate #8B4B5C"
+    ]
+  },
+  {
     "version": "1.2.22",
     "date": "2026-03-22",
     "changes": [
