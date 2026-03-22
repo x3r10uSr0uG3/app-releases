@@ -1,5 +1,19 @@
 [
   {
+    "version": "1.2.24",
+    "date": "2026-03-22",
+    "changes": [
+      "New \"Export Memo\" button in Investment Target profile top bar",
+      "Generates branded 30+ page Word document from all 6 sections of investment research data",
+      "Cover page with company name, analyst, date, classification",
+      "All sections rendered with KV tables, IS tables (historical + forecast), risk matrix, analyst notes",
+      "Header/footer on every page with company name, page numbers, confidentiality notice",
+      "File saved to Desktop as Investment_Memo_CompanyName.docx",
+      "IPC handler investment:exportMemo with save dialog",
+      "Generator: electron/investment-memo-generator.cjs (CommonJS, uses docx package)"
+    ]
+  },
+  {
     "version": "1.2.23",
     "date": "2026-03-22",
     "changes": [
