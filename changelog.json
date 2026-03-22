@@ -1,16 +1,71 @@
 [
   {
+    "version": "1.2.22",
+    "date": "2026-03-22",
+    "changes": [
+      "Release script now auto-syncs changelog.json from CHANGELOG.md before every push",
+      "Every release is guaranteed to have changelog entries visible in the update dialog",
+      "Added missing changelog entries for v1.2.19, v1.2.20, v1.2.21",
+      "Cost Structure: fixed empty category labels on reload (labels now re-map from translations)",
+      "Added missing financialEntry locale keys: salaries, rent, utilities, depreciation, otherOpex",
+      "Fixed RLS WITH CHECK on workforce, revenue_lines, location_costs (blocked writes after v1.1.59 hardening)"
+    ]
+  },
+  {
+    "version": "1.2.21",
+    "date": "2026-03-22",
+    "changes": [
+      "Cost Structure (Estructura de Costos): Fixed empty category labels on reload — labels now re-map from COST_LINES translations instead of relying on stale saved data",
+      "Added missing locale keys for cost categories: salaries, rent, utilities, depreciation, otherOpex in both en.json and es.json",
+      "Fixed RLS policies on workforce, revenue_lines, and location_costs tables — added WITH CHECK clause and admin bypass (writes were blocked after v1.1.59 security hardening)"
+    ]
+  },
+  {
+    "version": "1.2.20",
+    "date": "2026-03-21",
+    "changes": [
+      "Portal user creation now works via Supabase Dashboard flow (GoTrue-compatible)",
+      "Updated create_portal_user() SQL function: adds auth.identities row, raw_app_meta_data, raw_user_meta_data, and profiles row",
+      "Fixed \"Database error querying schema\" on portal login caused by missing auth.identities record"
+    ]
+  },
+  {
     "version": "1.2.19",
     "date": "2026-03-21",
     "changes": [
-      "Portal Access Management UI — full CRUD for client portal users",
-      "Create portal access with email + auto-generated secure password",
-      "Revoke/reactivate portal access (soft-delete, preserves audit trail)",
-      "Copy portal URL and formatted credentials to clipboard",
-      "Admin/Supervisor only — analysts cannot see Portal tab",
-      "OnboardingStatus step 9: portal_access (non-critical)",
-      "FirmSettings: configurable portal_url field with default Vercel URL",
-      "Full bilingual translations (25 portal keys in EN/ES)"
+      "Portal Access tab added to Documents (9th sub-tab, admin/supervisor only)",
+      "Portal login fix: profiles query made non-blocking in useAuth.ts",
+      "OnboardingStatus: portal_access added as step 9"
+    ]
+  },
+  {
+    "version": "1.2.18",
+    "date": "2026-03-21",
+    "changes": [
+      "Full portal user management UI in Documents tab (9th sub-tab after Branding)",
+      "Admin/Supervisor only — analysts cannot see or access the Portal tab",
+      "View all portal users with active/inactive status badges",
+      "Create portal access via modal: email + temp password + auto-generate option",
+      "Revoke/reactivate access with confirmation dialog (soft-delete, no hard delete)",
+      "Copy portal URL to clipboard",
+      "Copy formatted credentials to clipboard on create (URL + email + password)",
+      "Toast notifications for success/error states",
+      "Specific error handling: duplicate email, permission denied, generic errors",
+      "CRUD operations for client_portal_users table",
+      "createAccess() calls existing create_portal_user() RPC function",
+      "toggleActive() for revoke/reactivate (is_active toggle)",
+      "getPortalUrl() reads from firm settings with fallback to default Vercel URL",
+      "generatePassword() — secure random: 3 words + number + symbol (e.g. Solar-Mango-Tiger-42!)",
+      "Added portal_access as step 9 (non-critical)",
+      "Checks for >= 1 active row in client_portal_users",
+      "Shows incomplete until at least one portal user exists",
+      "New portal_url field in firm settings (stored in local settings.json)",
+      "Default: Vercel deployment URL",
+      "Admin-only editable, analyst read-only",
+      "Propagates to PortalAccessTab automatically",
+      "Full portal namespace (25 keys) in both en.json and es.json",
+      "FirmSettings portal keys (portalSection, portalUrl, portalUrlHint)",
+      "ClientProfile docPortal key"
     ]
   },
   {
@@ -194,7 +249,7 @@
   },
   {
     "version": "1.2.3",
-    "date": "2026-03-19",
+    "date": "2026-03-20",
     "changes": [
       "Bug fixes and stability improvements"
     ]
