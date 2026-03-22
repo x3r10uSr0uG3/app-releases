@@ -1,5 +1,16 @@
 [
   {
+    "version": "1.2.25",
+    "date": "2026-03-22",
+    "changes": [
+      "Fixed \"supabase is not defined\" error: created dedicated Supabase client in main process for investment IPC handlers",
+      "Added full bilingual i18n to Investment module (38 translation keys in both en.json and es.json)",
+      "InvestmentTargetList: all UI strings now use t() — title, subtitle, status labels, form labels, empty state, delete modal",
+      "InvestmentTargetProfile: all UI strings now use t() — section labels, rating picker, AI panel, save indicators, export button",
+      "Spanish translations: \"Investigación de Inversiones\", \"Nuevo Objetivo\", \"Panel AI\", etc."
+    ]
+  },
+  {
     "version": "1.2.24",
     "date": "2026-03-22",
     "changes": [
