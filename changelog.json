@@ -1,5 +1,40 @@
 [
   {
+    "version": "1.2.28",
+    "date": "2026-03-22",
+    "changes": [
+      "computeBookValue(): Book Value = Total Assets − Total Liabilities; Tangible Book Value excludes intangibles",
+      "Book Value bar added to Summary football field (Enterprise + Equity views)",
+      "Comparison flag: DCF below book value → \"potential value trap\" warning",
+      "computeLiquidationValue(): 6 asset classes with configurable recovery rates (Cash 100%, AR 70%, Inventory 50%, Fixed Assets 40%, Other Current 60%, Other NC 20%)",
+      "Conservative vs Orderly toggle (orderly = higher recovery rates for longer sale period)",
+      "Interactive recovery rate sliders per asset class with live recalculation",
+      "Liquidation bar in Summary football field (shown only when fixed assets exist)",
+      "Comparison flag: DCF below liquidation → \"distressed asset or check assumptions\"",
+      "Book Value breakdown card: Total Assets, Total Liabilities, Book Value, Tangible BV",
+      "Liquidation Value table: 6 rows with book value, recovery %, recovery value per asset class",
+      "Totals: Total Recovery − Total Liabilities = Net Liquidation Value",
+      "Conditional: \"No marketable fixed assets\" message when applicable",
+      "ValuationReconciliation now shows Book Value and Liquidation as floor rows alongside DCF, Multiples, 5×PTCF",
+      "Monthly/Annual toggle now works: Annual aggregates all monthly snapshots for the year via aggregateSnapshots()",
+      "No more ×12 multiplier — calculateSGRFromSnapshot takes data at whatever granularity it's given",
+      "Supporting metrics labels now toggle with period (Monthly Revenue / Annual Revenue, Asset Intensity label, ROIC label)",
+      "Loan Configuration panel: Annual interest rate slider, Linear/Balloon selector, Term length in months (years in parenthesis)",
+      "Computed debt service summary: Annual Interest, Annual Principal, Total Debt Service/year, DSCR",
+      "All loan params auto-saved per client"
+    ]
+  },
+  {
+    "version": "1.2.27",
+    "date": "2026-03-22",
+    "changes": [
+      "FundingDecision.jsx: Query now filters out projected/budget snapshots at the database level",
+      "Root cause: LIMIT 12 + ORDER BY period DESC returned only 2026 projected rows (COGS=0), pushing real 2025 historical data beyond the limit",
+      "Removed dangerous fallback that used projected data when no historicals were found",
+      "SGR now always uses the latest available historical snapshot with real P&L data"
+    ]
+  },
+  {
     "version": "1.2.26",
     "date": "2026-03-22",
     "changes": [
