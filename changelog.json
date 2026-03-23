@@ -1,5 +1,18 @@
 [
   {
+    "version": "1.2.34",
+    "date": "2026-03-22",
+    "changes": [
+      "No more \"∞\" survival — replaced with zero-revenue runway: \"If all revenue stopped today, how many days can we survive on net cash?\"",
+      "Survival = Net Cash / (Fixed Costs + Debt Service per day)",
+      "Profitable companies now show concrete runway days (e.g., 152 days) instead of misleading \"∞ Above breakeven\"",
+      "Classification updated: >365 days = Strong Reserve, >180 = Safe Zone, >90 = Caution, >30 = Alert, <30 = Critical",
+      "All components updated: SurvivalIndex, DownsideScenarios chart/table/tooltip, SensitivityAnalysis base case + table",
+      "Scenario chart bars now show actual day counts, no \"∞\" labels",
+      "Flag zeroRevRunway: true on above-breakeven results for UI context (\"Zero-revenue runway\")"
+    ]
+  },
+  {
     "version": "1.2.33",
     "date": "2026-03-22",
     "changes": [
