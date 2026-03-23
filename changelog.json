@@ -1,5 +1,17 @@
 [
   {
+    "version": "1.2.30",
+    "date": "2026-03-22",
+    "changes": [
+      "Manual EBITDA multiple input in DCF tab with industry reference, computes EV and Equity Value",
+      "EBITDA multiple bar appears in Summary football field (both EV and Equity cards) when set",
+      "Shares Outstanding input: persisted per client, enables price-per-share display",
+      "Total Value / Price per Share toggle: switches ALL football field bars between absolute values and per-share prices",
+      "All values auto-saved with DCF assumptions",
+      "Bilingual: \"Acciones en Circulación\", \"Precio / Acción\", \"Múltiplo EBITDA\""
+    ]
+  },
+  {
     "version": "1.2.29",
     "date": "2026-03-22",
     "changes": [
