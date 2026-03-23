@@ -1,5 +1,14 @@
 [
   {
+    "version": "1.2.39",
+    "date": "2026-03-22",
+    "changes": [
+      "Cash Flow by Source: Operating=Blue, Investing=Amber, Financing=Purple, Net Change=Navy — each category instantly distinguishable",
+      "Revenue Trend by Location: Replaced 20 dark blue/gray variants with 20 vibrant distinct colors (navy, blue, cyan, green, amber, purple, red, pink, teal, indigo)",
+      "Cost Colors: Renta=Navy, Servicios=Blue, Suministros=Amber, Mantenimiento=Green, Otros=Gray"
+    ]
+  },
+  {
     "version": "1.2.38",
     "date": "2026-03-22",
     "changes": [
