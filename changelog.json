@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.2.26",
+    "date": "2026-03-22",
+    "changes": [
+      "FundingDecision.jsx: Query now filters out projected/budget snapshots at the database level",
+      "Root cause: LIMIT 12 + ORDER BY period DESC returned only 2026 projected rows (COGS=0), pushing real 2025 historical data beyond the limit",
+      "Removed dangerous fallback that used projected data when no historicals were found",
+      "SGR now always uses the latest available historical snapshot with real P&L data"
+    ]
+  },
+  {
     "version": "1.2.25",
     "date": "2026-03-22",
     "changes": [
