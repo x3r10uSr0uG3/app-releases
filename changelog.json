@@ -1,5 +1,18 @@
 [
   {
+    "version": "1.2.31",
+    "date": "2026-03-22",
+    "changes": [
+      "DCF now computes TWO terminal value methods simultaneously:",
+      "Both appear as separate bars in the Summary football field (EV + Equity cards)",
+      "DCF tab shows side-by-side comparison cards with EV and Equity for both methods",
+      "Comparison bar shows % delta between TGR and Exit Multiple approaches",
+      "Exit Multiple input in DCF tab with industry reference, placeholder shows Damodaran median",
+      "\"Set an Exit Multiple to see this variant\" prompt when not configured",
+      "Note: preferred in LatAm markets where terminal growth rates are unreliable"
+    ]
+  },
+  {
     "version": "1.2.30",
     "date": "2026-03-22",
     "changes": [
