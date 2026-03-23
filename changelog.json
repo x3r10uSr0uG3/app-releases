@@ -1,5 +1,17 @@
 [
   {
+    "version": "1.2.32",
+    "date": "2026-03-22",
+    "changes": [
+      "DCF Exit Multiple now defaults to industry EV/EBITDA (Damodaran) instead of empty — both DCF methods always visible",
+      "Target EV/EBITDA Multiple input in Multiples tab for custom comparison",
+      "Target multiple appears as violet bar in Summary football field (both EV and Equity)",
+      "Target multiple row added to Multiples comparison table with ±15% range",
+      "Shows EV and Equity at target multiple inline with delta vs industry",
+      "All inputs auto-saved per client"
+    ]
+  },
+  {
     "version": "1.2.31",
     "date": "2026-03-22",
     "changes": [
