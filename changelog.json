@@ -1,5 +1,18 @@
 [
   {
+    "version": "1.2.35",
+    "date": "2026-03-22",
+    "changes": [
+      "Chart 1: Monthly Cash Flow — Green (surplus) or red (deficit) bars showing the actual cash position at each stress level. Makes the downward trend obvious.",
+      "Chart 2: Survival Days — Only shows bars for below-breakeven scenarios (when the company is actually burning cash). Above-breakeven scenarios show \"✓\" instead of a misleading number.",
+      "Eliminates the confusing pattern where -20% showed more days than the base case",
+      "Above breakeven: shows \"Self-sustaining\" headline instead of a numeric day count",
+      "Zero-revenue runway shown as a separate sub-metric: \"If all revenue stops — X days\"",
+      "Monthly surplus shown alongside when profitable",
+      "Above-breakeven scenarios show \"✓\" instead of misleading day counts"
+    ]
+  },
+  {
     "version": "1.2.34",
     "date": "2026-03-22",
     "changes": [
