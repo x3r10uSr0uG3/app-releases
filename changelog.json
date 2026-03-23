@@ -1,5 +1,17 @@
 [
   {
+    "version": "1.2.38",
+    "date": "2026-03-22",
+    "changes": [
+      "All valuation bars now share a common scale (globalMax) — methods are directly comparable at a glance",
+      "Bold colored mid-value marker line with value label above each bar",
+      "Translucent range band (low→high) shows uncertainty range clearly",
+      "Fixed-width labels: method name left, low–high range right, bar fills middle",
+      "More vertical spacing so labels don't overlap",
+      "Both EV and Equity cards independently scaled"
+    ]
+  },
+  {
     "version": "1.2.37",
     "date": "2026-03-22",
     "changes": [
