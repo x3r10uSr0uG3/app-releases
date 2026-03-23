@@ -1,5 +1,25 @@
 [
   {
+    "version": "1.2.29",
+    "date": "2026-03-22",
+    "changes": [
+      "Prominent banner in DCF view showing data basis: \"TTM — 12 months\" or \"N months, annualized\" or \"1 period, annualized\"",
+      "Shows Revenue, EBITDA, Net Income base values used",
+      "Warning when <12 months available: \"Annual consolidated data is preferred\"",
+      "computeCapitalizedEarnings(): Value = Normalized Earnings ÷ Cap Rate (Ke)",
+      "Normalizes earnings using average of last 12 available periods",
+      "Earnings stability check: coefficient of variation >30% triggers warning",
+      "Best for mature businesses with predictable earnings",
+      "computeExcessEarnings(): Total = Tangible Asset Value + (Excess Earnings ÷ Cap Rate)",
+      "Excess = Actual Earnings − (Tangible Assets × Normal ROA from industry benchmarks)",
+      "Separates tangible asset value from intangible/goodwill premium",
+      "Based on IRS Revenue Ruling 68-609",
+      "computeSDEValuation(): SDE = EBITDA + Owner Comp (estimated at 30% of personnel expenses)",
+      "Industry-calibrated multiples: 1.5x–4x range for PYMEs",
+      "Standard method for owner-operator exit valuations"
+    ]
+  },
+  {
     "version": "1.2.28",
     "date": "2026-03-22",
     "changes": [
