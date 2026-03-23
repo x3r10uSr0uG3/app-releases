@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.2.36",
+    "date": "2026-03-22",
+    "changes": [
+      "Sensitivity analysis now uses zeroRevRunwayDays for above-breakeven scenarios instead of days: 9999",
+      "Tornado chart shows meaningful variation: how each input (fixed costs, revenue, cash, debt service) affects zero-revenue resilience",
+      "Eliminates the broken \"9999+ for everything\" display that made the tornado chart useless",
+      "Risk concentration bars in Summary tab updated to match"
+    ]
+  },
+  {
     "version": "1.2.35",
     "date": "2026-03-22",
     "changes": [
