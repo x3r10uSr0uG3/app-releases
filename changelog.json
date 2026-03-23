@@ -1,5 +1,18 @@
 [
   {
+    "version": "1.2.37",
+    "date": "2026-03-22",
+    "changes": [
+      "Summary survival card: shows \"✓ Self-sustaining\" with monthly surplus + zero-rev runway (matches Survival tab)",
+      "Summary scenario chart: replaced misleading survival-days bars with Monthly Cash Flow bars (green/red, matches Scenarios tab)",
+      "Revenue concentration: replaced manual 1-5 slider with computed data from actual revenue_lines (top-client %, client count, HHI-based classification)",
+      "Risk indicators: survival index shows \"✓\" for self-sustaining with zero-rev runway sublabel",
+      "Tornado top 3: uses \"✓\" for self-sustaining, actual days for stressed scenarios",
+      "Fixed snapshot query limit: .limit(10) → .limit(50) preventing projected data from crowding out historicals",
+      "Added revenue_lines loading to StressTestTab for concentration calculation"
+    ]
+  },
+  {
     "version": "1.2.36",
     "date": "2026-03-22",
     "changes": [
