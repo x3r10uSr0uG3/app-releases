@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.2.41",
+    "date": "2026-03-23",
+    "changes": [
+      "Liquidation Value: Shows source field for each asset (Cash, AR, Inventory, Fixed Assets, etc.) with Balance Sheet period reference. Zero values flagged red with \"(no data entered)\". Formula: Net Liquidation = Total Recovery − Total Liabilities.",
+      "Capitalization of Earnings: Shows net income source, normalization method (average of N periods), cap rate from WACC/Ke, earnings variance (CV), and stability assessment. Formula breakdown with warning when CV > 30%.",
+      "Excess Earnings (Treasury Method): Shows tangible asset derivation, normal ROA calculation from industry data, excess earnings computation, and capitalization. Enhanced \"Insufficient data\" fallback explains exactly which field is missing.",
+      "SDE: Shows EBITDA, owner compensation (30% approximation), interest, D&A sources. Multiple range (1.5x–3.5x) with industry calibration from Damodaran."
+    ]
+  },
+  {
     "version": "1.2.40",
     "date": "2026-03-23",
     "changes": [
