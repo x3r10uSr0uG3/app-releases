@@ -1,5 +1,23 @@
 [
   {
+    "version": "1.2.43",
+    "date": "2026-03-23",
+    "changes": [
+      "Added scoresRef / adjustmentsRef / ddRef — mutable refs that are updated synchronously on every click, always reflecting the latest accumulated state",
+      "Debounced saves (600ms) — rapid clicks batch into a single API call with the final state instead of N concurrent overwrites",
+      "Flush-on-unmount — when the user navigates away before the debounce fires, pending saves are flushed immediately so no data is lost",
+      "Fixed applyAllSuggestions / applySuggestion to also read from scoresRef.current",
+      "Added dealLoadedRef guard to prevent the deal params auto-save useEffect from firing redundantly on initial data load",
+      "investor_analysis",
+      "revenue_lines",
+      "workforce",
+      "location_costs",
+      "SELECT/INSERT/UPDATE: Admin OR analyst with active client_assignments entry (removed_at IS NULL)",
+      "DELETE: Admin only",
+      "Drops the old permissive *_all policies before creating the new per-operation policies"
+    ]
+  },
+  {
     "version": "1.2.42",
     "date": "2026-03-23",
     "changes": [
