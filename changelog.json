@@ -1,5 +1,25 @@
 [
   {
+    "version": "1.2.40",
+    "date": "2026-03-23",
+    "changes": [
+      "Linear regression (6-11 months), Holt's double exponential smoothing (12-23 months), Holt-Winters triple exponential smoothing with seasonality (24+ months)",
+      "Auto-selects best method based on data availability",
+      "80% and 95% prediction intervals using t-distribution for small samples",
+      "Annualized trend growth rate, R², MSE, seasonal factors",
+      "Historical solid navy line, dashed gray trend, dashed blue forecast, confidence band fan shape",
+      "Method badge showing algorithm, R², data points",
+      "Custom tooltip with all values and ranges",
+      "RevenueForecastView with horizon selector (6/12/18/24 months) and method override",
+      "Summary metric cards, full forecast table with confidence intervals",
+      "Bilingual (ES/EN) with 19 locale keys per language",
+      "Forecast banner with \"Pre-fill with forecast\" button when 6+ months available",
+      "Auto-populates budget revenue fields with forecast midpoints",
+      "Conservative/Base/Optimistic scenarios use forecast lower80/midpoint/upper80 bands",
+      "Falls back to manual logic when insufficient data"
+    ]
+  },
+  {
     "version": "1.2.39",
     "date": "2026-03-22",
     "changes": [
