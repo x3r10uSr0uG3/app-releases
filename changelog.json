@@ -1,5 +1,17 @@
 [
   {
+    "version": "1.2.44",
+    "date": "2026-03-24",
+    "changes": [
+      "Reassign button on every portal user row — opens modal to swap which client a login sees instantly (critical for testing). Dropdown of all clients, amber-themed modal.",
+      "Whitelabeling Preview panel — collapsible \"Vista Previa del Portal\" section below the users list. Shows a scaled mockup of how the portal header, KPI cards, and footer look with the client's current branding config (logo, displayName, primaryColor, footerText, hidePoweredBy). When whitelabelMode = false, shows Asanoski defaults.",
+      "\"Abrir en Branding →\" link navigates directly to the Branding sub-tab for editing.",
+      "Portal Users sub-tab — table of ALL client_portal_users across all clients with email, company name, status pill, created date. Reassign and Revoke/Activate actions per row. \"+ Create\" button with client dropdown. Search/filter by email or client name.",
+      "Client Summary sub-tab — table showing portal access status per client: portal user count, active count, last activity. Clients with 0 users show a \"+ Create Access\" quick action.",
+      "Added reassignUser(userId, newClientId) method for client reassignment."
+    ]
+  },
+  {
     "version": "1.2.43",
     "date": "2026-03-23",
     "changes": [
