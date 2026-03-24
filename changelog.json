@@ -1,5 +1,14 @@
 [
   {
+    "version": "1.2.42",
+    "date": "2026-03-23",
+    "changes": [
+      "accounts_receivable, inventory, total_assets, total_liabilities, total_equity",
+      "fixed_assets, accumulated_depreciation, intangible_assets",
+      "other_current_assets, other_non_current_assets, custom_metrics passthrough"
+    ]
+  },
+  {
     "version": "1.2.41",
     "date": "2026-03-23",
     "changes": [
