@@ -1,5 +1,16 @@
 [
   {
+    "version": "1.2.57",
+    "date": "2026-03-26",
+    "changes": [
+      "Personas with cached responses now show a gray \"↻ Re-run\" button instead of hiding the run option",
+      "Personas with empty cached responses (from the v1.2.55 bug) show a red \"Empty response — click Re-run\" message",
+      "Cache guard now only skips re-run when the response has actual content AND is < 24h old — empty responses are always re-runnable",
+      "\"Run All\" button now forces re-run on all personas (ignores cache), so you can refresh the entire section panel in one click",
+      "runPersona(persona, force) accepts optional force parameter to bypass cache"
+    ]
+  },
+  {
     "version": "1.2.56",
     "date": "2026-03-26",
     "changes": [
