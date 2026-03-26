@@ -1,5 +1,14 @@
 [
   {
+    "version": "1.2.48",
+    "date": "2026-03-26",
+    "changes": [
+      "src/scripts/insertDemoInvestmentTarget.cjs — inserts complete fictional demo target (Distribuidora Centroamérica Verde S.A.)",
+      "src/scripts/fixDemoData.cjs — remaps demo data to exact field keys used by Section1-6 components (27 fieldGroups, 20 analyst notes)",
+      "src/scripts/fixSection5.cjs — fixes Section 5 financial tables with dynamically computed ISTable field keys (65 historical IS cells + 24 forecast cells)"
+    ]
+  },
+  {
     "version": "1.2.47",
     "date": "2026-03-26",
     "changes": [
