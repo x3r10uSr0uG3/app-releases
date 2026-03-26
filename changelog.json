@@ -1,5 +1,18 @@
 [
   {
+    "version": "1.2.53",
+    "date": "2026-03-26",
+    "changes": [
+      "chartBlock() helper — full-width chart (6.5\" at 96 DPI) with italic caption (Fig. N — description) and gray source attribution line below",
+      "chartRow() helper — two charts side-by-side in a borderless 2-column table (3.1\" each) with independent captions",
+      "Executive Summary: Revenue trend (Fig. 1) + EBITDA margin trajectory (Fig. 2), full-width with analyst commentary captions",
+      "Section 2 Market: Geographic donut + Market share horizontal bar side-by-side (Fig. 3, Fig. 4) using chartRow()",
+      "Section 5 Financial: IRR sensitivity matrix (Fig. 5), 6.5\" × 3.3\" with color scale description in caption",
+      "All captions use Calibri italic (guaranteed Word availability) with source in muted gray",
+      "Charts from DOM capture (3x res) display at 624×278px (full) or 298×240px (half) — crisp at print resolution"
+    ]
+  },
+  {
     "version": "1.2.52",
     "date": "2026-03-26",
     "changes": [
