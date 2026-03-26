@@ -1,5 +1,21 @@
 [
   {
+    "version": "1.2.60",
+    "date": "2026-03-26",
+    "changes": [
+      "Cover page: \"INFORME DE INVESTIGACIÓN DE INVERSIONES\", \"Preparado por\", \"Fecha de Análisis\", \"Clasificación\"",
+      "Header/footer: \"Investigación de Inversiones\", \"Para uso interno y de clientes únicamente\"",
+      "All 6 section headings and sub-headings in Spanish (Sección 1–6, 1.1–6.4)",
+      "All KV table row labels: \"Calificación del Analista\", \"Nivel de Convicción\", \"EV de Entrada\", etc.",
+      "Table column headers: \"Accionista\", \"% Participación\", \"Cliente\", \"Proveedor\", \"Riesgo\", \"Severidad\"",
+      "Analyst note hints: \"Evaluación del CEO\", \"Coherencia Estratégica\", \"Riesgo Dominante\", etc.",
+      "Figure captions: \"Evolución de ingresos\", \"Concentración geográfica\", \"Sensibilidad de TIR\"",
+      "Chart labels: \"Ingresos Históricos\", \"Margen Bruto %\", \"Participación de Mercado\"",
+      "IRR sensitivity: \"Múltiplo de Salida\", \"Caso Base\", \"Pesimista\", \"Optimista\"",
+      "Panel discussion heading: \"Discusión del Panel\""
+    ]
+  },
+  {
     "version": "1.2.59",
     "date": "2026-03-26",
     "changes": [
