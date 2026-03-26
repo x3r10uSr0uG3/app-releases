@@ -1,5 +1,19 @@
 [
   {
+    "version": "1.2.51",
+    "date": "2026-03-26",
+    "changes": [
+      "Geographic Revenue Exposure donut chart (navy/jade/granate palette, % labels inside slices)",
+      "Market Share Comparison horizontal bar chart (target company highlighted in granate, sorted by share)",
+      "Revenue Trend composed bar chart (navy historical bars + light blue forecast bars, CAGR annotation, granate forecast divider)",
+      "Margin Profile dual-line chart (jade Gross Margin + navy EBITDA Margin with dashed forecast extension, 16% target reference line)",
+      "IRR Sensitivity Heatmap — Goldman-style 7x5 grid (exit multiple rows x EBITDA scenario columns), base case highlighted in granate, color scale from navy (≥40% IRR) through jade (30-40%) to red (<10%), MoM shown below IRR in each cell",
+      "ChartTheme.js — centralized color palette, typography (Segoe UI titles, Inter data labels), axis styles, number formatters, safe parser",
+      "All charts use inline styles (no Tailwind) for print/export compatibility",
+      "Charts render inside white bordered cards within section components"
+    ]
+  },
+  {
     "version": "1.2.50",
     "date": "2026-03-26",
     "changes": [
