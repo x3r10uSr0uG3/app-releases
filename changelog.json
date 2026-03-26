@@ -1,5 +1,19 @@
 [
   {
+    "version": "1.2.55",
+    "date": "2026-03-26",
+    "changes": [
+      "All charts now full-width stacked (removed side-by-side layout that crushed donut/bar charts)",
+      "Per-chart display dimensions calibrated: Revenue 6.5\"×3.04\", Margin 6.5\"×2.79\", Geography 6.04\"×3.23\" (centered), Market Share 6.5\"×3.54\" (taller for 6 bars), IRR 6.5\"×3.13\"",
+      "Geography donut: larger radii (85/130px), legend moved to bottom for horizontal space",
+      "Market share chart: wider YAxis (180px) for long company names, taller per-bar spacing",
+      "Section 5 now has Revenue + Margin charts (Fig. 5, Fig. 6) after IS table",
+      "Section 6 now has IRR sensitivity (Fig. 7) between valuation and risk matrix",
+      "Capture timing increased to 600ms per section + 120ms per chart for reliable rendering",
+      "All figure captions updated with descriptive analytics commentary"
+    ]
+  },
+  {
     "version": "1.2.54",
     "date": "2026-03-26",
     "changes": [
