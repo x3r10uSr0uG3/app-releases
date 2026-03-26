@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.2.47",
+    "date": "2026-03-26",
+    "changes": [
+      "New scripts/update-app-description.sh — automatically regenerates APP_DESCRIPTION.md dynamic sections:",
+      "Integrated into release.sh — runs automatically before every DMG build",
+      "Fixed release.sh reference from non-existent update-app-description.cjs to new shell script",
+      "Updated Client Portal section in APP_DESCRIPTION.md to reflect Portal v2.0 (4-tab dashboard, 18 modules, Recharts charts, TypeScript)"
+    ]
+  },
+  {
     "version": "1.2.46",
     "date": "2026-03-24",
     "changes": [
