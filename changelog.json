@@ -1,5 +1,16 @@
 [
   {
+    "version": "1.2.49",
+    "date": "2026-03-26",
+    "changes": [
+      "Granate (#8B4B5C) left border with light pink background — visually distinct from navy analyst notes",
+      "Each persona rendered as a table row: name + role on the left, full analysis text on the right",
+      "10 personas supported: Schwarzman, Wasserstein, Chanos, Porter, Christensen, Buffett, Drucker, Martin, Deming, Watson-Hemphill",
+      "Sections with no cached persona responses show nothing (no empty block)",
+      "Responses sorted alphabetically by persona name within each section"
+    ]
+  },
+  {
     "version": "1.2.48",
     "date": "2026-03-26",
     "changes": [
