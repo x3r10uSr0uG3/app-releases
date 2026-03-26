@@ -1,5 +1,17 @@
 [
   {
+    "version": "1.2.52",
+    "date": "2026-03-26",
+    "changes": [
+      "html2canvas capture at 3x scale (2040x900px, 314 PPI) — print-quality",
+      "Section navigation during export — automatically visits Sections 5, 2, 6 to mount chart components, captures all 5 charts, then restores original section",
+      "Status feedback: \"Capturing charts...\" → \"Generating document...\" during export",
+      "Graceful fallback: if DOM capture fails (e.g., charts not mounted), falls back to server-side Chart.js rendering from v1.2.50",
+      "data-chart-id attributes on all 5 chart components for reliable DOM targeting",
+      "captureCharts.js utility — reusable chart capture with font enforcement in cloned DOM"
+    ]
+  },
+  {
     "version": "1.2.51",
     "date": "2026-03-26",
     "changes": [
