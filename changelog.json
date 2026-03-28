@@ -19,14 +19,20 @@
     "version": "1.2.59",
     "date": "2026-03-26",
     "changes": [
-      "Bug fixes and improvements"
+      "Nuevo: Pre-Release QA Gate automático — 25 verificaciones en 6 categorías antes de cada build",
+      "QA verifica: integridad de datos (claves kyc_responses), seguridad (API keys expuestas), referencias de módulos, handlers IPC, prefijos de campos de inversión, dependencias npm",
+      "El gate habría detectado los 3 bugs del incidente del panel de IA antes de cualquier release",
+      "Ejecutado automáticamente al correr el script de release (scripts/pre-release-qa.cjs)"
     ]
   },
   {
     "version": "1.2.58",
     "date": "2026-03-26",
     "changes": [
-      "Bug fixes and improvements"
+      "Corregido: Panel de IA — API key nunca se enviaba (pasaba cadena vacía), todas las llamadas fallaban en silencio",
+      "Corregido: El handler IPC analysis:run ahora auto-obtiene la API key de la tabla settings cuando no se provee",
+      "Corregido: Respuestas vacías ya no se cachean — los errores de API se muestran como alertas",
+      "Corregido: Los datos de contexto de secciones se leían con claves incorrectas (corregido en v1.2.57, confirmado funcionando)"
     ]
   },
   {
