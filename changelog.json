@@ -1,5 +1,13 @@
 [
   {
+    "version": "1.2.65",
+    "date": "2026-03-30",
+    "changes": [
+      "TableRow component called fmtCurrency which is defined inside CashFlowForecast — out of scope, causing ReferenceError crash on click",
+      "Fix: fmtCurrency now passed as fmt prop to all TableRow instances"
+    ]
+  },
+  {
     "version": "1.2.62",
     "date": "2026-03-30",
     "changes": [

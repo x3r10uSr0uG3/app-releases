@@ -1,7 +1,7 @@
 {
-  "version": "1.2.62",
+  "version": "1.2.65",
   "releaseDate": "2026-03-30",
-  "notes": "Fix — Pre-Release QA + Release Pipeline",
-  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.2.62/Analyst.Workstation-1.2.62-arm64.dmg",
-  "downloadUrlX64": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.2.62/Analyst.Workstation-1.2.62.dmg"
+  "notes": "Fix — Cash Flow Forecast "Ver Tabla" Crash",
+  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.2.65/Analyst.Workstation-1.2.65-arm64.dmg",
+  "downloadUrlX64": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.2.65/Analyst.Workstation-1.2.65.dmg"
 }
