@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.2.68",
+    "date": "2026-04-13",
+    "changes": [
+      "Added client_name (\"Cliente\") as the first column in the Products table — allows tracking different pricing per end-client for the same product",
+      "New product rows auto-fill resource time columns with 1 / processing_rate (hours/unit) from the Resources table, so analysts just fine-tune instead of entering from scratch",
+      "Updated PRODUCT_FIELDS and EMPTY_PRODUCT in ops-constants.js",
+      "Paste from Excel supports the new column order (Cliente first)"
+    ]
+  },
+  {
     "version": "1.2.67",
     "date": "2026-04-13",
     "changes": [

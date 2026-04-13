@@ -1,7 +1,7 @@
 {
-  "version": "1.2.67",
+  "version": "1.2.68",
   "releaseDate": "2026-04-13",
-  "notes": "Excel paste support in Operations Resources & Products tables",
-  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.2.67/Analyst.Workstation-1.2.67-arm64.dmg",
-  "downloadUrlX64": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.2.67/Analyst.Workstation-1.2.67.dmg"
+  "notes": "Client column + auto-fill resource times in Products table",
+  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.2.68/Analyst.Workstation-1.2.68-arm64.dmg",
+  "downloadUrlX64": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.2.68/Analyst.Workstation-1.2.68.dmg"
 }
