@@ -1,5 +1,23 @@
 [
   {
+    "version": "1.2.67",
+    "date": "2026-04-13",
+    "changes": [
+      "Resources table (Step2ProcessFlow.jsx): Added handleResourcePaste — copy a block from Excel and paste directly into the Resources grid; auto-creates rows if pasted data exceeds existing rows",
+      "Products table (Step2ProcessFlow.jsx): Added handleProductPaste — same clipboard paste support for the Products grid",
+      "Shared parseClipNum helper handles thousand separators, parenthesized negatives, and trailing % signs",
+      "Single-value paste still handled by browser default; multi-cell paste (tab/newline delimited) intercepted and mapped to grid"
+    ]
+  },
+  {
+    "version": "1.2.66",
+    "date": "2026-03-30",
+    "changes": [
+      "TimeTracker.jsx: JSON.parse(billingProfile.notes) was called at render level with no try/catch — any non-JSON value in notes crashed the component on every render; wrapped in IIFE with try/catch",
+      "Sidebar.jsx: JSON.parse(r.response) in forEach loop inside fetchClients() had no error handling — malformed branding JSON for any client caused the entire sidebar to fail to load; wrapped in per-iteration try/catch"
+    ]
+  },
+  {
     "version": "1.2.65",
     "date": "2026-03-30",
     "changes": [
