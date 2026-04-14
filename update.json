@@ -1,7 +1,7 @@
 {
-  "version": "1.2.99",
+  "version": "1.2.100",
   "releaseDate": "2026-04-14",
-  "notes": "Enhancement — Demand-weighted resource times (media ponderada)",
-  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.2.99/Analyst.Workstation-1.2.99-arm64.dmg",
-  "downloadUrlX64": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.2.99/Analyst.Workstation-1.2.99.dmg"
+  "notes": "Enhancement — TOC constraint identification via Tu intensity",
+  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.2.100/Analyst.Workstation-1.2.100-arm64.dmg",
+  "downloadUrlX64": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.2.100/Analyst.Workstation-1.2.100.dmg"
 }

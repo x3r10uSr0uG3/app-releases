@@ -1,5 +1,19 @@
 [
   {
+    "version": "1.2.100",
+    "date": "2026-04-14",
+    "changes": [
+      "Load table rewritten: Constraint identification now uses Tu intensity (Σ(Tu × demand) / effective_capacity) instead of raw time-based utilization. The CCR is the resource with the most throughput dollars competing for its capacity — correctly prioritizing economic impact over simple load.",
+      "New columns: Demand Total, Effective Capacity, % Carga, and Tu/Cap (throughput per unit of capacity, in currency). Resources sorted by Tu intensity with CCR flagged first.",
+      "Bar chart: Now visualizes Tu intensity (relative to highest), not load percentage. Shows which resource has the most throughput at stake.",
+      "Blue column auto-fill: Tu-weighted times per client (media ponderada). Load table no longer depends on these values — constraint ID uses demand vs capacity directly.",
+      "When a machine fails: Capacity drops → Tu intensity spikes → resource correctly flagged as new constraint.",
+      "Legibility overhaul: Products table upgraded from text-xs to text-sm, minimum column widths enforced (140px for text, 90-100px for numbers), number inputs right-aligned, blue columns use distinct blue border + white background, resource headers truncated at 16 chars with full name on hover",
+      "Release script fix: Failed QA runs now revert the version bump — no more wasted version numbers.",
+      "RLS fix SQL: Added supabase-fix-ops-cycles-rls.sql for the ops_cycles INSERT policy"
+    ]
+  },
+  {
     "version": "1.2.99",
     "date": "2026-04-14",
     "changes": [
