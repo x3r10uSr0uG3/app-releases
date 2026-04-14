@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.2.97",
+    "date": "2026-04-14",
+    "changes": [
+      "Resource-time auto-fill: Blue columns seed empty cells with 1/processing_rate as a starting point for the analyst to adjust per product. Does not touch demand or other fields.",
+      "Legibility overhaul: Products table upgraded from text-xs to text-sm, minimum column widths enforced (140px for text, 90-100px for numbers), number inputs right-aligned, blue columns use distinct blue border + white background, resource headers truncated at 16 chars with full name on hover",
+      "Release script fix: Failed QA runs now revert the version bump — no more wasted version numbers. Fixed set -e preventing the revert block from executing.",
+      "RLS fix SQL: Added supabase-fix-ops-cycles-rls.sql for the ops_cycles INSERT policy"
+    ]
+  },
+  {
     "version": "1.2.91",
     "date": "2026-04-14",
     "changes": [
