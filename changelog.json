@@ -1,5 +1,14 @@
 [
   {
+    "version": "1.2.84",
+    "date": "2026-04-14",
+    "changes": [
+      "Removed bulk auto-populate: The v1.2.82 effect that filled ALL products' resource-time columns with 1/processing_rate was wrong — it gave every product the same time, which is physically meaningless. Auto-fill now ONLY applies to new rows added via \"+ Agregar Producto\" button, as a starting point for the analyst to adjust per-product.",
+      "Legibility overhaul: Products table upgraded from text-xs to text-sm, minimum column widths enforced (140px for text, 90-100px for numbers), number inputs right-aligned, blue columns use distinct blue border + white background, resource headers truncated at 16 chars with full name on hover",
+      "RLS fix SQL: Added supabase-fix-ops-cycles-rls.sql for the ops_cycles INSERT policy"
+    ]
+  },
+  {
     "version": "1.2.83",
     "date": "2026-04-14",
     "changes": [
