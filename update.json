@@ -1,7 +1,7 @@
 {
-  "version": "1.2.79",
+  "version": "1.2.82",
   "releaseDate": "2026-04-14",
-  "notes": "Fix — Full ghost-save audit + QA hardening",
-  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.2.79/Analyst.Workstation-1.2.79-arm64.dmg",
-  "downloadUrlX64": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.2.79/Analyst.Workstation-1.2.79.dmg"
+  "notes": "Enhancement — Products table auto-populate + legibility",
+  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.2.82/Analyst.Workstation-1.2.82-arm64.dmg",
+  "downloadUrlX64": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.2.82/Analyst.Workstation-1.2.82.dmg"
 }

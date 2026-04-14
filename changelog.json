@@ -1,5 +1,14 @@
 [
   {
+    "version": "1.2.82",
+    "date": "2026-04-14",
+    "changes": [
+      "Auto-populate time_on_resources: Blue resource-time columns now auto-fill with 1 / processing_rate for any product that has empty cells — runs on data load and whenever resources change, never overwrites user-entered values",
+      "Legibility overhaul: Products table upgraded from text-xs to text-sm, minimum column widths enforced (140px for text, 90-100px for numbers), number inputs right-aligned, blue columns use distinct blue border + white background, resource headers truncated at 16 chars with full name on hover",
+      "RLS fix SQL: Added supabase-fix-ops-cycles-rls.sql for the ops_cycles INSERT policy (WITH CHECK was stripped during v1.2.59 security hardening)"
+    ]
+  },
+  {
     "version": "1.2.79",
     "date": "2026-04-14",
     "changes": [
