@@ -1,7 +1,7 @@
 {
-  "version": "1.2.84",
+  "version": "1.2.91",
   "releaseDate": "2026-04-14",
-  "notes": "Fix — Products table legibility + remove bad auto-populate",
-  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.2.84/Analyst.Workstation-1.2.84-arm64.dmg",
-  "downloadUrlX64": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.2.84/Analyst.Workstation-1.2.84.dmg"
+  "notes": "Fix — Products table legibility + resource-time auto-fill",
+  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.2.91/Analyst.Workstation-1.2.91-arm64.dmg",
+  "downloadUrlX64": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.2.91/Analyst.Workstation-1.2.91.dmg"
 }
