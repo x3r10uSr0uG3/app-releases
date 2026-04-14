@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.2.72",
+    "date": "2026-04-13",
+    "changes": [
+      "Root cause: Every Ops Step component (Step1-Step7) saved data via UPDATE ops_cycles WHERE status = 'active', but no code ever created the initial active cycle row for a client. Supabase returns no error when an UPDATE matches 0 rows, so saves appeared successful but data was silently lost on reload.",
+      "Fix (primary): fetchOpsConfig() in ClientProfile.jsx now auto-creates an active ops_cycles row (cycle_number=1) if none exists when the Ops tab loads.",
+      "Fix (safety net): All auto-save and manual save functions across Step1-Step7 now check if the UPDATE affected 0 rows and fall back to INSERT, ensuring data is never silently dropped.",
+      "Files changed: ClientProfile.jsx, Step1SystemBoundary.jsx, Step2ProcessFlow.jsx, Step3Constraint.jsx, Step4Exploit.jsx, Step5Subordinate.jsx, Step6Elevate.jsx, Step7Audit.jsx"
+    ]
+  },
+  {
     "version": "1.2.68",
     "date": "2026-04-13",
     "changes": [
@@ -72,31 +82,6 @@
     ]
   },
   {
-    "version": "1.2.59",
-    "date": "2026-03-26",
-    "changes": [
-      "Bug fixes and improvements"
-    ]
-  },
-  {
-    "version": "1.2.58",
-    "date": "2026-03-26",
-    "changes": [
-      "Bug fixes and improvements"
-    ]
-  },
-  {
-    "version": "1.2.57",
-    "date": "2026-03-26",
-    "changes": [
-      "Personas with cached responses now show a gray \"↻ Re-run\" button instead of hiding the run option",
-      "Personas with empty cached responses (from the v1.2.55 bug) show a red \"Empty response — click Re-run\" message",
-      "Cache guard now only skips re-run when the response has actual content AND is < 24h old — empty responses are always re-runnable",
-      "\"Run All\" button now forces re-run on all personas (ignores cache), so you can refresh the entire section panel in one click",
-      "runPersona(persona, force) accepts optional force parameter to bypass cache"
-    ]
-  },
-  {
     "version": "1.2.56",
     "date": "2026-03-26",
     "changes": [
@@ -105,20 +90,6 @@
       "Cache guard now only skips re-run when the response has actual content AND is < 24h old — empty responses are always re-runnable",
       "\"Run All\" button now forces re-run on all personas (ignores cache), so you can refresh the entire section panel in one click",
       "runPersona(persona, force) accepts optional force parameter to bypass cache"
-    ]
-  },
-  {
-    "version": "1.2.55",
-    "date": "2026-03-26",
-    "changes": [
-      "All charts now full-width stacked (removed side-by-side layout that crushed donut/bar charts)",
-      "Per-chart display dimensions calibrated: Revenue 6.5\"×3.04\", Margin 6.5\"×2.79\", Geography 6.04\"×3.23\" (centered), Market Share 6.5\"×3.54\" (taller for 6 bars), IRR 6.5\"×3.13\"",
-      "Geography donut: larger radii (85/130px), legend moved to bottom for horizontal space",
-      "Market share chart: wider YAxis (180px) for long company names, taller per-bar spacing",
-      "Section 5 now has Revenue + Margin charts (Fig. 5, Fig. 6) after IS table",
-      "Section 6 now has IRR sensitivity (Fig. 7) between valuation and risk matrix",
-      "Capture timing increased to 600ms per section + 120ms per chart for reliable rendering",
-      "All figure captions updated with descriptive analytics commentary"
     ]
   },
   {
@@ -175,17 +146,6 @@
     ]
   },
   {
-    "version": "1.2.50",
-    "date": "2026-03-26",
-    "changes": [
-      "Granate (#8B4B5C) left border with light pink background — visually distinct from navy analyst notes",
-      "Each persona rendered as a table row: name + role on the left, full analysis text on the right",
-      "10 personas supported: Schwarzman, Wasserstein, Chanos, Porter, Christensen, Buffett, Drucker, Martin, Deming, Watson-Hemphill",
-      "Sections with no cached persona responses show nothing (no empty block)",
-      "Responses sorted alphabetically by persona name within each section"
-    ]
-  },
-  {
     "version": "1.2.49",
     "date": "2026-03-26",
     "changes": [
@@ -213,18 +173,6 @@
       "Integrated into release.sh — runs automatically before every DMG build",
       "Fixed release.sh reference from non-existent update-app-description.cjs to new shell script",
       "Updated Client Portal section in APP_DESCRIPTION.md to reflect Portal v2.0 (4-tab dashboard, 18 modules, Recharts charts, TypeScript)"
-    ]
-  },
-  {
-    "version": "1.2.46",
-    "date": "2026-03-24",
-    "changes": [
-      "New IPC handler portal:create-user in Electron main process",
-      "Uses the GoTrue Admin API (POST /auth/v1/admin/users) with service_role key — same pattern as the existing admin:invite-user handler",
-      "GoTrue creates the user internally with proper password hashing, identities, and all required metadata",
-      "Then links the user to client_portal_users via service_role REST calls",
-      "Updated usePortalAccess.js to use IPC instead of the SQL RPC (with RPC fallback for non-Electron contexts)",
-      "Existing broken portal users need to be deleted and recreated via the Portal Access tab"
     ]
   },
   {
@@ -321,12 +269,14 @@
     "version": "1.2.38",
     "date": "2026-03-22",
     "changes": [
-      "All valuation bars now share a common scale (globalMax) — methods are directly comparable at a glance",
+      "Red dashed reference line drawn across ALL valuation bars showing the DCF (TGR) implied value",
+      "EV card: reference = DCF enterprise value; Equity card: reference = DCF equity value",
+      "Legend in each card header: \"Implied (DCF): Q11.6M\" with dashed line indicator",
+      "Bars to the right of the line = upside vs implied; bars to the left = discount",
+      "Makes it easy to argue with clients: \"Here's where you ARE (line) vs. where the market SAYS you should be\"",
+      "All valuation bars share a common scale (globalMax) — methods directly comparable",
       "Bold colored mid-value marker line with value label above each bar",
-      "Translucent range band (low→high) shows uncertainty range clearly",
-      "Fixed-width labels: method name left, low–high range right, bar fills middle",
-      "More vertical spacing so labels don't overlap",
-      "Both EV and Equity cards independently scaled"
+      "Translucent range band (low→high) shows uncertainty range clearly"
     ]
   },
   {
@@ -478,16 +428,6 @@
     ]
   },
   {
-    "version": "1.2.27",
-    "date": "2026-03-22",
-    "changes": [
-      "FundingDecision.jsx: Query now filters out projected/budget snapshots at the database level",
-      "Root cause: LIMIT 12 + ORDER BY period DESC returned only 2026 projected rows (COGS=0), pushing real 2025 historical data beyond the limit",
-      "Removed dangerous fallback that used projected data when no historicals were found",
-      "SGR now always uses the latest available historical snapshot with real P&L data"
-    ]
-  },
-  {
     "version": "1.2.26",
     "date": "2026-03-22",
     "changes": [
@@ -553,12 +493,10 @@
     "version": "1.2.22",
     "date": "2026-03-22",
     "changes": [
-      "Release script now auto-syncs changelog.json from CHANGELOG.md before every push",
-      "Every release is guaranteed to have changelog entries visible in the update dialog",
-      "Added missing changelog entries for v1.2.19, v1.2.20, v1.2.21",
-      "Cost Structure: fixed empty category labels on reload (labels now re-map from translations)",
-      "Added missing financialEntry locale keys: salaries, rent, utilities, depreciation, otherOpex",
-      "Fixed RLS WITH CHECK on workforce, revenue_lines, location_costs (blocked writes after v1.1.59 hardening)"
+      "Admin Panel: Fixed crash when clicking analyst with no assigned clients (Isulejman card) — added optional chaining on member.clients",
+      "Cost Structure: Fixed empty category labels on reload — labels now re-map from translations with hardcoded fallbacks",
+      "Release script now auto-syncs changelog.json from CHANGELOG.md — guarantees changelog entries in every update dialog",
+      "Added missing changelog entries for v1.2.19, v1.2.20, v1.2.21"
     ]
   },
   {
@@ -781,13 +719,6 @@
     ]
   },
   {
-    "version": "1.2.6",
-    "date": "2026-03-20",
-    "changes": [
-      "Bug fixes and stability improvements"
-    ]
-  },
-  {
     "version": "1.2.5",
     "date": "2026-03-19",
     "changes": [
@@ -795,13 +726,6 @@
       "Cotización Tier 2 defaults — Fixed race condition where autoTier hadn't resolved when loadData() ran, causing Tier 1 defaults ($1,500) to always apply. Now waits for useTier() to finish loading before initializing defaults.",
       "OnboardingStatus tier mismatch warning — Fixed detection logic: added Number() coercion to handle string vs number comparison, added fallback to useTier() hook when qualification data lacks assigned_tier, made warning message bilingual.",
       "NDA international firm paragraph — International templates (Panama, Mexico, US, UK, Neutral) no longer show Guatemala-specific legal formalities (NIT, DPI/CUI, Registro Mercantil). New buildNDAFirmParagraph_international() produces simplified party paragraph matching the DOCX generator output."
-    ]
-  },
-  {
-    "version": "1.2.3",
-    "date": "2026-03-20",
-    "changes": [
-      "Bug fixes and stability improvements"
     ]
   },
   {
