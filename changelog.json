@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.2.99",
+    "date": "2026-04-14",
+    "changes": [
+      "Blue columns now differ by client: Uses demand-weighted Tu (throughput per unit) to differentiate resource times. Formula: time = (1/rate) × (client_Tu / weighted_avg_Tu). Within a client, all products get the same time (batch processing). Between clients, times differ based on throughput characteristics. Analyst can still fine-tune any value — auto-fill only touches empty cells.",
+      "Legibility overhaul: Products table upgraded from text-xs to text-sm, minimum column widths enforced (140px for text, 90-100px for numbers), number inputs right-aligned, blue columns use distinct blue border + white background, resource headers truncated at 16 chars with full name on hover",
+      "Release script fix: Failed QA runs now revert the version bump — no more wasted version numbers.",
+      "RLS fix SQL: Added supabase-fix-ops-cycles-rls.sql for the ops_cycles INSERT policy"
+    ]
+  },
+  {
     "version": "1.2.98",
     "date": "2026-04-14",
     "changes": [
