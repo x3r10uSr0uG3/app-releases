@@ -1,7 +1,7 @@
 {
-  "version": "1.2.72",
-  "releaseDate": "2026-04-13",
-  "notes": "Fix — Operations data not persisting (silent save failure)",
-  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.2.72/Analyst.Workstation-1.2.72-arm64.dmg",
-  "downloadUrlX64": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.2.72/Analyst.Workstation-1.2.72.dmg"
+  "version": "1.2.79",
+  "releaseDate": "2026-04-14",
+  "notes": "Fix — Full ghost-save audit + QA hardening",
+  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.2.79/Analyst.Workstation-1.2.79-arm64.dmg",
+  "downloadUrlX64": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.2.79/Analyst.Workstation-1.2.79.dmg"
 }

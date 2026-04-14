@@ -1,5 +1,14 @@
 [
   {
+    "version": "1.2.79",
+    "date": "2026-04-14",
+    "changes": [
+      "App-wide audit: Verified every Supabase .update() call across all 70+ components for silent 0-row success (ghost-save pattern). Fixed 18 sites:",
+      "Pattern A (critical): No other missing-row-creation bugs found beyond ops_cycles (fixed in v1.2.72)",
+      "QA script: Added \"Ghost-Save Detection\" check to pre-release-qa.cjs — any future .update() without .select() now blocks the release"
+    ]
+  },
+  {
     "version": "1.2.72",
     "date": "2026-04-13",
     "changes": [
