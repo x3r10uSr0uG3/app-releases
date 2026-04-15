@@ -1,5 +1,18 @@
 [
   {
+    "version": "1.3.2",
+    "date": "2026-04-15",
+    "changes": [
+      "Export options modal: Clicking \"Export Memo\" now opens a dropdown with language selection and panel name toggle before generating the document",
+      "Auto language detection: Content language (Spanish/English) is automatically detected from analyst fields and KYC data",
+      "AI-powered translation: When exporting in a different language than the content, all fields (KYC data, analyst notes, AI panel responses) are translated via Claude before document generation",
+      "Bilingual labels: All 180+ static labels in the Word document (section headings, field names, table headers, captions, header/footer) now render in the selected export language",
+      "Panel name toggle: Panelist names and roles can be shown or hidden in the exported report — when hidden, panel discussion appears as anonymous full-width paragraphs with dividers",
+      "Language suffix in filename: Exported files now include _EN or _ES suffix for easy identification",
+      "Files changed: InvestmentTargetProfile.jsx, investment-memo-generator.cjs, main.cjs, preload.cjs"
+    ]
+  },
+  {
     "version": "1.3.1",
     "date": "2026-04-14",
     "changes": [
