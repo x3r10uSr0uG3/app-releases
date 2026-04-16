@@ -1,5 +1,17 @@
 [
   {
+    "version": "1.3.4",
+    "date": "2026-04-15",
+    "changes": [
+      "3-level hierarchy: Clients can now have Projects under Branches (a 3rd level). All three levels are clients rows linked recursively via parent_client_id, so Projects inherit every existing feature (financial snapshots, KYC, analyses, operations, etc.) with zero new tables.",
+      "Context-aware branch/project selector: The client profile dropdown now shows two selectors when a branch has projects. The deepest selection wins for effectiveClientId (project > branch > holding), and the \"+\" button label switches between \"Sucursal\" and \"Proyecto\" based on the current level.",
+      "Client portal hierarchy support: Portal users linked to a holding can now drill from consolidated → branch → project with a breadcrumb selector mirroring the Workstation. All dashboard modules, indicators, statements, analysis tabs, and reports re-scope automatically to the active node.",
+      "Recursive RLS: New portal_accessible_client_ids(user_id) SQL function walks parent_client_id recursively so a single portal user gets access to their holding + all descendants. No per-branch admin setup needed.",
+      "Deepest-selection-wins navigation: Switching between branches, projects, and consolidated views in either app is a single click — no page reload, and the period selector and all modules re-render with the new scope.",
+      "Files changed: ClientProfile.jsx, holding-utils.js, supabase-migration-v6.sql, portal App.tsx, Overview.tsx, Reports.tsx, DataRequest.tsx, new useHierarchy.ts, HierarchyContext.tsx, HierarchySelector.tsx, and supabase-migration-hierarchy-rls.sql."
+    ]
+  },
+  {
     "version": "1.3.3",
     "date": "2026-04-15",
     "changes": [
