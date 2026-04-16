@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.3.6",
+    "date": "2026-04-15",
+    "changes": [
+      "Streaming API: Translation now uses messages.stream() matching the analyst-analysis flow, which is confirmed working end-to-end. The non-streaming messages.create() path was silently failing on every batch in v1.3.5.",
+      "Error detail in UI: When translation fails, the yellow warning toast now shows the actual error message (HTTP status, API error text, or parse error) instead of just a generic \"X fields failed\" count. You can now see exactly what went wrong.",
+      "Wider diagnostic toast: Warning toast expanded to 400px with scroll support so error messages don't get cut off.",
+      "Raw response logging: If JSON parsing fails, the first 500 characters of Claude's raw response are now logged to the console for diagnosis."
+    ]
+  },
+  {
     "version": "1.3.5",
     "date": "2026-04-15",
     "changes": [
