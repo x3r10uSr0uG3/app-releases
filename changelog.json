@@ -1,5 +1,17 @@
 [
   {
+    "version": "1.3.7",
+    "date": "2026-04-15",
+    "changes": [
+      "Per-section + per-panelist batching: Instead of grouping fields by character count (which lumped unrelated content together and left panel responses undetected), each KYC section (s1..s6) is now one batch, each analyst-notes block per section is one batch, and every panelist's AI response is its own batch. This means many small focused calls instead of a few large ones.",
+      "Claude Haiku 4.5: Translation work switched from Sonnet 4.5 to Haiku 4.5. Translation is a well-defined transformation task; Haiku handles it fluently at ~3-5× lower latency per call.",
+      "Parallel execution: Up to 3 batches run concurrently. Combined with Haiku's speed, a typical memo with 30-50 translatable fields exports in roughly a third of the previous time.",
+      "Better language detection: Detection now counts stopword occurrences (not just unique-word hits) and only gives accent-presence weight for short strings (<120 chars). Previously, long English paragraphs containing Spanish proper nouns (e.g., \"Granja Orgánica\", \"Walmart Central América\") were misdetected as already-Spanish and skipped — that's why ~20 panel responses weren't translated in v1.3.6.",
+      "Batch-level isolation: If one panelist's translation fails, only that one fails — not 5 unrelated KYC fields that happened to share a character-count chunk.",
+      "Files changed: electron/main.cjs"
+    ]
+  },
+  {
     "version": "1.3.6",
     "date": "2026-04-15",
     "changes": [
