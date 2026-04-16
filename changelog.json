@@ -1,5 +1,17 @@
 [
   {
+    "version": "1.3.5",
+    "date": "2026-04-15",
+    "changes": [
+      "Chunked translation: Translation was silently failing on long memos because all fields were sent to Claude in one call with a 16K max_tokens ceiling — the response got truncated, JSON.parse threw, and the export fell back to the original content. Fields are now split into ~12K-char batches sent sequentially, max_tokens raised to 32K per batch, so full-length memos translate end-to-end.",
+      "Robust JSON extraction: The translation response is now parsed with a helper that strips markdown fences and trailing prose before JSON.parse, preventing spurious parse errors when Claude adds a leading json block.",
+      "Live progress popover: The export button now shows a spinner + a popover with the current stage (\"Capturing charts\", \"Translating batch 2 of 4 (18 fields)\", \"Generating document\"), a progress bar, and per-batch counts. No more staring at \"Exportando...\" with no feedback.",
+      "Failure surfaces to UI: If translation fails entirely or partially, the user sees a yellow warning toast after export (\"Translated 32 of 45 fields (13 failed). Please review the document.\") instead of the app silently exporting the untranslated version.",
+      "IPC wiring: New investment:export-progress event + electronAPI.investment.onExportProgress(callback) subscription, returns a cleanup function.",
+      "Files changed: electron/main.cjs, electron/preload.cjs, src/components/investment/InvestmentTargetProfile.jsx, src/index.css"
+    ]
+  },
+  {
     "version": "1.3.4",
     "date": "2026-04-15",
     "changes": [
