@@ -1,0 +1,38 @@
+name: Supabase keep-alive
+
+# Supabase free-tier projects auto-pause after 7 days of inactivity.
+# This ping every 3 days resets the inactivity timer.
+# The anon key is public by design (RLS protects the data) — no secret needed.
+
+on:
+  schedule:
+    - cron: '17 13 */3 * *'  # every 3 days at 13:17 UTC
+  workflow_dispatch:           # allow manual runs from the Actions tab
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Ping Supabase REST API (with cold-start retries)
+        env:
+          SUPABASE_URL: https://lblyujpknrbzzhahkhtd.supabase.co
+          SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxibHl1anBrbnJienpoYWhraHRkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA4NjQ4MjMsImV4cCI6MjA4NjQ0MDgyM30.G3q0NG4nw_qfz_UwnDTkOJKafqKg7kBvEo1dEeER27k
+        run: |
+          set -u
+          URL="$SUPABASE_URL/rest/v1/profiles?select=id&limit=1"
+          for i in $(seq 1 20); do
+            CODE=$(curl -sS -o /tmp/body -w "%{http_code}" \
+              -H "apikey: $SUPABASE_ANON_KEY" \
+              -H "Authorization: Bearer $SUPABASE_ANON_KEY" \
+              "$URL")
+            echo "attempt $i: HTTP $CODE"
+            if [ "$CODE" = "200" ]; then
+              echo "DB awake — activity registered"
+              exit 0
+            fi
+            sleep 6
+          done
+          echo "Failed to wake DB after 20 attempts"
+          head -c 500 /tmp/body || true
+          exit 1
