@@ -1,5 +1,17 @@
 [
   {
+    "version": "1.3.11",
+    "date": "2026-06-16",
+    "changes": [
+      "New brand identity applied app-wide: the product is now branded Vira (CFO Fraccional para empresas familiares). The legacy navy color token and all hardcoded navy hexes now resolve to Marian Indigo #273685, re-skinning every screen, chart, badge and export in one pass.",
+      "VIRA design tokens (src/vira-tokens.css) wired in at the app root: semantic color variables, indigo ramp, Cherubim/Papal-Gold accents (gold dark-backgrounds-only), Inter type scale, hairline-border elevation. Tailwind theme extended with the vira / primary / secondary / accent palettes.",
+      "Logos swapped: VIRA indigo wordmark in the sidebar, white wordmark on the login screen with the gold signature rule, and the compass avatar as the macOS app icon (build/icon.icns) and favicon set.",
+      "Copy and legal: brand name updated to \"Vira\" across UI, prompts and exports; legal entity set to Norte Consulting LLC; login footer carries the lockup Vira — una empresa de Norte Consulting LLC. Export logos (PDF/PPTX) updated, with PPTX placement corrected for the new wordmark aspect ratio.",
+      "Internal identifiers (Electron appId, npm package name, ~/Documents/Asanoski storage paths, User-Agent) left unchanged to preserve auto-update, code-signing identity and existing user data.",
+      "No migration required."
+    ]
+  },
+  {
     "version": "1.3.10",
     "date": "2026-05-07",
     "changes": [
