@@ -2,7 +2,7 @@ name: Supabase keep-alive
 
 # Supabase free-tier projects auto-pause after 7 days of inactivity.
 # This ping every 3 days resets the inactivity timer.
-# The anon key is public by design (RLS protects the data) — no secret needed.
+# The publishable key is public by design (RLS protects the data) — no secret needed.
 
 on:
   schedule:
@@ -13,11 +13,20 @@ jobs:
   ping:
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    permissions:
+      actions: write
     steps:
+      # GitHub auto-disables scheduled workflows in public repos after 60 days without commits
+      # (happened 2026-08-16 → Supabase paused → app login broke). Re-enabling via API resets that timer.
+      - name: Keep this workflow from being auto-disabled
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/supabase-keepalive.yml/enable"
+
       - name: Ping Supabase REST API (with cold-start retries)
         env:
           SUPABASE_URL: https://lblyujpknrbzzhahkhtd.supabase.co
-          SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxibHl1anBrbnJienpoYWhraHRkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA4NjQ4MjMsImV4cCI6MjA4NjQ0MDgyM30.G3q0NG4nw_qfz_UwnDTkOJKafqKg7kBvEo1dEeER27k
+          SUPABASE_ANON_KEY: sb_publishable_WqwGYR1pmg_9B1Y3h9VrcQ_ExuhyWef
         run: |
           set -u
           URL="$SUPABASE_URL/rest/v1/profiles?select=id&limit=1"
@@ -25,7 +34,7 @@ jobs:
             CODE=$(curl -sS -o /tmp/body -w "%{http_code}" \
               -H "apikey: $SUPABASE_ANON_KEY" \
               -H "Authorization: Bearer $SUPABASE_ANON_KEY" \
-              "$URL")
+              "$URL") || true  # DNS/connection errors must retry, not abort under bash -e
             echo "attempt $i: HTTP $CODE"
             if [ "$CODE" = "200" ]; then
               echo "DB awake — activity registered"
