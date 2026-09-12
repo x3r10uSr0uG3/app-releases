@@ -1,5 +1,13 @@
 [
   {
+    "version": "1.3.13",
+    "date": "2026-09-11",
+    "changes": [
+      "Client portal moved to the new VIRA address https://portal.virafinancial.com, rebranded from Asanoski & Co. to Vira.",
+      "Portal invitations and Firm Settings now point to the new address."
+    ]
+  },
+  {
     "version": "1.3.12",
     "date": "2026-09-10",
     "changes": [
