@@ -1,5 +1,19 @@
 [
   {
+    "version": "1.3.17",
+    "date": "2026-09-28",
+    "changes": [
+      "Todos los NDA (Guatemala e internacionales) salen en Arial, en cuerpo, títulos y pie. Antes usaban Segoe UI.",
+      "La entidad de LA CONSULTORA es la misma en el párrafo de partes y en el bloque de firma. Si Ajustes no trae razón social, ambos usan Asanoski Blanco Consultores y Asociados, S.A.; antes el bloque de firma caía a Norte Consulting LLC.",
+      "Bloque de firma rehecho como tabla de dos columnas (electron/nda-signature.cjs): cada parte queda alineada en su columna, con su línea de firma. Antes se armaba con espacios y se descuadraba. Lleva marcas invisibles para que DocuSign coloque firma y fecha por anclaje.",
+      "El pie de los documentos dice VIRA en mayúsculas (regla de marca); antes decía «Vira».",
+      "El registro mercantil de Ajustes ya no se duplica (\"… de Sociedades de Sociedades Mercantiles\").",
+      "Nuevo scripts/generate-nda-headless.mjs: genera el NDA sin abrir la app, con los mismos generadores y constantes legales que NDAView. Lo usa el flujo de firma por DocuSign. No toca texto legal.",
+      "No migration required.",
+      "Files changed: electron/docx-generator.cjs, electron/nda-international.cjs, electron/nda-signature.cjs (nuevo), scripts/generate-nda-headless.mjs (nuevo)."
+    ]
+  },
+  {
     "version": "1.3.16",
     "date": "2026-09-24",
     "changes": [
