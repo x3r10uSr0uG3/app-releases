@@ -1,5 +1,16 @@
 [
   {
+    "version": "1.3.24",
+    "date": "2026-10-02",
+    "changes": [
+      "Official rates for CRC, HNL, COP, DOP and ARS from Banco de Guatemala (TipoCambioRangoMoneda, per USD, mid of buy/sell). Together with GTQ (Banguat) and MXN, CAD, EUR, GBP, AUD, NZD (FRED). PEN, CLP, UYU, PYG and BOB are not published by Banguat and stay manual.",
+      "Edit before approving in the LBO queue. Each pending deal has \"Editar\": company, EV/EBITDA, Debt/EBITDA, deal size, close date, buyer, sector. On approve, values are re-validated with the same ranges as the extraction; the audit entry records edited_by_reviewer and the final figures.",
+      "Security: three one-off scripts in src/scripts/ had a legacy service_role key hardcoded; they now read SUPABASE_SERVICE_KEY from the environment. Source is now backed up in a private repository.",
+      "No migration required (optional SQL refreshes the Tipos de Cambio card description).",
+      "Files changed: src/lib/fxRates.js, src/lib/fxRates.test.mjs, src/components/LboQueueModal.jsx, src/locales/es.json, src/locales/en.json, src/scripts/*.cjs, .gitignore."
+    ]
+  },
+  {
     "version": "1.3.23",
     "date": "2026-10-02",
     "changes": [
