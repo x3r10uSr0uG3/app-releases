@@ -1,7 +1,7 @@
 {
-  "version": "1.3.17",
-  "releaseDate": "2026-09-28",
-  "notes": "NDA — Arial, entidad consistente y generador sin interfaz",
-  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.3.17/Analyst.Workstation-1.3.17-arm64.dmg",
-  "downloadUrlX64": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.3.17/Analyst.Workstation-1.3.17.dmg"
+  "version": "1.3.18",
+  "releaseDate": "2026-10-02",
+  "notes": "Sprint 3 — Comparables públicos (FinnHub) y múltiplos Damodaran en Supabase",
+  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.3.18/Analyst.Workstation-1.3.18-arm64.dmg",
+  "downloadUrlX64": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.3.18/Analyst.Workstation-1.3.18.dmg"
 }

@@ -1,5 +1,18 @@
 [
   {
+    "version": "1.3.18",
+    "date": "2026-10-02",
+    "changes": [
+      "Comparable Wizard in New Analysis → Investment Mode (M&A, LBO, Exit): \"Sugerir comparables\" asks Claude for 12–15 public tickers, validates each on FinnHub (/stock/profile2: name, exchange, industry, market cap) and discards unknown ones. The analyst keeps 5–8; the set goes into the prompt via buildInvestmentContext() and is saved to comparable_sets after the analysis. Optional: skipping it (0 selected) is allowed; 1–4 is blocked.",
+      "FRED rates now reach the prompt. Investment Mode analyses include the stored SOFR and High Yield OAS as cost-of-debt reference.",
+      "Industry multiples load from Supabase (industry_multiples) at login and override the built-in Damodaran table; the vintage year cited in prompts follows the Datos registry. Without migration v10 the built-in values keep working.",
+      "Datos tab: FinnHub card has a working \"Probar conexión\" button that records real freshness; VIRA indigo header with wordmark; the manual refresh modal normalizes vintages (Q22026 → Q2 2026).",
+      "Audit: new COMPARABLE_SET_SAVED; FinnHub check logs REFERENCE_DATA_REFRESHED.",
+      "Migration v10 required for comps to save and multiples to come from Supabase (supabase-migration-v10.sql, idempotent). Store the FinnHub key with the SQL template in the file header.",
+      "Files changed: src/components/ComparableWizard.jsx (new), src/lib/finnhub.js (new), src/lib/industryMultiples.js (new), src/lib/sprint3.test.mjs (new), src/lib/prompts.js, src/pages/NewAnalysis.jsx, src/components/ReferenceDataTab.jsx, src/App.jsx, electron/main.cjs (FinnHub proxy origin; origin prefixes now end in /), src/locales/es.json, src/locales/en.json, supabase-migration-v10.sql (new)."
+    ]
+  },
+  {
     "version": "1.3.17",
     "date": "2026-09-28",
     "changes": [
