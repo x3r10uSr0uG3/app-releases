@@ -1,5 +1,17 @@
 [
   {
+    "version": "1.3.23",
+    "date": "2026-10-02",
+    "changes": [
+      "Official exchange rates, automated. Admin → Datos → Tipos de Cambio → \"Actualizar ahora\" downloads ~13 months of daily official rates: GTQ from Banco de Guatemala's public service (TipoCambioRango) and MXN, CAD, EUR, GBP, AUD, NZD from FRED. Pegged currencies (PAB, BSD, BZD, NIO) are built in. Stored in the new fx_rates table; the card now shows real freshness.",
+      "Client FX tables (Tasas FX): each pair now states its direction (\"1 GTQ = x USD\"), shows the official closing/average per period, and has \"Completar con tasas oficiales\" to fill empty periods (manual values are never overwritten). Manual values more than 20% away from the official rate are flagged ⚠ as likely inverted.",
+      "Fix — direction ambiguity in FX consolidation. The conversion code reads a pair \"A/B\" as 1 A = rate B (GTQ/USD ≈ 0.131), but the table never said so; a rate typed in the usual quote (7.64) made GTQ→USD conversion multiply instead of divide. The pegged-rate badges also used the opposite convention (NIO/USD 36.6243, BZD/USD 2.0); they now show the convention the conversion uses (0.027304, 0.5). Existing manual entries are not changed — review flagged ⚠ rows.",
+      "Other LatAm currencies (COP, CRC, HNL, DOP, …) stay manual.",
+      "Migration v12 required for official rates (supabase-migration-v12.sql, idempotent). Without it, the FX tables work exactly as before.",
+      "Files changed: src/lib/fxRates.js (new), src/lib/fxRates.test.mjs (new), src/lib/fredCsv.js, src/components/ExchangeRateManager.jsx, src/components/ReferenceDataTab.jsx, src/lib/holding-utils.js (import extensions only), electron/main.cjs (Banguat proxy origin), src/locales/es.json, src/locales/en.json, supabase-migration-v12.sql (new)."
+    ]
+  },
+  {
     "version": "1.3.22",
     "date": "2026-10-02",
     "changes": [
