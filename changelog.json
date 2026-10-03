@@ -1,5 +1,17 @@
 [
   {
+    "version": "1.3.19",
+    "date": "2026-10-02",
+    "changes": [
+      "Each confirmed comparable now brings its real multiples from FinnHub (/stock/metric): EV/EBITDA, EV/Revenue, P/E, EBITDA/gross/net margin and beta (TTM). The wizard cards show EV/EBITDA, P/E and EBITDA margin to help pick the set.",
+      "The prompt gets each comp's numbers plus the set's median and range (negative multiples from loss-makers excluded), and the panel is told to cite those values instead of estimating its own ranges. Before, only market cap was passed, so the panel made up comp multiples (e.g. \"8x–15x EBITDA\").",
+      "Missing FinnHub fields show as n/d; a failed metric call keeps the comparable without numbers.",
+      "Replaces the Sprint 4 TradingAgents Python service for comp fundamentals: no Python environment needed on analyst Macs.",
+      "No migration required.",
+      "Files changed: src/lib/finnhub.js, src/lib/prompts.js, src/components/ComparableWizard.jsx, src/lib/sprint3.test.mjs, src/locales/es.json, src/locales/en.json."
+    ]
+  },
+  {
     "version": "1.3.18",
     "date": "2026-10-02",
     "changes": [
