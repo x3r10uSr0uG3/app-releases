@@ -1,5 +1,27 @@
 [
   {
+    "version": "1.3.22",
+    "date": "2026-10-02",
+    "changes": [
+      "Add deals by pasting an announcement. Admin → Datos → \"Revisar cola\" now has an intake box: paste a press release or article (optional source URL) and Claude extracts each transaction (company, sector, EV/EBITDA, Debt/EBITDA, deal size, close date, buyer, supporting quote) into the review queue. Undisclosed figures stay empty — the extraction is told never to estimate or derive multiples — and out-of-range values are dropped. Sectors map to the same industry list clients use. Nothing is published until an admin approves it.",
+      "Approving a deal refreshes the LBO card (date, record count, next review in 90 days), so the Datos tab reflects real freshness.",
+      "Precedent transactions reach Investment Mode analyses. Approved deals from the client's sector (or the most recent across sectors, labeled as such) go into the prompt with their median entry EV/EBITDA and Debt/EBITDA. The valuation-discipline cap now uses the higher of the public-comp and precedent medians.",
+      "Audit: new LBO_DEALS_EXTRACTED.",
+      "Migration v11 (optional, data only): refreshes the stale \"not integrated yet\" notes on the FRED and LBO cards.",
+      "Files changed: src/lib/lboDeals.js (new), src/components/LboQueueModal.jsx, src/lib/prompts.js, src/pages/NewAnalysis.jsx, src/lib/sprint3.test.mjs, src/locales/es.json, src/locales/en.json, supabase-migration-v11.sql (new)."
+    ]
+  },
+  {
+    "version": "1.3.21",
+    "date": "2026-10-02",
+    "changes": [
+      "New mandatory valuation rules in the Investment Mode prompt. Every EV/equity figure must show its implied multiple on current (TTM) EBITDA; projected or post-restructuring EBITDA must be labeled with its formula; no value may imply a multiple above the comparable-set median unless it rests on labeled projected EBITDA with named levers; each panelist must stay consistent with their own stated maximum multiple; executive summary, verdict and final note must use the same range and central value; the central value reflects current information, with conditional scenarios shown separately.",
+      "Why: in a test LBO analysis the panel's central value (Q23.5M equity) implied 14.2x current EBITDA, above the 10.9x public-comp median the same panel cited, and the summary and verdict quoted different ranges.",
+      "No migration required.",
+      "Files changed: src/lib/prompts.js."
+    ]
+  },
+  {
     "version": "1.3.20",
     "date": "2026-10-02",
     "changes": [
