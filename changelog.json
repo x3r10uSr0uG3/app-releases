@@ -1,5 +1,14 @@
 [
   {
+    "version": "1.3.25",
+    "date": "2026-10-02",
+    "changes": [
+      "FRED requests (SOFR, High Yield OAS and the FX majors) timed out after 30s each inside the app, so \"Actualizar ahora\" on Tipos de Cambio sat on \"Guardando…\" for ~3 minutes and the FRED card never got data. FRED's bot protection stalls Node's TLS client as bundled in Electron; Chromium's network stack is accepted. FRED requests now go through Electron's net.fetch (verified in Electron: 35–175 ms per series). Supabase, Banguat and FinnHub keep the existing path.",
+      "No migration required.",
+      "Files changed: electron/network-proxy.cjs."
+    ]
+  },
+  {
     "version": "1.3.24",
     "date": "2026-10-02",
     "changes": [
