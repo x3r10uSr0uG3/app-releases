@@ -1,7 +1,7 @@
 {
-  "version": "1.3.25",
-  "releaseDate": "2026-10-02",
-  "notes": "Fix — FRED nunca respondía desde la app",
-  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.3.25/Analyst.Workstation-1.3.25-arm64.dmg",
-  "downloadUrlX64": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.3.25/Analyst.Workstation-1.3.25.dmg"
+  "version": "1.3.26",
+  "releaseDate": "2026-10-04",
+  "notes": "Fix — feriados de FRED leídos como tasa 0",
+  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.3.26/Analyst.Workstation-1.3.26-arm64.dmg",
+  "downloadUrlX64": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.3.26/Analyst.Workstation-1.3.26.dmg"
 }

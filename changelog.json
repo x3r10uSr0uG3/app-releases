@@ -1,5 +1,16 @@
 [
   {
+    "version": "1.3.26",
+    "date": "2026-10-04",
+    "changes": [
+      "\"Actualizar ahora\" on Tipos de Cambio failed with fx_rates_per_usd_check. FRED now marks US holidays with an empty value (2025-09-01,) instead of .; the parser read it as 0, and the database correctly rejected a rate of 0 (12 holidays × 6 FRED currencies). Empty values are now treated as missing, and FX rows must be > 0 before saving.",
+      "Same fix for the FRED rates card: on a holiday the latest SOFR / High Yield value could have been stored as 0%; it now falls back to the last real observation.",
+      "Verified with live data inside Electron: GTQ, CRC, HNL, COP, DOP, ARS (Banguat) and MXN, CAD, EUR, GBP, AUD, NZD (FRED) — 0 invalid rows.",
+      "No migration required.",
+      "Files changed: src/lib/fredCsv.js, src/lib/fxRates.js, src/lib/fredRates.test.mjs, src/lib/fxRates.test.mjs."
+    ]
+  },
+  {
     "version": "1.3.25",
     "date": "2026-10-02",
     "changes": [
