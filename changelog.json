@@ -1,5 +1,16 @@
 [
   {
+    "version": "1.3.28",
+    "date": "2026-10-06",
+    "changes": [
+      "Registro in the sidebar, main administrator only. Opens the VIRA Registro back office (facturas, cobranza, bancos, pipeline, estados financieros de la firma) in the browser. Gated by account email, not by the admin role, so other admins don't see it.",
+      "Apple Silicon only. Releases now ship a single arm64 DMG; the Intel build is dropped. Installed copies keep updating through the arm64 link.",
+      "Investments nav item uses the shared indigo highlight.",
+      "No migration required.",
+      "Files changed: src/components/Sidebar.jsx, src/lib/constants.js, src/locales/*.json, package.json, scripts/release.sh."
+    ]
+  },
+  {
     "version": "1.3.27",
     "date": "2026-10-06",
     "changes": [
