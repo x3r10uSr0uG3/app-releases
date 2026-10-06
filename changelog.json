@@ -1,5 +1,24 @@
 [
   {
+    "version": "1.3.27",
+    "date": "2026-10-06",
+    "changes": [
+      "One brand palette. Every Tailwind color family now maps onto VIRA: navy-tinted neutrals, Marian Indigo, Grace, Papal Gold / Cherubim, functional green and a restrained red. Hardcoded colors in charts, PDF and PPTX exports were mapped the same way. One indigo accent for every sidebar section; plain white title bar.",
+      "Inter only, bundled with the app (works offline). Tabular figures on every number, light display titles, nothing heavier than semibold, pill-shaped primary buttons, soft navy-tinted shadows.",
+      "Calmer numbers. Dashboard and Métricas tiles show ink numbers on white; status is a thin marker or dot instead of colored digits or red-filled cards. Chart labels show negatives in parentheses.",
+      "Voice. Sentence case across the UI, usted instead of tú, VIRA in capitals, Spanish terms instead of stray English (Administración, Inversiones, estados), no exclamation marks, no emoji icons.",
+      "No migration required.",
+      "Files changed: tailwind.config.js, src/index.css, src/vira-tokens.css, src/assets/fonts/, src/locales/*.json, src/lib/constants.js and other label files, src/App.jsx, src/pages/Dashboard.jsx, src/pages/MetricasDashboard.jsx, chart theme and ~60 components (class and color swaps).",
+      "Plantilla and Exportar Excel files now carry the VIRA look. Header row in Marian Indigo with white bold text, light borders on the table grid, totals and section rows on an indigo-50 band, titles in indigo, numbers formatted #,##0.00 and right-aligned.",
+      "Arial is the only font in the file, including the workbook default, so cells a client types into outside the template also use Arial (clients don't have Inter).",
+      "Applies to every template (Ingresos, Nómina, Costos Ubicación, Financiero, Recursos/Productos Operaciones) and every table export.",
+      "Styled templates still import unchanged.",
+      "New dependency: xlsx-js-style (SheetJS fork with style writing, same API).",
+      "No migration required.",
+      "Files changed: electron/data-io.cjs, package.json."
+    ]
+  },
+  {
     "version": "1.3.26",
     "date": "2026-10-04",
     "changes": [
