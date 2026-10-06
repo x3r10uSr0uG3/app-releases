@@ -1,5 +1,20 @@
 [
   {
+    "version": "1.3.29",
+    "date": "2026-10-06",
+    "changes": [
+      "One naming rule for every export: YYYY-MM-DD_ClienteCorto_Documento.ext, e.g. 2026-10-06_EfectivoCobranzas_IndicadoresMoM.pdf. Date first, short client name (legal suffix and connector words dropped, no accents), no time of day. Same-day re-exports get _2, _3 instead of overwriting. Applies to PDF, Excel, Word, PowerPoint, templates, signed uploads and the international NDA. Helper: electron/file-naming.cjs.",
+      "Indicadores MoM / QoQ / YoY PDF rebuilt from data, no longer a screenshot of the screen. No toggles, buttons or collapse arrows in the file; every ratio category printed; negatives in parentheses; colored status dot per ratio with a legend; wide period ranges split into balanced column blocks with repeated headers; Altman Z-Score with zone and trend.",
+      "Dashboard financiero and Dashboard completo PDFs are rebuilt the same way: KPI cards and tables from the dashboard's own numbers, charts embedded as vector graphics with their legends.",
+      "Arial only in every client-facing file (PDF, Word, PowerPoint, Excel, memo charts) and VIRA colors everywhere: PPTX palette, Word text grays and greens, memo accents were still on off-brand blues, reds and slates.",
+      "PDF header no longer prints VIRA twice (logo plus the same name as text).",
+      "Excel financial and operations exports now get the VIRA styling too (header band, totals, sections, negatives in parentheses, percent rows as %).",
+      "Fix: Dashboard financiero labeled net income as Ingresos netos in Spanish; now Utilidad neta.",
+      "No migration required.",
+      "Files changed: electron/file-naming.cjs (new), electron/report-document.cjs (new), src/print/* (new), electron/main.cjs, electron/pdf-generator.cjs, electron/data-io.cjs, electron/financial-io.cjs, electron/ops-exporter.cjs, electron/docx-generator.cjs, electron/nda-international.cjs, electron/pptx-generator.cjs, electron/investment-memo-generator.cjs, electron/investment-charts.cjs, src/components/MoMDashboard.jsx, src/components/FinancialDashboard.jsx, src/pages/ClientProfile.jsx, src/locales/*.json."
+    ]
+  },
+  {
     "version": "1.3.28",
     "date": "2026-10-06",
     "changes": [
