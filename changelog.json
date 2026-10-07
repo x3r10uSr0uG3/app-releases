@@ -1,5 +1,19 @@
 [
   {
+    "version": "1.3.37",
+    "date": "2026-10-07",
+    "changes": [
+      "Which clients pay off. Time Tracker hours and invoices are combined per client and month for the last 12 months: hours (with the billable share), fees, effective hourly rate (fees ÷ hours), cost and margin.",
+      "Billed by default, collected as a toggle. Billed counts invoices by invoice date; collected counts paid invoices by payment date. Cancelled invoices never count.",
+      "Flags: months with hours and no invoice; clients below cost; analysts without a cost per hour; missing exchange rates (shown, never guessed).",
+      "Sales time: hours before a client's first invoice stay out of its margin and are shown apart.",
+      "Cost per hour per team member in Admin → Equipo. Only admins can see or change it, and every change is audited.",
+      "Fix: CLV realized revenue never loaded. The Dashboard and CRM asked for invoice columns that don't exist (total, issued_date, engagement_start).",
+      "Migration v16 recommended (the app works without it; cost and margin show as —): supabase-migration-v16.sql. Analysts also start seeing every hour logged on their clients, not just their own.",
+      "Files changed: new src/lib/profitability.js (with tests), ClientProfitability.jsx, ProfitabilityPanel.jsx, AnalystCosts.jsx; MetricasDashboard.jsx, ClientProfile.jsx, AdminPanel.jsx, useCLV.js, Dashboard.jsx, CrmPage.jsx, locales."
+    ]
+  },
+  {
     "version": "1.3.36",
     "date": "2026-10-07",
     "changes": [
