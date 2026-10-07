@@ -1,5 +1,21 @@
 [
   {
+    "version": "1.3.38",
+    "date": "2026-10-07",
+    "changes": [
+      "The client's month in one click. Financiero → Dashboard → \"Generar paquete del mes\" builds the month's package from the month the dashboards show: a cover with key numbers and a written summary, the MoM indicators, the financial dashboard and variance vs. the approved budget (skipped with a note when there's no budget).",
+      "One PDF or separate files, chosen per package. Files follow the naming rule and a local copy is kept, like every export.",
+      "Written summary: drafted with AI from the month's numbers, prior month and budget, and always editable before the PDF is built. The package uses the app's language (ES / EN).",
+      "Only client-ready months: a month with no data, only projected data, no revenue, a balance that doesn't tie, a failing cash proof or a levantamiento imported with failing controls can't be packaged.",
+      "Approval: generating sends the package for approval. Supervisors and admins see it on their Dashboard (\"paquetes del mes esperan tu aprobación\"), open the files, and approve or request changes with a note. Once approved, the analyst publishes it. The database enforces the order.",
+      "Versions: regenerating a month creates a new version; earlier versions are never overwritten. Packages can be withdrawn.",
+      "Portal-ready: published packages are stored privately in Supabase Storage, and a client's portal account can only reach published packages of its own company. The portal list ships once the portal deploy works again.",
+      "Audit: package generated, approved, changes requested, published and withdrawn.",
+      "Migration v17 required for packages (the rest of the app works without it): supabase-migration-v17.sql.",
+      "Files changed: new src/lib/monthPackage.js (with tests), src/lib/monthPackageActions.js, MonthPackagePanel.jsx, PendingPackagesCard.jsx; ClientProfile.jsx, Dashboard.jsx, MoMDashboard.jsx, FinancialDashboard.jsx, AdminPanel.jsx, electron/main.cjs, locales."
+    ]
+  },
+  {
     "version": "1.3.37",
     "date": "2026-10-07",
     "changes": [
