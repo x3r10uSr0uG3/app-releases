@@ -1,5 +1,14 @@
 [
   {
+    "version": "1.3.39",
+    "date": "2026-10-07",
+    "changes": [
+      "VIRA Registro: the link follows the can_access_registro profile setting, now on levent@virafinancial.com (main account) with hola@virafinancial.com and levent.asanoski@gmail.com as backups. The built-in fallback list uses the same three accounts.",
+      "Audit log: role changes (made in SQL, since the app has no role screen) show as \"Rol cambiado\" / \"Role changed\" in Admin → Auditoría.",
+      "Files changed: src/lib/constants.js, src/pages/AdminPanel.jsx."
+    ]
+  },
+  {
     "version": "1.3.38",
     "date": "2026-10-07",
     "changes": [
