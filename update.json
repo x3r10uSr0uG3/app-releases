@@ -1,6 +1,6 @@
 {
-  "version": "1.3.31",
+  "version": "1.3.32",
   "releaseDate": "2026-10-06",
-  "notes": "Diseño — la fuente depende de quién edita el documento",
-  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.3.31/Analyst.Workstation-1.3.31-arm64.dmg"
+  "notes": "Fix — la actualización interna dañaba la app",
+  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.3.32/Analyst.Workstation-1.3.32-arm64.dmg"
 }
