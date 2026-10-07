@@ -1,5 +1,19 @@
 [
   {
+    "version": "1.3.40",
+    "date": "2026-10-07",
+    "changes": [
+      "See cash coming, week by week. Financiero → Caja 13 semanas shows 13 weeks from the current Monday, by the direct method: opening cash, customer collections, supplier payments, payroll, operating expenses, taxes, debt service, capex/other, net flow and closing cash.",
+      "Monthly reconciliation: each month-end forecast freezes when the month starts and is compared with the actual cash on that month's statement. A 3-month accuracy figure is shown.",
+      "Loans: one record per loan (balance, rate, level payment / equal principal / balloon, months left, payment day). The first loan is prefilled from the funding parameters and the balance sheet debt.",
+      "Covenants per loan:",
+      "Audit: 13-week cash saved, loan saved/deleted, covenants saved.",
+      "Fix: saving the loan parameters in Financiamiento now reports errors and is audited.",
+      "Migration v18 required for loans and covenants (the forecast works without it): supabase-migration-v18.sql.",
+      "Files changed:"
+    ]
+  },
+  {
     "version": "1.3.39",
     "date": "2026-10-07",
     "changes": [
