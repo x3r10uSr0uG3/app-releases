@@ -1,5 +1,18 @@
 [
   {
+    "version": "1.3.34",
+    "date": "2026-10-06",
+    "changes": [
+      "Precedent deals match related sectors. Investment analyses first use deals from the client's exact sector; when there are fewer than 3 they add deals from sectors in the same Damodaran group (e.g. Turismo with Hospitalidad, Consultoría with Servicios Legales), and only then fall back to all sectors. The scope is stated in the prompt.",
+      "PEN, CLP, UYU, PYG and BOB rates are automatic. Datos → Tasas de cambio → Actualizar ahora now also downloads them from a free daily market source (currency-api), about 13 months on the first run and only the missing days afterwards. They are market reference rates, not central-bank rates: filled periods show source \"mercado\".",
+      "VIRA Registro access is a profile setting (can_access_registro) instead of an email list in the code. Until migration v13 is applied the app keeps the previous check.",
+      "The invite Edge Function no longer falls back to the legacy service-role key (disabled on 2026-10-02). Already deployed.",
+      "Docs: APP_DESCRIPTION (17-advisor panel, Investment Mode, Datos tab, email invites, export naming), README, completed sprint briefs marked as done.",
+      "Migration v13 recommended (the app works without it): supabase-migration-v13.sql.",
+      "Files changed: src/lib/prompts.js, src/lib/fxRates.js, src/lib/constants.js, src/components/Sidebar.jsx, src/components/ExchangeRateManager.jsx, electron/main.cjs, supabase/functions/admin-invite-user/index.ts, supabase-migration-v13.sql, tests in src/lib/*.test.mjs, docs."
+    ]
+  },
+  {
     "version": "1.3.33",
     "date": "2026-10-06",
     "changes": [
