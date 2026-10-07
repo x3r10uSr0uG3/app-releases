@@ -1,5 +1,22 @@
 [
   {
+    "version": "1.3.41",
+    "date": "2026-10-07",
+    "changes": [
+      "Financiero → Inventario, a new tab next to Economía unitaria, with four sections.",
+      "1. Days of inventory and cash released:",
+      "2. ABC classification: Pareto chart of the Operations products by annual value (variable cost × demand). A = up to 80%, B = the next 15%, C = the rest.",
+      "3. Reorder points per product:",
+      "4. Constraint buffer (TOC): ½ of the production flow time (Step 2, editable) in front of the confirmed constraint, in days and in units, with green/yellow/red zones. Use in Step 5 writes it to Subordinate → buffer size after a confirmation.",
+      "AI analyses get an inventory block: DIO vs target, cash tied up, A items below their reorder point, constraint buffer.",
+      "Change: inventory turnover is now annual (360 ÷ DIO) everywhere: dashboards, PDFs and the client portal. It used to divide one month of COGS by inventory, about 12 times too low against the annual 6× threshold. Packages already published keep their old numbers.",
+      "Fix: DIO for quarterly and annual periods used one month of days; it now uses the months in the period, the same formula as the balance sheet DIO.",
+      "Audit: inventory policy saved, product inventory data saved, constraint buffer sent to Step 5, inventory reduction sent to 13-week cash.",
+      "Migration v19 (optional): supabase-migration-v19.sql stores Inventory/Sales in industry_multiples; without it the same values ship in the app.",
+      "Files changed:"
+    ]
+  },
+  {
     "version": "1.3.40",
     "date": "2026-10-07",
     "changes": [
