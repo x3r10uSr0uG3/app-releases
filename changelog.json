@@ -1,5 +1,18 @@
 [
   {
+    "version": "1.3.36",
+    "date": "2026-10-07",
+    "changes": [
+      "Import levantamiento in Financiero → P&L / balance loads a client's months from the Plantilla de levantamiento VIRA with no retyping. Two ways in:",
+      "One preview for both: each month shows New, Unchanged or Replaces existing data, plus whether the balance sheet ties, the cash proof passes and the app's totals match the levantamiento's. The file's client, tax ID and currency are shown next to the app's.",
+      "Saved like the grid: subtotals, ratios and cash flow are stored, and BG-210 (year-to-date net income) is imported so the balance ties from the second month on. The file also updates the cost structure (monthly average and % variable).",
+      "Failing controls: any analyst can import anyway by typing a reason. The reason and the failed controls go to the audit log (new action: Levantamiento con controles en falla), each month is flagged, and admins see an alert on the client until a clean import replaces those months.",
+      "Onboarding: new step \"Levantamiento cargado\" after NDA firmado.",
+      "Recursos: the blank template v3.4 and its instructivo.",
+      "Files changed: new src/lib/levantamiento.js (with tests), src/lib/snapshotRecord.js (save logic shared with the grid), src/components/LevantamientoImport.jsx; FinancialDataEntry.jsx, alertEngine.js, OnboardingStatus.jsx, constants.js, AdminPanel.jsx, ClientProfile.jsx, locales, resources/."
+    ]
+  },
+  {
     "version": "1.3.35",
     "date": "2026-10-07",
     "changes": [
