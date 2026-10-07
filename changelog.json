@@ -1,5 +1,23 @@
 [
   {
+    "version": "1.3.42",
+    "date": "2026-10-07",
+    "changes": [
+      "Alertas, a new sidebar item for admins, supervisors and analysts. Every alert across your clients in one list (admins and supervisors: all active clients; analysts: their assigned ones), grouped by severity and then by client.",
+      "Acknowledge or snooze any alert, with an optional note. Snooze needs a date. Both drop out of the main list; an alert comes back when it gets worse than when it was acknowledged, or when the snooze date passes. Reopen undoes either.",
+      "Weekly summary at the top of Alertas: new critical alerts since Monday, alerts resolved since Monday, and clients missing the last closed month. One firm-wide baseline per client and week, saved the first time anyone opens Alertas that week. In the app only, no email.",
+      "Dashboard: each client row shows its count of open critical alerts, the same count as Alertas.",
+      "Per-client thresholds from the client's alert banner (e.g. a client whose normal liquidity is 0.9). Analysts change their clients' thresholds; admins and supervisors change any and can lock one, which analysts then can't edit. \"Use standard\" removes the override.",
+      "New alerts: missing month between actuals; no data for the last closed month (warning after day 15, critical after 45 days); inventory above target DIO and A items below their reorder point (v1.3.41); covenant breach forecast within 13 weeks (v1.3.40).",
+      "Fixes:",
+      "Alerts and ratio thresholds are in Spanish and English.",
+      "Change: receivables and payables turnover are annual (360 ÷ DSO / DPO), matching their annual thresholds, the same rule as inventory in v1.3.41. Quarterly and annual DSO/DPO now use the months in the period. Packages already published keep their old numbers.",
+      "Audit: alert acknowledged, snoozed, reopened; alert threshold saved (with lock), threshold reset.",
+      "Migration v20 required for acknowledge, snooze, the weekly summary and threshold overrides (alerts show without it): supabase-migration-v20.sql.",
+      "Files changed:"
+    ]
+  },
+  {
     "version": "1.3.41",
     "date": "2026-10-07",
     "changes": [
