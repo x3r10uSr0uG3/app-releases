@@ -1,5 +1,18 @@
 [
   {
+    "version": "1.3.45",
+    "date": "2026-10-08",
+    "changes": [
+      "One industry match for every screen. The client's industry is free text; ten screens (dashboards, valuation, benchmarks, red flags, investor analysis, PPTX, AI analyses, Ciclo de caja) each matched it to the reference table by its first six letters, so \"Lavandería…\" never matched. One shared matcher now tries the exact name (accents ignored), known aliases (laundry, podcast, collections), the start of a word (\"Química\" → Industria Química, not Agroquímica), then the old rule.",
+      "No industry DIO target for sectors without material inventory (inventory under 2% of sales: services, software, finance, education, construction, transport). They get no industry inventory target or inventory alert; the analyst can still set one.",
+      "New alert: debt without a payment schedule. When the balance sheet shows debt but Caja 13 semanas has no loans, Alertas and the client banner say so, with the amount. Ciclo de caja and Escenarios now say when debt service is estimated.",
+      "Presupuesto subtracts the scheduled principal of the client's loans in Caja 13 semanas: debt runs off the schedule, principal due within 12 months is short-term, and projected cash falls with it. Without loans, debt is carried flat as before. Rows that held debt only in total debt keep it (it used to drop out of the budget). Escenarios subtracts only what the budget hasn't already, so principal is never counted twice.",
+      "Fix to the v1.3.44 notes: the sales-collapse example (\"10 days instead of 804\") mixed pesos and dollars; in one currency the 3-month DSO was about 165 days. The fix itself stands.",
+      "No migration.",
+      "Files changed: constants.js, cashCycle.js, alertEngine.js, portfolioAlerts.js, scenarioEngine.js, amortization.js, new budgetProjection.js (moved out of BudgetModule.jsx), prompts.js, ClientProfile.jsx, NewClient.jsx, BudgetModule.jsx, CashCycle.jsx, ScenarioPlanner.jsx, the seven screens that matched industries, locales; tests for the matcher, the budget projection and the debt alert."
+    ]
+  },
+  {
     "version": "1.3.44",
     "date": "2026-10-07",
     "changes": [
