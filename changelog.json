@@ -1,5 +1,20 @@
 [
   {
+    "version": "1.3.48",
+    "date": "2026-10-08",
+    "changes": [
+      "Financiero → Importar computes everything. A generic Excel/CSV import used to save the file's lines as read, so gross profit, EBITDA, totals, ratios and cash flow stayed empty until someone re-saved each month. Every imported month now goes through the same computation as the grid and the levantamiento import, with the cash flow taken against the prior month (from the file, else the saved one).",
+      "Months already saved: the analyst chooses. When the file has months that are already saved, a dialog lists them and offers Sobrescribir (the file replaces the month, for restated financials) or Combinar (file values replace, blank fields keep the saved value). Budget rows are never touched by this import. The audit entry financial_imported now records the mode and the months replaced.",
+      "Presupuesto → Importar was broken. It read the importer's list of months as if it were keyed by month, so an imported budget landed in columns \"0\", \"1\", \"2\" with the wrong data. It now lands in the right months.",
+      "Template (Plantilla_Financiero): accumulated depreciation is now positive, as the app stores it. \"Utilidad Neta del Período\" is now a field to fill in (the year-to-date figure; left blank, the app uses the month's net income) instead of being marked \"← Calculado\". \"Dividendos Pagados\" was also labeled negative and is now positive.",
+      "Old files still import correctly: accumulated depreciation and dividends are read as absolute values, and \"Utilidad Neta del Período\" is now recognized.",
+      "The import messages showed a raw {{count}} and a hardcoded Spanish \"advertencias\"; both now read properly in both languages.",
+      "HawkScan: the Low \"Private IP Disclosure\" finding on GET /rest/v1/profiles is a false positive. The addresses are the scanner's own callback URLs, saved as display names by test users it created on the local Supabase. Production has none.",
+      "No migration.",
+      "Files changed: new financialImport.js (+ tests), ClientProfile.jsx, BudgetModule.jsx, AdminPanel.jsx, electron/financial-io.cjs, electron/data-io.cjs, locales."
+    ]
+  },
+  {
     "version": "1.3.47",
     "date": "2026-10-08",
     "changes": [
