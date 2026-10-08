@@ -1,5 +1,24 @@
 [
   {
+    "version": "1.3.49",
+    "date": "2026-10-08",
+    "changes": [
+      "Each client has a number format. \"Formato: 1.234,56 / 1,234.56\" sits next to Importar. Files and pastes for that client are read with it, so \"7,705\" is 7.705 for a client who writes decimals with a comma and 7,705 for one who doesn't. Until a client has a format, the first import asks for it. The display format doesn't change (still 1,234.56 everywhere).",
+      "The import no longer rebuilds the file's totals. Line items are the inputs and the file's totals are checks. A total with no breakdown goes to a named line (\"Gastos operativos 300\" with no split → other operating expenses 300), and a file with net income but no tax line gets tax = EBT − net income, shown in the preview. When a total doesn't match its line items, the month is held: the preview shows the file figure, the line-item figure and the difference. The analyst picks Usar componentes or Conciliar (the difference goes to a named line, kept in import_reconciliation). Since v1.3.48, a file with opex 300 and no breakdown saved EBITDA 600 and net income 600 instead of 300 and 200.",
+      "Every import opens a preview: the client's format (with a warning and a one-off override when the file looks like the other format), one chip per month (Nuevo / Reemplaza / Combina / Totales no cuadran), and the overwrite/merge choice when months are already saved.",
+      "Expense signs: a file that writes expenses as negatives is read as such (\"Signos invertidos (n líneas)\"). COGS −400 no longer turns gross profit into 1,400. A refund in an otherwise positive file keeps its sign.",
+      "Commas, percents, exponents and trailing minus signs are read correctly in files and pastes: \"1.234,56\", \"12,5\", \"15%\", \"1.5E+06\", \"$ (500)\", \"1,234-\". \"8,5x\" in the LBO deal intake is 8.5, not 85.",
+      "A month can have an actual and a budget (migration v23). Importing or loading an actual no longer overwrites that month's budget, and the cash flow never uses a budget row as the prior month. Presupuesto no longer shows the \"DROP CONSTRAINT\" banner.",
+      "Datos grid: the H/P toggle only types new months. A saved month keeps its type, shown on a chip in the column header; changing it is an explicit \"⇄ Convertir…\" with confirmation (audited as snapshot_type_changed). What you type while a save runs is kept and saved next, and two saves never overlap. Changing only an exchange rate now autosaves. If the data can't be loaded, a banner with Reintentar replaces the grid instead of an empty grid.",
+      "Facturación: saving invoices no longer deletes them all first. An invoice without a date or amount blocks the save and names the row, and nothing is lost. A not-yet-issued invoice dates to its month. Payment terms and billing day are separate fields (terms of 45 or 60 days used to break the save), included hours can be set and Horas reads them, and the notes text is left alone.",
+      "Settings that never saved now save: exchange rates, intercompany positions, PPTX KPI selection and branding, CLV settings, ROI estimator, referral sources, the contact log and the CRM referral link. They sent a column that doesn't exist or skipped required ones, and the error was never shown. Errors now show.",
+      "Read errors show in the holding comparison, exchange rates, intercompany and billing, instead of an empty screen that could then be saved over.",
+      "QA: a new \"Data-in Integrity\" section fails on snapshot writes outside the shared helper, on kyc_responses writes missing required columns and on DROP CONSTRAINT SQL. It also warns on reads that ignore errors.",
+      "Migration v23 (snapshot uniqueness by type, billing_profiles.extra). Until it's applied, saving an actual into a month with a budget (or the reverse) says the migration is pending and saves nothing; everything else works.",
+      "Files changed: new src/lib/kyc.js, src/lib/billing.js, dataInIntegrity.test.mjs, audit/2026-10-08-register.json; financialImport.js, snapshotRecord.js, numberFormat.js, lboDeals.js, useAutoSave.js, FinancialDataEntry.jsx, ClientProfile.jsx, BudgetModule.jsx, LevantamientoImport.jsx, BillingTracker.jsx, TimeTracker.jsx, ExchangeRateManager.jsx, IntercompanyRecon.jsx, PPTXExportDialog.jsx, HoldingComparison.jsx, NumberInput.jsx, AdminPanel.jsx, CrmPage.jsx, three hooks, electron/financial-io.cjs, scripts/pre-release-qa.cjs, locales."
+    ]
+  },
+  {
     "version": "1.3.48",
     "date": "2026-10-08",
     "changes": [
