@@ -1,5 +1,20 @@
 [
   {
+    "version": "1.3.47",
+    "date": "2026-10-08",
+    "changes": [
+      "Preguntar a VIRA, a button in the client header that opens a side panel from any tab. The analyst asks about the client's numbers and the answer streams in as it's written. Answers cite each figure with its period, say plainly when data is missing, follow the app language (usted in Spanish) and recommend nothing the data doesn't support.",
+      "Context toggle in the panel: *Solo datos* (default) sends the answer rules plus the client's data (client, last 24 periods of financials, operations, red flags, valuation, unit economics, inventory, scenarios, cash cycle, the last 3 analyses). *Prompt completo* sends the full analysis prompt, with the 18 panelists and the formats, and the answer rules on top. The toggle is there to compare both on a live case.",
+      "The context is rebuilt from today's data each time the panel opens, and the header shows \"datos al …\". A reopened conversation is answered with current numbers.",
+      "Follow-up questions are cheap: the system prompt and the conversation so far are cached. Each answer shows its tokens (in, of which cached, and out).",
+      "Saved history: past conversations for the client are listed in the panel. Any staff member who can see the client can reopen and continue one. Only the person who started it, or an admin, can delete it.",
+      "Analyses now get the last 3 analyses. The analysis prompt has always told the model to review prior analyses, but none were ever sent. New analyses now receive their summary (lo esencial, hallazgos, áreas de atención, próximos pasos), and the financial context now states the reporting currency.",
+      "Audit log: ask_vira_question (client, question length, context mode; not the text) and delete_client_chat.",
+      "Migration v22 (client_chats). Staff-only access: admins and supervisors see every client, analysts their assigned clients, portal users nothing. Without v22 the panel still answers, but shows \"migración v22 pendiente\" and saves nothing.",
+      "Files changed: new AskVira.jsx, new askVira.test.mjs, prompts.js, NewAnalysis.jsx, ClientProfile.jsx, AdminPanel.jsx, electron/anthropic-engine.cjs, main.cjs, preload.cjs, locales."
+    ]
+  },
+  {
     "version": "1.3.46",
     "date": "2026-10-08",
     "changes": [
