@@ -1,5 +1,21 @@
 [
   {
+    "version": "1.3.43",
+    "date": "2026-10-07",
+    "changes": [
+      "Financiero → Escenarios, a new tab next to Presupuesto. Up to 3 scenarios per client, compared side by side against the base: the approved budget, or the projected periods when there's none. Comparison only; the budget stays in Presupuesto.",
+      "Ciclo de caja, a new section at the top of Financiero → Dashboard:",
+      "New alerts (warnings): collection days above target, and cash cycle above target with cash tied up in receivables and inventory. In Alertas, the Dashboard badge and the client banner. \"Inventory above target\" now uses the same live DIO.",
+      "Change: DSO, DIO and DPO use the average flow of the last 3 months (fewer at the start of the history or across a missing month), so one seasonal month doesn't swing them. The same days on every screen: dashboards and PDFs, the Resumen PPTX, Inventario, Métricas, alerts, AI analyses and the client portal. Quarterly and annual views keep the flow of the period.",
+      "Change: days come first. Activity blocks lead with DSO, DIO, DPO and the cash cycle; turnovers move below and are labelled \"(anualizada)\".",
+      "Change: Financiamiento's growth limit uses the last 12 months on both views (it used one month of sales on the monthly view, e.g. 1.4% instead of 19%). Asset intensity follows Acton CV2 (working capital + net capex, without cash or debt); debt service comes from the client's loans in Caja 13 semanas when there are any. The ROE ceiling (F03) shows next to it, with the binding limit and a note when high fixed costs make the result a floor.",
+      "Fixes:",
+      "Audit: scenario saved, scenario deleted, working-capital targets saved.",
+      "No migration.",
+      "Files changed:"
+    ]
+  },
+  {
     "version": "1.3.42",
     "date": "2026-10-07",
     "changes": [
