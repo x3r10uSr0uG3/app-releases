@@ -1,5 +1,20 @@
 [
   {
+    "version": "1.3.46",
+    "date": "2026-10-08",
+    "changes": [
+      "Documentos → Solicitudes, a new sub-tab. Solicitar mes creates the month's checklist in one click (default: levantamiento, estados de cuenta, planilla; editable per client) with a due date on the 10th of the following month. Single requests can be added with a type, title, notes and due date.",
+      "Statuses: pendiente → recibido (the client uploaded) → aceptado or rechazado. A rejection carries a reason the client sees in the portal; the client uploads again.",
+      "Uploaded files open (signed link) or download to ~/Documents/Asanoski/<Client>/solicitudes/ with the standard file name.",
+      "Importar on a levantamiento .xlsx opens the levantamiento importer (Financiero → P&L/Balance) with the client's file already loaded.",
+      "New alert: overdue data requests. A request past its due date and not accepted raises a warning in Alertas and the client banner.",
+      "Audit log: data_request_created, _accepted, _rejected, _deleted, data_request_template_saved.",
+      "Client portal v2.1.16: the Solicitudes page lists the requested documents with due dates, status and rejection reason, and takes drag-and-drop uploads (PDF, XLSX, CSV, JPG, PNG; 25 MB per file). A holding's user sees each branch's requests with the branch name. The free-text question form stays; its labels were showing raw keys and now read properly.",
+      "Migration v21 (data_requests, data_request_files, private bucket client-uploads, function submit_data_request_file). Portal users can only read; an upload is recorded only through the function, which checks the request belongs to their client, the file is theirs and the request isn't accepted. No overwrite or delete for clients. Without v21 the app shows \"migración v21 pendiente\" in Solicitudes and the portal hides the section.",
+      "Files changed: new DataRequests.jsx, dataRequests.js (+ tests), alertEngine.js, portfolioAlerts.js, ClientProfile.jsx, FinancialDataEntry.jsx, LevantamientoImport.jsx, AdminPanel.jsx, electron/main.cjs, preload.cjs, locales. Portal: new OpenDataRequests.tsx, DataRequest.tsx, locales."
+    ]
+  },
+  {
     "version": "1.3.45",
     "date": "2026-10-08",
     "changes": [
