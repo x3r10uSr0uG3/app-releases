@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.3.61",
+    "date": "2026-10-09",
+    "changes": [
+      "New source \"Kit (outbound)\" in CRM → Nuevo prospecto, with a required Disparador block: type (finance job ad, expansion, press, event, other), link, date seen, excerpt and the advertised role. The prospect and its kit draft are created in one transaction.",
+      "Prospect → Documentos → Kit (before NDA, prospects only). Public information only: there are no fields for the prospect's sales, margins or costs.",
+      "CRM header: kits sent in the last 30 days and the reply rate; Métricas breaks them down by trigger type.",
+      "Audit: kit_created, kit_sent, kit_status_changed, kit_settings_updated."
+    ]
+  },
+  {
     "version": "1.3.60",
     "date": "2026-10-09",
     "changes": [
