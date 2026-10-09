@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.3.65",
+    "date": "2026-10-09",
+    "changes": [
+      "CRM → Métricas, expanded (open deals, before IVA, in USD):",
+      "Over a period (last 3 months, last 12 months, all time):",
+      "Acquisition cost (admin only, D8): sales hours (logged before a client's first invoice) × each analyst's cost, over every deal closed in the period, ÷ clients won; also by source.",
+      "The old CRM activity table is retired (D2): migration v32 copies any last rows into the single activity log and renames it crm_activities_legacy (read-only, admin only)."
+    ]
+  },
+  {
     "version": "1.3.64",
     "date": "2026-10-09",
     "changes": [
