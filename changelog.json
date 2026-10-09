@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.3.66",
+    "date": "2026-10-09",
+    "changes": [
+      "Investor analysis → Estructura de capital (replaces the single-round table once v33 is applied):",
+      "Costo total de capital, rebuilt: the effective cost is the provider's annual IRR after fees, in success, slow progress and failure. Debt and equity are measured the same way.",
+      "The investment memo's IRR heatmap uses the memo's own EBITDA, entry value, horizon and exit multiple. Missing fields are listed instead of being filled with demo numbers.",
+      "Investment memo and funding prompts: they now get the capital structure, the downside sentences and the cost in each scenario."
+    ]
+  },
+  {
     "version": "1.3.65",
     "date": "2026-10-09",
     "changes": [

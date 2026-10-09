@@ -1,6 +1,6 @@
 {
-  "version": "1.3.65",
+  "version": "1.3.66",
   "releaseDate": "2026-10-09",
-  "notes": "CRM: analítica del embudo (Sales SA2) — migration v32",
-  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.3.65/Analyst.Workstation-1.3.65-arm64.dmg"
+  "notes": "Estructura de capital y costo total de capital (Finance F3) — migration v33",
+  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.3.66/Analyst.Workstation-1.3.66-arm64.dmg"
 }
