@@ -1,5 +1,26 @@
 [
   {
+    "version": "1.3.58",
+    "date": "2026-10-09",
+    "changes": [
+      "Indicadores on 12 months:",
+      "Days on the calendar: DSO, DIO and DPO divide by the actual days in the period (February 28, March 31), not 30 per month, on every screen (decision 2A, carried from A3). Values move by up to 3%.",
+      "Dividends stay what the books give: the year-to-date balance of \"Dividendos decretados\" (decision D6 revised by Levent on 2026-10-09, after the Levantamiento template showed the field comes from that account).",
+      "Fiscal year per client (default January), on Financiero next to the number format. It is audited (\"Inicio del año fiscal\") and drives the dividend reset and the budget's year-end close.",
+      "Projections:",
+      "Presupuesto:",
+      "Forecasts:",
+      "Variación:",
+      "Red flags are one-sided: only cash short of earnings (or short of EBITDA for FCF) is a flag. A loss with negative operating cash flow has its own rule.",
+      "Alertas: a ratio of exactly 0 (e.g. current ratio 0) now fires.",
+      "Métricas:",
+      "Apalancamiento operativo: each month's fixed and variable costs come from that month's own lines, so contribution margin − fixed costs = EBIT. A line with no category is flagged \"clasificación incompleta\".",
+      "Preguntar a VIRA quotes the same 12-month Z as Indicadores.",
+      "Tests: 262, up from 241. Golden D's consolidated DSO moves 45.36 → 46.36 (92 real days).",
+      "HawkScan: not rerun. No database objects or endpoints changed; the fiscal-year setting is a new key in the existing kyc_responses table."
+    ]
+  },
+  {
     "version": "1.3.57",
     "date": "2026-10-09",
     "changes": [
