@@ -1,5 +1,19 @@
 [
   {
+    "version": "1.3.63",
+    "date": "2026-10-09",
+    "changes": [
+      "Missing hours are visible (D7):",
+      "Where it shows:",
+      "Margin marked provisional (D8): a month with fees where the primary analyst logged 0 hours shows its margin with \"≈\" and \"provisional\". The client totals say they include provisional months, and the admin ranking can leave those clients out.",
+      "Ficha operativa (Equipo → ⋯), for admins and supervisors:",
+      "\"Mi semana\" for analysts: last week's hours against capacity, billable utilization, their gaps and their clients' close. Only their own numbers.",
+      "\"Equipo esta semana\" on Alertas (admins and supervisors): one line per person, with low, over and no-hours people first.",
+      "Check-in notes (admins only, D10): one private note per person per week, in the Ficha operativa.",
+      "Audit-table dates follow the app language."
+    ]
+  },
+  {
     "version": "1.3.62",
     "date": "2026-10-09",
     "changes": [
