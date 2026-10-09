@@ -1,5 +1,27 @@
 [
   {
+    "version": "1.3.60",
+    "date": "2026-10-09",
+    "changes": [
+      "Settings that save: Admin → CLV and Referidos now save to the database and confirm, or say why not. Before, they wrote to a client 0 that doesn't exist and reverted on reload.",
+      "CLV on how long clients really stay (decision D3):",
+      "One activity log (D2): calls, meetings, notes, follow-ups and stage moves logged in the CRM appear in the client profile and feed the health score. Old CRM notes are copied over.",
+      "Security (SL-25): portal accounts see and create only their own data requests. They could read every activity row of their company.",
+      "Deals:",
+      "Lost is its own status (D11): a lost deal becomes lost, not closed, so Cerrados means former clients only. The Sidebar has a Perdidos group, and Dashboard, Admin and Métricas count lost apart.",
+      "Contacts per prospect and client: several people with buying roles (decisor, económico, usuario, influenciador, bloqueador, campeón), one primary, one día a día (linked to their portal account for the SA3 survey). In the CRM and in the client profile.",
+      "Next actions:",
+      "Stage history is written by the database from the first move after the migration, plus a backfill from the March notes (SA2 analyses it). \"Days in stage\" counts from the move.",
+      "Referidos works: add a source, log a contact, and see the prospects and clients it brought with their real CLV. There's no $4,500 floor, and the screen no longer crashes once a source exists.",
+      "CRM page:",
+      "Test records: clients 4 (COAGRO) and 7 (Oronda Media Content) are soft-deleted (Levent, 2026-10-09).",
+      "Portal (v2.1.18): lost clients never appear.",
+      "QA:",
+      "Tests: 277 (sa1.test.mjs: retention prior, exposure, blending, CLV, MRR, follow-ups, CRM alerts, close rules); SQL role test scripts/sql-tests/sales-sa1.sql.",
+      "Before the migration is applied: the CRM shows \"migración pendiente\". Deals, contacts and referrals are read-only, and Nuevo prospecto is disabled."
+    ]
+  },
+  {
     "version": "1.3.59",
     "date": "2026-10-09",
     "changes": [
