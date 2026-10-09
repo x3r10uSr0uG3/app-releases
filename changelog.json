@@ -1,5 +1,23 @@
 [
   {
+    "version": "1.3.59",
+    "date": "2026-10-09",
+    "changes": [
+      "The offer lives in one place, src/lib/offer.js: the three levels at the site's prices (Orden US$1,000, Rumbo US$1,750, Escala US$3,250, + IVA), minimum term, exit notice, what each includes and excludes, and the three guarantees word for word from virafinancial.com in Spanish and English, with the paused-clock clause. Version 2026-09-25.",
+      "IVA follows the site: Guatemalan clients pay 12% (1,120 / 1,960 / 3,640). Clients outside Guatemala are billed as an export of services with no IVA, and the quote says so. Before, any country's own rate applied whenever it matched the firm's.",
+      "Calificación routes to a level:",
+      "Cotización:",
+      "Hoja de Ruta by level: stages with honest durations (Orden 2–4 months to books current and a first balance sheet, minimum 3; Rumbo's day-21 deliverable; Escala's 5-business-day recommendation), the level's guarantee, Lo que no incluye, Lo difícil dicho de antemano, Decisiones que son suyas, and Para subir de nivel. On screen and in the DOCX, in ES and EN. A client on an old quote sees their stored fee marked \"Oferta anterior\".",
+      "Facturación and the guarantee (decision by Levent, 2026-10-09):",
+      "Facturación fix: invoices reloaded from the database keep their number, subtotal, IVA, total and issued state. Before, they came back blank after a reload because the screen read the table's raw columns.",
+      "Everywhere else a tier showed: the onboarding badge and level mismatch, the Ficha de Cliente level, the NDA note and white-label default (Escala), the CLV rates, and the ROI estimator read levels and prices from the offer.",
+      "Removed: the unused two-tier Calificación screen and the June offer's constants (90-day roadmap, Tier quotes and deliverables, add-on callout).",
+      "QA: a fee literal (1000/1750/3250/1500/3500) in a sales or quote file outside offer.js, the June refund wording anywhere, or AI wording in quote or roadmap copy fails the release. A warning fires when offer.js stops matching the site's prices or guarantee text.",
+      "Tests: 269, up from 262 (offer.test.mjs, billing.test.mjs).",
+      "HawkScan: not rerun. No database objects or endpoints changed; the entry level and guarantee log are new keys in the existing billing_profiles.extra."
+    ]
+  },
+  {
     "version": "1.3.58",
     "date": "2026-10-09",
     "changes": [
