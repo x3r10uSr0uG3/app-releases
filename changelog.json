@@ -1,5 +1,17 @@
 [
   {
+    "version": "1.3.64",
+    "date": "2026-10-09",
+    "changes": [
+      "Client time is logged on its own (D2): active time on a client's screen (profile, new analysis, analysis view) is recorded in 5-minute blocks.",
+      "Always visible: the sidebar shows \"⏱ Cliente · hoy 2 h 15\", or \"⏱ En pausa (inactivo)\". There is no pause button; idle time pauses it.",
+      "Offline-safe: blocks wait in a local queue and upload without duplicates when the connection returns.",
+      "Every hours screen counts it:",
+      "Manual entries stay for work outside the app (meetings, calls, travel).",
+      "Recursos: the Estándar's time line now says time is logged automatically."
+    ]
+  },
+  {
     "version": "1.3.63",
     "date": "2026-10-09",
     "changes": [
