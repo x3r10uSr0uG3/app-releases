@@ -1,5 +1,29 @@
 [
   {
+    "version": "1.3.53",
+    "date": "2026-10-08",
+    "changes": [
+      "Cost of capital built up and sourced: Ke = rf + βL × ERP + λ × CRP + size premium + company-specific premium; WACC from the same D/E. Costo de capital shows every input with its source and date:",
+      "One tax rate (the client's effective rate, else the country's) for beta, cost of debt and NOPAT.",
+      "Valuations with fewer than 12 months are annualized: \"n meses, anualizado\". The engines take the monthly average and annualize once. The manual EBITDA multiple, capitalized earnings, excess earnings and SDE now use annual figures; they were up to 12× too low. EBITDA excludes other income.",
+      "Small-company risk is charged once per method:",
+      "Investor returns rebuilt:",
+      "Valuation chart:",
+      "Reconciliation judges only the methods that have data, and names the pair that doesn't overlap.",
+      "FCFE: \"debt creates/destroys value\" is replaced by ROIC (trailing NOPAT) against the after-tax cost of debt.",
+      "No tax credit on losses, in the DCF and in FCFF.",
+      "Financiamiento never recommends outside equity when there's no funding gap:",
+      "Preguntar a VIRA and AI reports use the same figures: the monthly base, the Ke build-up, the deal returns per structure, and the funding paths.",
+      "\"¿Cómo se calcula?\" popovers on Ke, WACC, DCF, multiples, DLOM and reconciliation.",
+      "Portal v2.1.17 gets the same engines and data, with a parity check in QA. The workstation saves the policy premiums and DLOM, so both apps show the same Ke and equity.",
+      "Migration v25 (reference data: country_risk, market_parameters, industry beta and D/E). Until it's applied, the same Damodaran data shipped in the release is used.",
+      "HawkScan (local Supabase with v25, scan dc1b763c): 0 High new. The new country_risk path showed the known classes: CORS * (Supabase-managed, risk-accepted as on 2026-10-07) and two Kong header Lows (false positive). The two existing Lows on client_chats and profiles stay open as before.",
+      "Restatement: 5 clients have saved valuation, funding or investor work to recompute and re-save. Two AI reports for Lavanderías quote figures and will be regenerated. Details in audit/restatement-2026-10-08.xlsx.",
+      "QA: new Finance F1 checks.",
+      "Files changed:"
+    ]
+  },
+  {
     "version": "1.3.52",
     "date": "2026-10-08",
     "changes": [
