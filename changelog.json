@@ -1,5 +1,17 @@
 [
   {
+    "version": "1.3.56",
+    "date": "2026-10-09",
+    "changes": [
+      "Bank terms per client: step 3 has \"Condiciones del banco para este cliente\".",
+      "A2 needs its line to fit: when internal sources cover the need by month 12 but the revolving line needed until then exceeds debt capacity, the plan says so and treats it as a shortfall. It shows the three options (equity, adjusted growth, longer timeline) instead of A2, and without any capacity the path is C.",
+      "Loan covenants in the pro forma: the covenants on the client's loans in Caja 13 semanas appear as rows under the 3-year test, with the headroom per year in the Plan, Estrés and scenario columns.",
+      "Preguntar a VIRA and the AI reports see the adjusted bank terms with their reason, an A2 line that doesn't fit, and any covenant breach.",
+      "Tests: 223.",
+      "HawkScan: not rerun. No database objects or endpoints changed; the new values live in the existing funding_proposals.overrides column."
+    ]
+  },
+  {
     "version": "1.3.55",
     "date": "2026-10-09",
     "changes": [
