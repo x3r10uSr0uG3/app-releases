@@ -1,5 +1,26 @@
 [
   {
+    "version": "1.3.54",
+    "date": "2026-10-08",
+    "changes": [
+      "Five steps on Financiamiento, each with its formula. The plan answers, in order: do you need outside money, how much and when, how much can you borrow, what each loan does to coverage (in the bad case too), and what to do if borrowing falls short.",
+      "Need by month, not a year-end netting:",
+      "Internal sources first: cash released by reaching the DSO and DIO targets, and cash above the minimum balance (one month of operating expenses, or the covenant typed in). If they cover the need, the path is A. If they cover it by month 12 but not earlier, the path is A2 with a revolving line sized at the peak.",
+      "Debt capacity is the lower of two limits, and the screen says which one binds:",
+      "Proposal: working capital goes to a 12-month revolving line, fixed assets to a term loan matched to the asset life (up to 84 months), capped at capacity. Tranches can be edited. A term that doesn't match the use is flagged but never blocked.",
+      "Three-year pro forma test with the existing and proposed debt: DSCR, Debt/EBITDA and EBIT ÷ interest against the bank hurdles (1.25 / 1.50, 3.0, 2.0). There are Plan and Estrés columns (growth at half, margin −3pp, rate +2pp) plus a column for the active scenario. Breaches are red, with the first month.",
+      "When capacity falls short, three options with their numbers: equity for the shortfall, the highest growth that fits, or the shortest timeline (up to 48 months) that reaches the target. The analyst's choice is saved and sets the path letter.",
+      "No more \"DSCR 99x\": with no debt service the screen says \"sin servicio de deuda\". The loan panel is always visible, and its debt service and DSCR come from the same pro forma.",
+      "Saved per client in funding_proposals (migration v26), with typed results (peak, capacity, binding limit, worst DSCR, path). Opening a client never writes; each save is audited as \"Propuesta de financiamiento guardada\". Without v26 the plan is still computed, with a \"migración pendiente\" note.",
+      "Prueba de estrés:",
+      "Survival index: pledgeable assets default to the borrowing base after advance rates, not book value at 100%.",
+      "Preguntar a VIRA and AI reports get the plan: peak and month, internal sources, capacity and what binds, tranches, worst year, the three options and the one chosen, and the path.",
+      "Restatement (audit/restatement-funding-2026-10-08.xlsx, 5 clients):",
+      "Tests: 220, up from 195. New suites: fundingPlan, borrowingBase, stressTestCalcs. Extended: fundingCalcs (the gap wrapper returns the plan's peak), askVira and financeGolden (golden A self-funds; golden C has no cash flow to service debt and gets the options).",
+      "HawkScan (local Supabase with v26, scan 9db3f99c; the spec includes funding_proposals): no new High or Medium findings. Two new Lows, both on existing endpoints (profiles, client_chats) and both known false-positive classes (scanner callback IPs saved as display names, and the server version header). Nothing new on funding_proposals."
+    ]
+  },
+  {
     "version": "1.3.53",
     "date": "2026-10-08",
     "changes": [
