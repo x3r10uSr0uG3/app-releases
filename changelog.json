@@ -1,5 +1,22 @@
 [
   {
+    "version": "1.3.57",
+    "date": "2026-10-09",
+    "changes": [
+      "Fecha sin caja on every cash screen: \"Fecha sin caja: 14 mar 2027 (5.2 meses) · quema neta Q38k/mes\", or \"No consume caja en el horizonte\".",
+      "Runway alert: fires only when the fume date is within 6 months (critical under 3). A profitable client with little cash in the bank no longer gets one. The old alert divided cash by monthly costs.",
+      "Caja 13 semanas:",
+      "Proyección de caja:",
+      "Loans whose first payment is in the past restart at the next payment date: \"Saldo y cuotas desde 15 oct 2026\".",
+      "Minimum-cash covenant: the headroom is absolute (lowest projected cash − threshold). It turns amber under one month of fixed outflows, even with a threshold of 0.",
+      "Prueba de estrés:",
+      "Inventario: the \"Variab. mensual %\" column is month-to-month demand variability, converted to daily inside the safety-stock formula. For the same number, safety stock is about 5.5× the old figure. No production product has this field filled, so no saved figure changes.",
+      "Production check (5 clients, read-only):",
+      "Tests: 241, up from 223.",
+      "HawkScan: not rerun. No database objects or endpoints changed; the tax setting lives in the existing cash_13w row."
+    ]
+  },
+  {
     "version": "1.3.56",
     "date": "2026-10-09",
     "changes": [
