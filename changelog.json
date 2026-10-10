@@ -1,5 +1,17 @@
 [
   {
+    "version": "1.3.76",
+    "date": "2026-10-10",
+    "changes": [
+      "Stress tab faster: the stress cases, the tornado and Supervivencia convert the client's months once and apply each shock to them; repeated shocks are reused.",
+      "Stress cases: the monthly cash flow of each case now comes from the same outlook as its days (after taxes, capex and debt), so the table and the days no longer contradict each other. A capped case reads \"> 2 años\", and the −30% insight says how long the cash lasts.",
+      "Funding: with debt and no loan schedule, the funding DSCR, the growth speed limit and the AI context use the same estimated schedule as the cash screens (B-D2).",
+      "Holding comparison: branches convert with the client's fiscal year.",
+      "Clients with no country: months with no currency read as GTQ, the data-entry default, instead of dropping out of the screens.",
+      "Grid paste: a multi-cell paste lists the values it read. The tornado bars on Resumen show their names."
+    ]
+  },
+  {
     "version": "1.3.75",
     "date": "2026-10-10",
     "changes": [
