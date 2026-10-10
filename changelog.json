@@ -1,5 +1,20 @@
 [
   {
+    "version": "1.3.67",
+    "date": "2026-10-09",
+    "changes": [
+      "DCF:",
+      "Equity bridge: EV − debt + excess cash (cash above one month of operating costs) − leases − severance owed − overdue taxes − minority interest ± other items (with a reason) = equity, then − DLOM. The DCF, the multiples and the deal returns all use this one bridge.",
+      "Multiples: the industry multiple, then each private-company discount (size, key person, concentration), then the multiple applied, which is also the default exit multiple. A warning appears above 15x.",
+      "Small-business methods:",
+      "FCFF / FCFE are in the reporting currency, with the conversion noted. The payout period asks for the unit price instead of showing ∞.",
+      "Admin → Datos: paste Damodaran's January tables (country risk, market and VIRA policy values, industry betas), preview the changes, then confirm. No new app version is needed.",
+      "Every finance screen and the investment memo now work in English.",
+      "The client portal shows the same valuation (v2.1.19).",
+      "Re-save existing valuations: reopen and save the valuations of clients with saved work so they reflect the new engine."
+    ]
+  },
+  {
     "version": "1.3.66",
     "date": "2026-10-09",
     "changes": [
