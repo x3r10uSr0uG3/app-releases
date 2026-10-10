@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.3.77",
+    "date": "2026-10-10",
+    "changes": [
+      "Asignaciones: the team filter and each client's analyst selector show the person's login email next to the name, so two accounts with the same name can't be confused. Admins only; needs migration v37 (before it, names show as before)."
+    ]
+  },
+  {
     "version": "1.3.76",
     "date": "2026-10-10",
     "changes": [
