@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.3.79",
+    "date": "2026-10-10",
+    "changes": [
+      "AI analysis on Claude Sonnet 5.5 (effort medium): New Analysis, \"Generar informe\", month-end summary, comparables, investment target panel and LBO deal extraction. Ask VIRA stays on Opus 5.5. Measured on the same client and month: about $0.25 a run against $0.85 on Opus, with the same report sections and the same figures.",
+      "Longer answers before a cut-off: the output cap is 64,000 tokens with one continuation (was 32,000 with two).",
+      "Declined requests: a request the model declines is retried on a fallback model in the same call; if the whole chain declines, the screen says so instead of showing an empty report.",
+      "Bare JSON answers: month summary, comparables and LBO extraction read the answer whether or not it comes in a code block."
+    ]
+  },
+  {
     "version": "1.3.78",
     "date": "2026-10-10",
     "changes": [
