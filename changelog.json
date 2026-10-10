@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.3.73",
+    "date": "2026-10-10",
+    "changes": [
+      "Fixed: revenue included IVA. Invoices store the total the client pays. Rentabilidad (client and firm), contribution and CLV in the CRM, and the Dashboard's portfolio CLV all counted that total as revenue."
+    ]
+  },
+  {
     "version": "1.3.72",
     "date": "2026-10-10",
     "changes": [
