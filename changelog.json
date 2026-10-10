@@ -1,5 +1,19 @@
 [
   {
+    "version": "1.3.75",
+    "date": "2026-10-10",
+    "changes": [
+      "Imports and pastes:",
+      "P/E: an industry P/E above 40× (or ≤ 0) is excluded from the football field, the AI range and the portal. Example: Servicios Profesionales at 300× (B-04, B-D1).",
+      "Fiscal year everywhere:",
+      "Cash:",
+      "Currency:",
+      "Valuation: capitalized and excess earnings, and the g ≤ rf checks, use Fisher-adjusted Ke and rf in the valuation currency (B-09).",
+      "Also fixed:",
+      "Register and tests: the audit register is corrected (B-25). The D14 and FA-25 tests that couldn't fail are replaced with independent checks (B-26). New QA gates cover B-03, B-05, B-07, B-11, B-14 and B-20."
+    ]
+  },
+  {
     "version": "1.3.74",
     "date": "2026-10-10",
     "changes": [
