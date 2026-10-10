@@ -1,5 +1,14 @@
 [
   {
+    "version": "1.3.70",
+    "date": "2026-10-09",
+    "changes": [
+      "Fixed: the autosave could save one client's answers into another. If you switched clients less than a second after typing, the pending save ran with the new client and the previous client's answers.",
+      "The analyst preparation can be downloaded. On the \"Preparación del analista\" tab, the buttons download the preparation in Word or PDF, marked as an internal document. On \"Informe para el cliente\" they download the report.",
+      "The preparation is shown properly formatted: headings, tables with bold and italics inside the cells, lists and dividers, with no  or # showing."
+    ]
+  },
+  {
     "version": "1.3.69",
     "date": "2026-10-09",
     "changes": [
