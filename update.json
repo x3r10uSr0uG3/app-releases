@@ -1,6 +1,6 @@
 {
-  "version": "1.3.71",
-  "releaseDate": "2026-10-09",
-  "notes": "PDFs del análisis: sin páginas en blanco ni encabezados sueltos",
-  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.3.71/Analyst.Workstation-1.3.71-arm64.dmg"
+  "version": "1.3.72",
+  "releaseDate": "2026-10-10",
+  "notes": "Calidad de clientes: NPS, renovaciones, concentración y selección (Sales SA3) — migration v34, portal v2.1.20",
+  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.3.72/Analyst.Workstation-1.3.72-arm64.dmg"
 }
