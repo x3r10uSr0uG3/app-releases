@@ -1,8 +1,26 @@
 [
   {
+    "version": "1.3.74",
+    "date": "2026-10-10",
+    "changes": [
+      "Security (H0, needs v36): create_portal_user can no longer be called from the API; reassign_client checks for an active admin or supervisor in a way an anonymous caller can't slip past; only active staff can assign themselves to a client (portal accounts never); only admins delete assignments. Portal accounts can no longer edit or move their own requests, and their requests carry their own id. Anonymous access to sales tables and to admin functions is revoked.",
+      "The pipeline never demotes a client in service. A deal whose client is active, inactive or closed is read-only on the CRM board; \"Próximas acciones\" opens that client's profile. Moving a lost deal to Cerrado-Ganado puts the client back to prospect. Stage, close reasons and client status save in one transaction (crm_move_stage); the close form stays open, with what was typed, until the save works. A failed save no longer turns a lost deal into a former client.",
+      "Lifetime value follows the offer taken (SD4): the offer level's expected life (Admin → CLV) with Orden's 3-month minimum as a floor. Every role now sees the same CLV for the same client; it's no longer marked \"est.\" just for using the offer's curve.",
+      "1 client = 1 legal entity (SD1): branches and projects roll their fees, invoices, renewals and hours up to their company. An admin can mark a branch that is its own S.A. or LLC (client profile → \"Es su propia entidad legal\").",
+      "Numbers fixed:",
+      "Screens: Admin's status dropdown applies lost-vs-closed; parent-company lists offer only open companies; \"Cerrados\" counts are former clients (closed or inactive) everywhere; contacts keep exactly one primary (crm_set_contact_flags); referral sources are shared across screens; activity dates and errors follow the app language.",
+      "Portal (next portal version): the NPS scale wraps into two labelled rows on phones with 44 px buttons; the survey survives a branch switch and financial-data errors; \"Más tarde\" lasts until the next login; screen-reader labels and focus fixed.",
+      "QA: new gate checks with planted-violation self-tests; npm run test:sql runs the sales role tests against local Supabase and fails on any accepted bad case.",
+      "New audit actions: client_legal_entity_set, activity_deleted."
+    ]
+  },
+  {
     "version": "1.3.73",
     "date": "2026-10-10",
     "changes": [
+      "Operaciones: one TOC engine for Step 2, Steps 3–6, the Excel export and Inventario; load follows each product's routing, in minutes.",
+      "Step 4 plan de mezcla and Step 6 simulation capped by what the plant can make and sell; 'Límite de mercado' vs 'Restricción interna' readings.",
+      "The 2 existing operations cycles need a routing review (estimated routing now shown in minutes with a banner).",
       "Fixed: revenue included IVA. Invoices store the total the client pays. Rentabilidad (client and firm), contribution and CLV in the CRM, and the Dashboard's portfolio CLV all counted that total as revenue."
     ]
   },

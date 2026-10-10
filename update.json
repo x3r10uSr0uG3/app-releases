@@ -1,6 +1,6 @@
 {
-  "version": "1.3.73",
+  "version": "1.3.74",
   "releaseDate": "2026-10-10",
-  "notes": "Operaciones: un solo motor TOC, tiempos en minutos y plan de mezcla (Operations Sprint OP) — migration v35",
-  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.3.73/Analyst.Workstation-1.3.73-arm64.dmg"
+  "notes": "Ventas SA4a: corrección del CRM tras la auditoría de SA1–SA3 — migration v36",
+  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.3.74/Analyst.Workstation-1.3.74-arm64.dmg"
 }
