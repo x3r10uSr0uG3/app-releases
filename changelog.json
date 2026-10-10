@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.3.71",
+    "date": "2026-10-09",
+    "changes": [
+      "Fixed: the client report left page 1 almost blank. Each report section was kept whole, so a long section like Hallazgos clave jumped to the next page. Sections now flow across pages; paragraphs still don't split.",
+      "Fixed: the analyst preparation ended with an orphan \"PARTE 2: INFORME PARA EL CLIENTE\" heading. The preparation now stops before it (screen, PDF and Word).",
+      "Fixed: sub-items in the preparation were flattened. Indented items (for example the three causes under a hypothesis) now render indented, on screen and in Word.",
+      "Fixed: list lines inside panelist quotes showed a literal \"-\", and empty quote lines left blank bars. They now show as bullets, and the empty lines are dropped."
+    ]
+  },
+  {
     "version": "1.3.70",
     "date": "2026-10-09",
     "changes": [
