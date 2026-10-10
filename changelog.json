@@ -1,5 +1,16 @@
 [
   {
+    "version": "1.3.68",
+    "date": "2026-10-09",
+    "changes": [
+      "An analysis cut off before its client report can now recover it.",
+      "\"Generar informe\" on analyses saved without a report (Corporación de Lavanderías has two). It writes the client report from the existing preparation, saves it and logs it in the audit trail. After that, Word and PDF are available.",
+      "\"Descargar PDF\" next to \"Descargar Word\" on the client report.",
+      "Labels that showed as raw keys now read properly: the analysis view (status, tabs, report sections), Conciliación intercompañía, the update banner, the quote's IVA line, the stress chart hint and two valuation labels (41 in total). A release check now blocks any text key missing in Spanish or English.",
+      "\"Filtrar por período::\" no longer shows two colons."
+    ]
+  },
+  {
     "version": "1.3.67",
     "date": "2026-10-09",
     "changes": [
