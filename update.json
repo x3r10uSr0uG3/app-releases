@@ -1,6 +1,6 @@
 {
-  "version": "1.3.80",
+  "version": "1.3.81",
   "releaseDate": "2026-10-10",
-  "notes": "Régimen de ISR por cliente (TX)",
-  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.3.80/Analyst.Workstation-1.3.80-arm64.dmg"
+  "notes": "Régimen de ISR: ISO, Washington y Canadá completos",
+  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.3.81/Analyst.Workstation-1.3.81-arm64.dmg"
 }
