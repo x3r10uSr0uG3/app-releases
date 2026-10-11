@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.3.84",
+    "date": "2026-10-11",
+    "changes": [
+      "Pantalla en blanco: with a budget that has months of negative cash, the \"cover with a credit line\" card referenced a value that only existed inside another function. The screen failed to draw and, with no error screen around it, the whole window went white. The card now reads the typed rate correctly. A scan of the whole source found no other undefined references."
+    ]
+  },
+  {
     "version": "1.3.83",
     "date": "2026-10-10",
     "changes": [
