@@ -1,5 +1,14 @@
 [
   {
+    "version": "1.3.87",
+    "date": "2026-10-12",
+    "changes": [
+      "Uploads: the desktop app sends every Supabase request through its main process, and that bridge only carried text: a file (Blob / FormData) was sent as JSON.stringify(...), which is {}. Storage kept a 2-byte file with a 200, so the month package looked generated but its PDF was empty. Files now travel as bytes with their content type.",
+      "Downloads: the same bridge decoded every response as text, corrupting binary files (Solicitudes de datos → Descargar a PDF or Excel). Binary responses now come back byte for byte.",
+      "Release gate C now also flags empty stored files: one stored after this fix blocks the release; the old one (MAC 2025-12 v1) is listed to regenerate."
+    ]
+  },
+  {
     "version": "1.3.86",
     "date": "2026-10-11",
     "changes": [
