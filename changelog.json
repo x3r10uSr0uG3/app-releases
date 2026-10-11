@@ -1,5 +1,21 @@
 [
   {
+    "version": "1.3.80",
+    "date": "2026-10-10",
+    "changes": [
+      "Perfil fiscal (client profile, Información): one income-tax regime per client, read by every screen. Templates for the United States (by state), Canada (by province), México, Central America, Cuba, the Dominican Republic, Puerto Rico, Colombia, Perú and Ecuador, plus Personalizado; every other country uses its profit rate from the country risk table. Each template shows its legal source and the date it was checked. Changes are audit-logged.",
+      "Regime comparison: the card runs every template of the client's country on its last 12 months (and next year at the saved growth) and shows the pre-tax profit at which two regimes cost the same.",
+      "A revenue regime is taxed as one (e.g. Guatemala's opcional simplificado, 5% / 7% of monthly revenue): NOPAT takes the tax in full, interest gives no tax shield (WACC, Hamada, FCFE, the levered growth limit, the debt test), and the tax is paid in a loss year in the funding pro forma, the budget, projections, scenarios and the cash outlook. The stress test counts it as a variable cost.",
+      "Minimum taxes (Guatemala ISO, Honduras activo neto, Nicaragua PMD, Panamá CAIR, Dominican asset tax) apply as a floor: the greater of the two, the worst case.",
+      "\"ISR: …\" chip wherever a tax figure is shown; it opens the Perfil fiscal card. Under a revenue regime the screens say \"sin escudo fiscal\" instead of hiding rows, and the historical rate is disabled.",
+      "Caja 13 semanas: the tax selector now changes the client's regime on every screen.",
+      "One country tax rate: Budget and Growth read the same rate as Valuación (Guatemala 25%, México 30%; they read an older table before).",
+      "Puerto Rico can be valued: it uses the United States row (country risk 0.23%) and its 37.5% tax rate.",
+      "Funding: NOPAT now uses the client's regime (the statutory rate and any minimum tax) instead of the booked effective rate.",
+      "Ask VIRA and the reports state the regime and, under a revenue regime, that there is no tax shield."
+    ]
+  },
+  {
     "version": "1.3.79",
     "date": "2026-10-10",
     "changes": [
