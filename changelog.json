@@ -1,5 +1,18 @@
 [
   {
+    "version": "1.3.83",
+    "date": "2026-10-10",
+    "changes": [
+      "Financiamiento (F5-D1, F5-D2): debt capacity is now two numbers: a revolving line on receivables and inventory (it finances working capital), and term debt = the lower of fixed-asset collateral and what stress cash flow carries after the line's interest. Cash flow available for debt now deducts the working capital growth absorbs, unless the line funds it. A stress breach suggests reducing the loan to the largest amount that passes (\"B-resize\"); equity (C) only when nothing passes. The plan-case capacity is shown for reference only.",
+      "Funding screen: full tranche editor (amortization, fee, asset life, add/remove), a warning above the capacity of each kind of debt, the fee paid at drawdown, breaches labelled by year, \"Plazo extendido\" no longer blocked by the purchase, a stale chosen option cleared with a note, the SGR bar on the binding limit, the speed-limit DSCR renamed \"Cobertura actual\", and the loans' minimum-cash covenant in excess cash.",
+      "Costo de capital: a total loss costs −100% and the expected cost is always shown; collateral by type at the conservative recovery rates (a different rate needs a reason, audited); the line of credit gets collateral and guarantee; \"Avance lento\" charges a covenant waiver (1% fee, 6 months interest-only, editable); a term of 0 is invalid.",
+      "Inversor: deal proceeds never go below 0 (\"El capital se pierde\"); unpaid LBO interest adds to the debt; EBITDA ≤ 0 is invalid; with issued instruments the deal's proceeds follow the payout order (deal card preference, default 1x); seller picker on secondary deals; a pending post-money SAFE converts the post-money way; warrant by coverage; pre-money must be above 0.",
+      "Valuación: \"Participación valorada\" picks the minority DLOM below 50%; no scorecard → no key-person or concentration discount, valuation marked \"Provisional — calificación pendiente\" (F5-D3); 0 projection years, WACC ≤ 0 and capitalized earnings without equity are invalid, never NaN.",
+      "AI context and Ask VIRA: the same cost of capital (saved λ, D/E, premiums, tax mode, client Kd), deal inputs (net debt from the equity bridge, size on USD revenue) and funding capacities as the screens; capital structure sentences read the guarantee exposure and the funding plan's covenant year.",
+      "Client portal (v2.1.26): net income includes other income and other non-operating items; the funding plan follows the same split capacity and resize, under the desktop ↔ portal parity check."
+    ]
+  },
+  {
     "version": "1.3.82",
     "date": "2026-10-10",
     "changes": [
