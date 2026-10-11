@@ -1,5 +1,13 @@
 [
   {
+    "version": "1.3.85",
+    "date": "2026-10-11",
+    "changes": [
+      "Debt service in the 6-month projection: loan payments (and the estimated schedule for debt without loans) were scheduled from today, while the projection covers the six months after the client's last actual month. With a base month already in the past, no payment fell in those months: interest and principal showed 0, and the burn behind the fume date was understated. The projection now schedules them from the base month; Caja 13 semanas still counts from today.",
+      "Cost of sales at 0%: a 0 saved as the scenario's COGS % projects no cost of sales (blank = the base month's ratio). Flujo proyectado now warns when a client with cost of sales has 0% saved, and Supuestos de crecimiento shows the base month's ratio in the blank field and a warning on a typed 0."
+    ]
+  },
+  {
     "version": "1.3.84",
     "date": "2026-10-11",
     "changes": [
