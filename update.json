@@ -1,6 +1,6 @@
 {
-  "version": "1.3.85",
+  "version": "1.3.86",
   "releaseDate": "2026-10-11",
-  "notes": "Flujo proyectado: servicio de deuda con mes base atrasado; costo de ventas 0% guardado",
-  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.3.85/Analyst.Workstation-1.3.85-arm64.dmg"
+  "notes": "Garantías de calidad: sin pantalla en blanco, sin variables sin definir, revisión con datos de producción",
+  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.3.86/Analyst.Workstation-1.3.86-arm64.dmg"
 }

@@ -1,5 +1,16 @@
 [
   {
+    "version": "1.3.86",
+    "date": "2026-10-11",
+    "changes": [
+      "No more white window: a screen that fails to draw shows an error card (\"Esta pantalla no se pudo mostrar\", with retry and reload) at three levels: the app, the page area (the sidebar keeps working; going to another page retries) and the finance modules (the other tabs keep working). The error goes to the diagnostic log.",
+      "Release gate A: every release lints the whole source for undefined names (the class of the v1.3.84 white screen), with a planted probe that proves the rule still works.",
+      "Release gate C: every release runs every production client (read-only) through the engines the screens and the AI use, at today's date. Engine failures block the release; implausible saved data (a 0% cost of sales) and clients months behind are listed for the analyst.",
+      "Found by gate C on its first run, fixed (AI context): the stress-test section stopped at clients with no debt service (DSCR \"sin servicio\"); the sensitivity (tornado) lines read \"undefined: NaN\" for every client; cost categories saved without a name read \"undefined\"; the cash-cycle section stopped at clients without a balance sheet.",
+      "The three guarantees are in CLAUDE.md and enforced by QA: removing or disarming any of them fails the release."
+    ]
+  },
+  {
     "version": "1.3.85",
     "date": "2026-10-11",
     "changes": [
