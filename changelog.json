@@ -1,5 +1,22 @@
 [
   {
+    "version": "1.3.91",
+    "date": "2026-10-12",
+    "changes": [
+      "Data-completeness strip (SL-58): at the top of the CRM, each open deal lists what it lacks (fee, close date, level, primary contact, next action) and each client in service what blocks its numbers (billing profile, day-to-day contact, portal account, hours this month for admins). Each area has a score; each item opens the field.",
+      "Decisions SD2, SD3, SD6 (option A):",
+      "Selection modal: each signal shows its values (the three monthly margins, the latest score and its date, the most overdue invoice and its days). The suggestion is no longer preselected: the admin picks.",
+      "Numbers explained:",
+      "Deals and clients:",
+      "NPS: send and round buttons show only to those who can send (admin, supervisor, assigned staff). A round reports one summary: sent, without access, already open.",
+      "Alertas: the referral nurture alert opens that source in Referidos (SL-46).",
+      "Rentabilidad: a month whose invoice had no exchange rate shows margin N/D, for the client and the firm. It was showing a loss and \"hours without invoice\".",
+      "Plural forms for the CRM's counts (\"1 cliente\", \"1 día\").",
+      "QA: production-shape now runs the CRM builders (funnel, completeness, selection) on production and fails on a non-finite figure. New unit tests cover referrals, retention, CLV sources, MRR in two currencies, alert boundaries, a profitability snapshot and the local date. New SQL role tests cover undo and the activity-log rule.",
+      "Portal v2.1.27: the NPS card's buttons are 44 px tall on phones."
+    ]
+  },
+  {
     "version": "1.3.90",
     "date": "2026-10-12",
     "changes": [
