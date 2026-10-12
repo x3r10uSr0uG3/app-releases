@@ -1,6 +1,6 @@
 {
-  "version": "1.3.87",
+  "version": "1.3.88",
   "releaseDate": "2026-10-11",
-  "notes": "Corrección: el Paquete del mes guardaba un PDF vacío (y las descargas binarias se corrompían)",
-  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.3.87/Analyst.Workstation-1.3.87-arm64.dmg"
+  "notes": "Paquete del mes: resumen obligatorio, días de cobro consistentes, nómina con fuente, Altman por industria, diagramación",
+  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.3.88/Analyst.Workstation-1.3.88-arm64.dmg"
 }

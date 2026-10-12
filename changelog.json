@@ -1,5 +1,16 @@
 [
   {
+    "version": "1.3.88",
+    "date": "2026-10-12",
+    "changes": [
+      "Summary required: a package can't be generated, or approved, with a summary under 80 words (the AI drafts 150–250). MAC 2025-12 v1 and v2 went out with a one-line placeholder.",
+      "DSO / DIO / DPO were two different numbers in one package: the indicators page added the *projected* rows of the two prior months into the 3-month window of an actual month (MAC Dec: DSO 79 vs. 63 on the financial page). The trailing windows (3 months for the days, 12 months for the annual-basis ratios and the Altman Z) now only use months of the same kind.",
+      "Payroll share: the two percentages come from different sources. Each now says which: \"% planilla / ingresos\" (payroll roster) and \"% nómina contable / ingresos\" (P&L personnel expense). The labels in that block are now translated.",
+      "Altman Z-Score: the model now follows the client's industry. Manufacturers and distributors get the private manufacturing Z'. It was always the services Z'', even for MAC (Manufactura). The analyst can still switch.",
+      "PDF layout: chart legends no longer spill into the next chart (the PDF reserves each chart's height). Charts drawn full-width on screen keep a full row, so their text is readable. The summary keeps its paragraphs. No lone dot when a box has no subtitle, and no repeated client name on the cover. The net-margin target label no longer overlaps the EBITDA one. Amounts read \"Q871,314.00\" on every page (the cover and variance pages said \"GTQ 871,314.00\")."
+    ]
+  },
+  {
     "version": "1.3.87",
     "date": "2026-10-12",
     "changes": [
