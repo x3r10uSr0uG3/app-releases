@@ -1,5 +1,18 @@
 [
   {
+    "version": "1.3.92",
+    "date": "2026-10-12",
+    "changes": [
+      "Margen por cliente y ubicación (MP-D1 A): the margin now subtracts the month's P&L cost of sales, split by revenue share, plus the location's fixed costs and payroll. It can now be compared with gross margin and the A–D thresholds. MAC 2025-12 no longer shows 100% / 98.7% / 94.4% margins. The legend says what the margin includes.",
+      "Two labelled windows (MP-D2 A):",
+      "Locations match by name (MP-D3 B): names are compared without case, accents, punctuation or \"Principal\" (\"Planta Zona 12\" = \"Planta Principal - Zona 12\"). Locations that don't line up are listed in the dashboard, the Ingresos and Ubicaciones tabs and the PDF, along with the spellings that were joined.",
+      "No revenue, no rating: a location with no revenue in the month shows \"Sin ingresos en el mes\" / N/D. Before, it showed 0.0% margin, rating C, and a green payroll %.",
+      "Package readiness: the dialog warns, without blocking, about unmatched locations, about revenue lines covering less than 90% or more than 110% of P&L revenue, and about a month with no revenue lines.",
+      "One engine (src/lib/opsProfitability.js) for the screen, the PDF, the package check and gate C. The golden test is MAC 2025-12, with planted cases for each fault.",
+      "QA C: production-shape runs the operations engine for every client. A margin rated on zero revenue fails the release. Unmatched locations, and a month with no revenue lines, are warnings."
+    ]
+  },
+  {
     "version": "1.3.91",
     "date": "2026-10-12",
     "changes": [
