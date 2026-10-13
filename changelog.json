@@ -1,5 +1,18 @@
 [
   {
+    "version": "1.3.93",
+    "date": "2026-10-13",
+    "changes": [
+      "Financiero, grouped by use (IN-D1 A): one row in labelled groups, one colour each.",
+      "Levels (IN-D2 A): a tab above the client's level (Orden / Rumbo / Escala) is dimmed and tagged with its level, never hidden. For a Rumbo client, Valuación and Inversor read \"Escala\".",
+      "Same format, copied both ways (IN-D5 A):",
+      "Levantamiento v3.5:",
+      "Levantamiento status card above the grid: template version, months loaded, country, norma, coverage, the second semaphore, the last import, and months imported with failing controls.",
+      "Recursos: template and instructivo VI-05 (v3.5) replace VI-04.",
+      "QA C: production-shape lists months imported with another country, or with a failed VF-260 check (warnings)."
+    ]
+  },
+  {
     "version": "1.3.92",
     "date": "2026-10-12",
     "changes": [
