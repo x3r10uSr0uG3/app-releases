@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.3.95",
+    "date": "2026-10-14",
+    "changes": [
+      "Phantom long-term debt fixed: a short-term debt in debit (Efectivo 2026-08 and 09, 13 months of Oronda Media) was booked as long-term debt of the same amount, so liabilities + equity exceeded assets. The legacy total_debt column now counts as long-term debt only when both debt fields are empty. The rule lives in one helper (effectiveLongTermDebt) used by the balance sheet, the budget projection and the scenarios. Efectivo's file now imports with the balance check OK in every month.",
+      "Statements without a P&L are flagged: an IFRS / US GAAP month with no P&L / balance in the app reads \"Sin P&L / balance del mes\". It gets no \"Cuadra\" badge and stays out of the PDF and the month package, and the alert stays open. When that month's P&L is imported later, the stored statements are checked again on their own; the flag clears if the figures match (audited gaap_statements_rechecked).",
+      "Import guidance: the Estados por norma paste box says it loads only the statements, and the tab has an \"Importar levantamiento\" button for the full file (P&L, balance, costs, IFRS and US GAAP in one save).",
+      "QA C: fails a month whose non-current liabilities ≠ long-term debt when the debt fields are filled (planted). Warns on statements stored with no P&L behind them."
+    ]
+  },
+  {
     "version": "1.3.94",
     "date": "2026-10-13",
     "changes": [
