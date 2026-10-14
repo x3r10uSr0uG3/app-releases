@@ -1,5 +1,18 @@
 [
   {
+    "version": "1.3.94",
+    "date": "2026-10-13",
+    "changes": [
+      "Estados por norma: a new tab in Datos financieros, for any client whose levantamiento has them.",
+      "Import: importing the levantamiento file now also stores EEFF_IFRS and EEFF_USGAAP for every month loaded (table gaap_statements, migration v42). The preview lists each month and standard as clean (\"Cuadra\") or with its differences. Values are kept to the cent, so Excel's float noise never reads as a change.",
+      "Differences are flagged, not blocked (GS-D4):",
+      "PDF and month package: only clean or reviewed months go out. \"Exportar PDF\" builds four sections per standard. The month package dialog offers \"Incluir estados IFRS / US GAAP\" when the month is printable, with the month before as a comparative, and says when a standard is left out for unreviewed differences.",
+      "Copy both ways (GS-D5): \"Copiar a Excel\" writes the sheet's shape with the fingerprint in AA. \"Pegar desde Excel\" reads it back and refuses a shifted paste, or one without the fingerprint. That fingerprint arrives with template v3.6, which is drafted and awaiting approval.",
+      "QA C: production-shape fails on a non-finite figure in a stored statement. It warns on unreviewed differences, or on a month whose base was re-imported after its statements.",
+      "SQL role tests: gaap-gs1.sql (admin and the assigned analyst only; deactivated users see nothing). It now runs by default."
+    ]
+  },
+  {
     "version": "1.3.93",
     "date": "2026-10-13",
     "changes": [
