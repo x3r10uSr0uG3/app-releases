@@ -1,5 +1,24 @@
 [
   {
+    "version": "1.3.103",
+    "date": "2026-10-15",
+    "changes": [
+      "One growth speed limit (SC-02): Escenarios, Financiamiento, Ciclo de caja and the AI show the binding limit, min(cash limit, ROE × retention), from the same inputs (trailing 12 months, debt service from the base month, the client's tax regime and monthly revenue). Ciclo de caja used a different tax and debt-service date before.",
+      "Self-funding businesses (SC-03): when suppliers finance the operation (AP > AR + inventory) the limit reads \"sin límite — ventas es el cuello de botella\", not \"Faltan: balance general\".",
+      "Growth above the limit (CT-04): Supuestos de crecimiento warns per scenario and saves a faster scenario only with a note on how it is funded. A blank capex uses the client's capex run rate, as Proyección de caja; the FCF column is \"Flujo de caja libre (después de intereses)\".",
+      "Personal guarantee in the cost of capital (BK-01): in the failure case the lender receives the collateral recovery plus the owner's guarantee, so the cost is \"costo empresa + dueño\". A 1M loan defaulting in month 12 with a 1M guarantee went from −91% to +11.7%.",
+      "Unlimited guarantees (SW-01): a ticked guarantee with a blank cap is unlimited (the whole shortfall, \"ilimitada\"), on Costo de capital, Estructura de capital and the AI. Loans carry the guarantor's name; new bank tranches assume the owner's guarantee (untick to remove); a KYC question asks about guarantees signed.",
+      "Default month (NV-07): a blank default month in Costo de capital is seeded from the fume date, labelled, and stays editable.",
+      "Recovery rates (BK-04): equipment recovers at 50% and real estate at 70% (was 40% for both); loans in Estructura de capital take a collateral type.",
+      "LBO / MBO (BK-02): each buyout card shows entry debt / EBITDA against the 3.0× hurdle, the first year a bank test breaks and the default cliff (DSCR < 1), with the case capped at what a bank would lend beside it. The AI gets both.",
+      "Existing credit line (BK-03): Caja 13 semanas types each loan as a line or a term loan and its collateral (migration v47). A line sits on receivables and inventory; an untyped loan is netted against them first. AR 1M with a 500k line: 180k of line capacity, not 680k.",
+      "Funding plan (BK-06, BK-07, BK-08, SW-06): step 2 shows the need with no dividends and with +2 pp of margin, and both are options. Permanent working capital goes on a 36-month term tranche; leaving it on a 12-month line warns, and the stress case runs with the line not renewed at month 12. Equity is staged on the need curve and carries a month and milestone. Receivables without aging warn (68% effective advance); related-party receivables are excluded. Equity is priced at pre-money = DCF after DLOM, with the owner's stake after the round and a flag at 66.7% / 50% / 33.3%. Owner loans read \"dinero del dueño, subordinado\".",
+      "Payout order in a liquidation (BK-05): Estructura de capital runs secured lenders (to their collateral) → labour → taxes → unsecured → equity. Labour and tax ranking are analyst inputs until confirmed per country.",
+      "QA C: guarantee_outside_cost, lbo_leverage_breach_unflagged, revolver_double_counted, sgr_mismatch, each with a planted test; the Sev-1 register covers BA2.",
+      "Migration v47 (pending, SQL in chat): debt_schedules.facility_type, pledged_class. Before it, loans save without them and every loan is untyped."
+    ]
+  },
+  {
     "version": "1.3.102",
     "date": "2026-10-15",
     "changes": [
