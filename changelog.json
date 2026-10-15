@@ -1,5 +1,21 @@
 [
   {
+    "version": "1.3.101",
+    "date": "2026-10-15",
+    "changes": [
+      "Raw activity blocks are private (CO-01): the 5-minute automatic-time blocks are read only by the person and by admins. Supervisors and co-assigned analysts keep the daily totals they had, now from time_block_days (kept by a trigger). Every hours screen shows the same numbers.",
+      "Staff profiles are staff-only (CO-07, confirmed on production): portal accounts could read every staff profile (weekly_hours, is_active, role). They now read only their own row; the portal gets the analyst's name on a delivered report from staff_public (name only).",
+      "Staff-data changes need a sign-off (CO-08): QA fails when a release touches time_blocks, profiles, staff_check_ins, people policies, useAutoTime or the autoTime.* texts without a \"People sign-off\" line here. CLAUDE.md no longer tells Claude to keep its release logic from Levent.",
+      "What reaches the AI provider (SW-02, NV-06): KYC goes through an allowlist (interview answers only; no onboarding, quote, invoice, NDA or CRM JSON, which carried CUI, NIT, phone, e-mail and address). Company, contact and legal-representative names go as placeholders and come back on screen. E-mails, labelled tax / ID numbers, DPI and phones are masked everywhere in the prompt (transcripts, notes, past analyses). The owner's personal answers (founding story, key-person risk, team challenges, avoided conversations) go only when the analyst ticks \"Incluir las respuestas personales\" for that run. Applies to analyses, report regeneration, Ask VIRA, the month-package summary and the investment-target panel.",
+      "NDA: new clause 2.3 (Spanish) / 2 f) (international) authorising AI processing under these rules. Applies to NDAs generated from this version; signed NDAs are untouched.",
+      "Client tone (SW-04): the client-report and month-summary prompts require *usted* and no AI wording; the analysis view flags tú / vos / AI words before the report is approved. Ten UI strings moved from vos / tú to usted.",
+      "KYC (SW-05): a cleared answer is deleted; answers are written through upsertKyc; changes are audited kyc_updated (keys only, never the answers).",
+      "Smaller fixes: permanent-delete errors show on screen and the hint to open FOR DELETE … USING (true) is gone (SW-03); the investment memo exports without the AI panel and without real names unless switched on, and the panel is titled as AI-generated (SW-07); \"Generar Caso de Valor\" is hidden until it can export only the value case (RM-03).",
+      "QA C: pii_in_ai_context builds the analysis and Ask VIRA prompts for every production client and fails on a client name or a PII pattern (planted test included). Role test scripts/sql-tests/ba1.sql (16 checks).",
+      "Migration v46 (pending, SQL in chat): time_blocks read policy, time_block_days + trigger + backfill, time_entries_all on the daily totals, profiles read policy, staff_public. The app works before and after it. Portal: Reports reads the analyst name from staff_public (vira-portal, deploy pending); until then delivered reports show \"analista\"."
+    ]
+  },
+  {
     "version": "1.3.100",
     "date": "2026-10-15",
     "changes": [
