@@ -1,5 +1,16 @@
 [
   {
+    "version": "1.3.100",
+    "date": "2026-10-15",
+    "changes": [
+      "Demo clients (DQ-D5, D6, D9): a new clients.is_demo flag, set by admins in Admin → Clientes with a \"Demo\" checkbox (confirmation: out of portfolio figures, the engines keep running). Audited client_demo_set. A demo client stays in the sidebar (grey \"Demo\" badge, listed after real clients), on its profile and in the Admin list; it is out of every portfolio number. Meant for #7 Oronda, #8 MAC and #12 PodX.",
+      "One definition of a portfolio client (W1.3): isPortfolioClient (legal entity, not demo, not deleted) now drives the Dashboard counts, Mis acciones and close strip, Métricas and churn, the CRM under-service MRR / ARR, CLV and concentration, the Monday team block, per-person client load, logging gaps and the Admin active count. A QA check fails on any new inline !c.parent_client_id filter, with a planted fixture.",
+      "Branch alerts roll up to the parent (DQ-D7): the portfolio review, Alertas, the Dashboard badges and the weekly baselines cover portfolio clients only; branches and demo clients raise no portfolio alert. On a parent's profile, its branches' alerts show under one \"Sucursales\" line, each with the branch name, and a branch's critical alert is acknowledged there with a decision (on the branch's own record). The 15 old branch baselines stay and are no longer read.",
+      "QA C · can every paying client be served? (warnings, never blocking): client_level_missing, billing_profile_missing, branch_months_behind (a branch more than 2 months behind its parent) and demo_with_portal_user. A demo client's engine failure still fails the release; its data warnings are listed apart under \"Demo (no cuenta)\".",
+      "Migration v45 (pending, SQL in chat): clients.is_demo. Before it's applied, every client reads as not demo and Admin → Clientes says the migration is pending."
+    ]
+  },
+  {
     "version": "1.3.99",
     "date": "2026-10-15",
     "changes": [
