@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.3.105",
+    "date": "2026-10-15",
+    "changes": [
+      "Guard (CL1 §3.2): a figure saved before the engine fix (BA1–BA3, v1.3.104) — valuation, total cost of capital, funding proposal, the client's latest AI analysis, an unpublished month package — keeps the client in \"Reexpresión pendiente\": the package can't be published and no client PDF goes out (dashboard PDF, GAAP statements, AI report). It is checked again inside the publish action, not only on the button. A row closes when the figure is saved again on current code, or when the analyst closes it with a note (\"Cerrar sin cambio\", audited restatement_row_closed). A funding proposal without utilization is listed as blocked (missing input) and doesn't block: it already shows N/D. No migration: the notes live on the client's kyc_responses row restatement_closures.",
+      "Report: npm run restatement reads production read-only and writes audit/restatement-<date>.xlsx (client, artifact, saved date, old and new figure, Δ%, action, done by, done on). The old figures were taken once into audit/restatement-baseline.json before anyone re-saves. Today: 20 clients, 13 open rows, 3 blocked.",
+      "QA C: published_with_restatement_open fails a release if a package went out past the guard (planted test); open rows are a warning. The shape check no longer overwrites BA1a's past analyses with the usage rows, so the PII check reads their text again.",
+      "Descripción: herramienta interna de VIRA (APP_DESCRIPTION.md, D1)."
+    ]
+  },
+  {
     "version": "1.3.104",
     "date": "2026-10-15",
     "changes": [
