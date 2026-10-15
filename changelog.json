@@ -1,5 +1,23 @@
 [
   {
+    "version": "1.3.98",
+    "date": "2026-10-15",
+    "changes": [
+      "One debt rule everywhere (HF3-D3): total debt is max(short-term debt, 0) + long-term debt. A short-term debt in debit (Efectivo 2026-09, −24,793) stays on the balance sheet as entered but no longer makes \"Deuda total\" negative, lowers debt-to-assets or adds to equity in the valuation bridge. The rule lives in src/lib/debt.js and every engine, screen, PDF and the AI context reads it (alerts, 13-week cash, stress, FCFE, Inversor, valuation, ratios, scenarios, budget, funding, red flags). The client portal gets the same rule (portal v2.1.28).",
+      "The package accepts what the import accepts (HF3-D2, D4): the levantamiento import stores each month's VF-260. The package's cash check passes when the cash-flow difference equals VF-260 (±1), shows \"= VF-260\" and adds a client footnote with the amount. A month imported before this version asks to be re-imported, instead of failing silently. A month imported with failing controls can be released for the package by an admin, with a reason (audited levantamiento_override_released); a re-import clears the release.",
+      "Level and agreed fee are required (HF3-D5, D7): Facturación no longer defaults to Rumbo. A profile needs a level, and a fee that differs from the level's list price is a *precio pactado* with a reason (audited billing_profile_price_set). Existing profiles get a level and fee editor.",
+      "Rumbo and Escala packages include Caja 13 semanas (HF3-D6): a new 13-week cash section (weekly grid, minimum cash, the fume date, covenants), from the same engine as the screen. It's locked on for Rumbo and Escala and optional for Orden. A package can't be approved without it, or for a client with no level.",
+      "Statements a client sees (HF3-D11): an IFRS / US GAAP month with no P&L never prints. A reviewed month whose sheet controls aren't 0 prints only with \"Imprimir con nota\", and then carries the difference as a footnote. Statements are rechecked after a manual edit and after a Solicitudes import. The PDF no longer prints the internal \"sin revisar\" note; the left-out months are listed in the app only.",
+      "Published figure changed (HF3-D8): when a month changes after its package was published, admins get an alert with the figures old → new. It closes only with \"Se avisó al cliente\" or \"No requiere aviso\". Nothing is sent to the client.",
+      "Close strip: three new steps after the data request: \"Importar levantamiento pendiente\", \"Paquete bloqueado: {motivo}\" and \"Revisión IFRS/US GAAP pendiente\". They also apply when no data request was sent.",
+      "No lost work on update: \"Actualizar ahora\" first saves pending autosaves, then refuses while a screen still has unsaved changes, and says which one (\"Tenés cambios sin guardar en …\"). The app's own install paths refuse too. New snooze: \"Hasta mañana\" (07:00).",
+      "Client report: the Word / PDF export is blocked when Part 2 names a panelist or author, and the report instructions forbid it.",
+      "Inversor: the valuation grid shows EV and equity (EV − the bridge's net debt). Each EBITDA add-back needs a note. Without one it is shown but left out of adjusted EBITDA, the deal returns and the AI context.",
+      "QA C: checks stored debt against the recomputed row and fails on any negative debt in an output. A source scan fails on sign-based debt fallbacks, and the 13-week section runs on every production client.",
+      "Migration v43 (pending, SQL in the brief): billing_profiles.price_reason, gaap_statements.print_with_note, month_packages.figures. Before it's applied, the reason is kept in the profile's extras, \"Imprimir con nota\" says the migration is pending, and packages are generated without figures."
+    ]
+  },
+  {
     "version": "1.3.97",
     "date": "2026-10-15",
     "changes": [
