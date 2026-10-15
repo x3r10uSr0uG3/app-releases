@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.3.96",
+    "date": "2026-10-15",
+    "changes": [
+      "\"= VF-260\" instead of \"Falla\": in the import preview, a month whose cash-flow proof misses by exactly the amount the template expects in VF-260 now reads \"= VF-260\" in green, with the amount on hover. The import already accepted these months (IN-D4); only the label was misleading (Efectivo 2026-02…04)."
+    ]
+  },
+  {
     "version": "1.3.95",
     "date": "2026-10-14",
     "changes": [
