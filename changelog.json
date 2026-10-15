@@ -1,5 +1,13 @@
 [
   {
+    "version": "1.3.97",
+    "date": "2026-10-15",
+    "changes": [
+      "The app keeps checking for updates: at launch, every 30 minutes and when the window comes back to the front (at most every 10 minutes). It used to check only once at launch, so an app left open for days never heard of a release.",
+      "A banner you can't miss: an amber bar across the top: \"Hay una versión nueva: v… (tenés v…)\", with Actualizar ahora (downloads, installs and restarts in place, with progress). If the in-app install fails, it opens the download in the browser and says what to do. \"Más tarde\" hides it for 2 hours only."
+    ]
+  },
+  {
     "version": "1.3.96",
     "date": "2026-10-15",
     "changes": [
