@@ -1,5 +1,26 @@
 [
   {
+    "version": "1.3.102",
+    "date": "2026-10-15",
+    "changes": [
+      "Fecha sin caja on old data (CT-01): a base month more than 2 months old with no bank balance typed in Caja 13 semanas shows no headline date. The line says the cash is unverified, asks for today's balance, and gives the date \"si la quema continuara\" from the base month as a secondary line. A critical cash_unverified alert replaces the runway alert. Lavanderías (base 2026-02) moved from \"2027-06-18\" to blocked, rolled-forward 2026-09-10. The AI and the 13-week print say the same.",
+      "Proyección de caja agrees with its fume line (CT-03): its months start from today's balance and drop months already past. The month straddling week 13 counts only its days after the 13 weeks, and net burn lets positive months offset losing ones (CT-08).",
+      "Month package (CT-07): the cover and the AI summary carry the fume date, blocked or labelled when the base is stale.",
+      "uFCFF / FCFE (CT-02): capex = Δnet fixed assets + D&A (gross PP&E counted D&A twice); disposals show as negative capex; working capital includes accrued expenses, as in the valuation.",
+      "PTCF check (CT-05): a PTCF of zero or less is a warning, not silence; the 5× card reads the DCF's own ±30% rule. The unused terminal-value function is gone.",
+      "Supervivencia (NV-02): the headline is the fume date; \"con la base de préstamo: N días\" is a second line.",
+      "AI stress section (NV-01): survival days, stress cases and the tornado come from the screen's own runner (stressInputs.js), so the AI can no longer say \"∞ genera caja\" beside a cash-out date.",
+      "AI financials (NV-03): months run oldest to newest, MoM compares like with like (actual with actual), budget rows are out, every figure comes from computeFinancials, rows are in the reporting currency with the screens' rates (a month with no rate is named), plus a 12-month line.",
+      "Red Flags (SO-04, SO-05): the screen reads the newest 24 months (it read the oldest); prior month and year-ago are exact months; screen and AI share redFlagInputs and the client's industry. A missing cash flow skips its checks; fewer than 4 checks read \"Insuficiente\"; \"n de 8 evaluados\".",
+      "First invoice (ST-01): a CRM win creates the first monthly invoice in the engagement-start month; \"Siguiente factura\" never starts at 2025-02 and ignores the one-time invoice.",
+      "Levantamiento currency (ST-02): a file in another currency than the client's is a currency failure no override releases; a client with no rows takes the file's currency.",
+      "Operaciones paso 6 (MC-03): ΔT and ΔOE are converted to the reporting currency before the % of revenue (no rate → N/D and the FX notice); the ops currency defaults to the client's functional currency.",
+      "MRR (SC-06): the Dashboard uses the same USD MRR as Métricas and the CRM. QA fails on an inline monthly_fee sum.",
+      "QA C: stale_fume_headline, capex_double_da, ai_survival_mismatch, ai_mom_sign, redflags_oldest_window, each with a planted test. QA checks that every BA1 Sev-1 finding has an audit <ID>: test.",
+      "Restatement: saved analyses and uFCFF / FCFE figures computed before this version used the old AI context and capex; the list is in chat for Levent to decide what to regenerate."
+    ]
+  },
+  {
     "version": "1.3.101",
     "date": "2026-10-15",
     "changes": [
