@@ -1,5 +1,25 @@
 [
   {
+    "version": "1.3.104",
+    "date": "2026-10-15",
+    "changes": [
+      "Deal prices after the DLOM (CL-01): every deal card prices the stake after the DLOM for the interest bought (minority 25%, control 10% by firm policy; a card can override it with a note). A 30% minority cheque is 25% lower than before. The sensitivity table, the AI and the capped LBO case use the same price.",
+      "Private multiple bands (CL-02, BD-22): the applied EV/EBITDA stays inside the sector's private band; the discounted public multiple is shown beside it as a reference. Until precedents are approved, the band is derived from the Damodaran emerging-markets sector multiple × 50% / 65% / 80%, capped at 4× / 6× / 8× (policy parameters, approved by Levent 2026-10-15), labelled as derived. Deal entry multiples use the same band. An approved row in private_multiple_bands (v48) wins.",
+      "One EBITDA basis (CL-03): Valuación's multiples use the adjusted EBITDA from Investor analysis (supported add-backs only), with reported and adjustments beside it, on screen, in the AI and in the portal.",
+      "Add-backs (CL-05): each add-back needs a reason and an evidence reference to count; above 20% of reported EBITDA they are flagged. Investor analysis' price grid runs over the private band.",
+      "SDE (CL-04): SDE adds back the owner's total pay (a new field), not the excess over market; SDE × a sourced multiple (market parameters) goes through net debt and the DLOM.",
+      "Three values (CL-06): a \"Tres valores\" panel — to the owner (DCF after DLOM), market (band × adjusted EBITDA after DLOM) and strategic (market + synergies, each with a reason). The AI gets all three; the reconciliation wording no longer suggests one value.",
+      "Target and exit multiples (CL-07): a multiple away from the applied one is used only with its reason; the target is labelled \"Oferta / ancla\"; the placeholder is the applied private multiple; the manual-multiple equity is after the DLOM.",
+      "Seller's view (CL-08): each sale card shows what the selling owners keep after transaction costs, capital-gains tax and a haircut on non-cash payment (inputs asked, never assumed); a \"Conservar la empresa\" card shows the DCF value to a controlling owner. The fixed \"typical multiple range\" is gone.",
+      "Sector match (SO-03): a fuzzy text match is flagged and must be confirmed on the client's profile (clients.industry_ref, v48); the confirmed sector drives every engine; the prospect kit won't print an unconfirmed sector. \"Servicios financieros\" no longer matches Funerary services.",
+      "Benchmarks (SO-06, BD-21): Indicadores de industria and the AI compare the trailing 12 actual months (never one month) with the Damodaran emerging-markets sector averages (January 2026), with a ±3 pp neutral band; P/E above 40× reads \"no representativo\".",
+      "Fuerza dominante (SO-07): the AI must name the binding force, the substitute and its price ceiling, the erosion timing and three key success factors, and say what has to stay true when the DCF implies more than 20× EBITDA. The analyst can record the force and substitutes on the client (v48).",
+      "Dueño y familia (SW-08): a KYC category for succession, family on payroll, years to retirement and share of net worth (personal: sent to the AI only when switched on for a run). \"Familias impactadas\" is now \"Empleos en clientes activos\".",
+      "QA C: deal_price_without_dlom, applied_multiple_above_private_band_without_reason, ebitda_basis_mismatch, industry_fuzzy_unconfirmed (warning), each with a planted test. Role test scripts/sql-tests/ba3.sql.",
+      "Migration v48 (pending, SQL in chat): private_multiple_bands, clients.industry_ref, binding_force, substitutes. Portal: the multiples read the saved band and add-backs (vira-portal, deploy pending); a valuation shows the new value in the portal once it is re-saved in Valuación."
+    ]
+  },
+  {
     "version": "1.3.103",
     "date": "2026-10-15",
     "changes": [
