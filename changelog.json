@@ -1,5 +1,25 @@
 [
   {
+    "version": "1.3.106",
+    "date": "2026-10-15",
+    "changes": [
+      "Terms catalog (SR1 §5.3, SR1-D6): Cotización has the conditions from Registro's proformas as checkboxes: IVA (más / con / sin, driven by the quote's IVA mode), tipo de cambio (on by default for a USD quote paid in local currency), días de crédito, suspensión por falta de información, impago and vigencia. The texts come from the Kolonia proforma 20261013–VI–FN–145. The catalog lives in firm_settings quote_terms_catalog; until an admin saves one, the seed in src/lib/quoteTerms.js is used. Registro's salida, garantía, transferencia and virtual terms weren't available and aren't seeded; an admin adds them.",
+      "Condiciones particulares: one per line, leading bullets stripped, printed before the catalog terms (Registro v70). An admin can save a line as a catalog term (audited quote_term_added).",
+      "Validity (SR1-D12): new quotes are valid 30 days (was 15), still editable. \"Válida hasta\" = quote date + validity days, on screen and in the document.",
+      "Logo toggle: \"Logo de la firma arriba del documento\" also hides the website in the footer.",
+      "Internal note: saved with the quote, never printed (checked by test).",
+      "The old IVA row in Términos y condiciones gives way to the catalog's IVA term. No migration.",
+      "Approval and publication re-check the data (T1, TA-D6): a month package stores a hash of the month it was built on (the stored month, the month before and the fiscal start). Approving or publishing reads the month again and re-runs the data gate (balance, cash proof against VF-260, override release). If the month was re-imported or edited after generation, it can't go out: \"Los datos del mes cambiaron después de generar el paquete. Genere una nueva versión.\" Approved and published packages show the app and engine version they went out on. Packages generated before v49 are re-checked but have no hash to compare.",
+      "Delivered analyses (T1): \"Marcar como entregado\" records who, when and on which app version, writes analysis_delivered to the audit log, and shows it in the header. The engine version stays the one the analysis was computed with.",
+      "Engine version stamp (T2, TA-D19): funding proposals, valuations, total cost of capital, AI analyses and month packages save the engine version that computed them (src/lib/engineVersions.js; all engines start at 1 in this release, none bumped). Rows saved before carry none.",
+      "Equipment as a pair (T4, TA-D17): Financiamiento asks for the equipment's quick-sale value next to its net book value. When both exist, the screen shows both and the gap, and capacity uses the lower one; the proposal and the AI name which one bound it. With only one, it is used and the missing value is flagged. Results are unchanged when quick-sale is empty.",
+      "Migrations through the release (T5, TA-D18): release.sh applies a migration file newer than production's schema_version after one confirmation (MIGRATION_OK=<n> when there is no terminal), and offers the portal deploy when vira-portal has unpushed commits. Releases without either don't ask.",
+      "LICENSE (T6, TA-D12): proprietary, © Norte Consulting LLC; QA checks it names the same holder as package.json. Update URLs move to the Norte org after P0-2.",
+      "QA C: books_unbalanced, cash_proof_failed, cash_proof_vf260_unknown (every actual month of every set of books; branches roll up to the parent), package_approved_without_recheck / package_published_without_recheck, schema_behind fail; engine_version_stale and package_data_changed warn. Each has a planted test. Role test scripts/sql-tests/ta1a.sql.",
+      "Migration v49 (applied on production 2026-10-15): schema_version, the package / analysis stamps and engine_version columns."
+    ]
+  },
+  {
     "version": "1.3.105",
     "date": "2026-10-15",
     "changes": [
