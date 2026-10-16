@@ -1,5 +1,17 @@
 [
   {
+    "version": "1.3.107",
+    "date": "2026-10-16",
+    "changes": [
+      "Register closes (G-01): an open row in audit/2026-10-08-register.json now fails the release, and a dismissed row needs Levent's approval (approved_by, approved_on). B-10 (re-save Efectivo #30) is the one open row.",
+      "No calculations in screens (G-04, Q-04): financial arithmetic in JSX is a release failure, with a planted self-test. 35 calculations moved to src/lib (laborKpis.js, revenueFigures.js, costSplit.js, the period kernel's toAnnual / toMonthly); 11 display-only lines are listed with their reason in scripts/qa/jsx-arithmetic-allow.txt. With data present every figure is unchanged. A missing revenue now shows N/D instead of 0 (labor %, gap, revenue per employee, efficiency, coverage, DuPont captions, % of revenue in Operaciones step 6, base COGS %), and a month with revenue 0 shows labor % as N/D instead of \"0%\" in green. Tax-on-revenue labels drop months with no revenue instead of counting them as 0.",
+      "Coverage gate (G-04, A5-D1): src/lib ≥ 90% of lines overall and every file ≥ 70%; a file no test loads counts as 0%. I/O, constants and rendering files are exempt with a reason (scripts/qa/coverage-exempt.txt). 12 files raised; src/lib is at 95.2%. npm test covers src/lib//*.test.mjs.",
+      "Invariants and fuzz (G-03): invariants.test.mjs checks, 2,000 seeded cases each: the balance sheet balances; cash rolls forward in the cash-flow statement, the 13-week grid, Proyección de caja, the budget and Escenarios; the DuPont identity; parse(format(x)) = x; FX same-currency identity and round trip; toAnnual on 12 months. Budget phasing isn't tested: the app has no annual-to-month phasing function. fuzz.test.mjs feeds missing, empty, zero and negative inputs to every exported calc: none may return NaN or Infinity. 28 functions in 15 modules fixed (null or { invalid } instead). An unreachable breakeven, a payout that never recovers and an undefined DOL still show \"∞\" (flags instead of Infinity); Stress test no longer prints \"QInfinityM\". In Inversionistas, adjusted EBITDA with no TTM EBITDA is N/D instead of the add-backs alone, so that deal is invalid.",
+      "Methodology appendix (G-07): APP_DOCUMENTATION.md §17 is generated from the popover text (scripts/methodology-appendix.mjs): 15 metrics with definition, formula, period basis, units, source fields, N/D rule and the audit ID that last changed them, in es and en. QA fails if a field is missing or the document is stale. Five popover formulas no longer matched the engine and are corrected: net burn (average first, then the floor at 0), DCF terminal value (NOPAT × (1 + g) × (1 − g ÷ RONIC)), equity bridge (excess cash and the other claims), and the multiples / reconciliation range (the private band when there is one).",
+      "Time logging (staff data): autoTime.js ignores a tick whose clock can't be read, instead of writing a NaN slot. No stored data changes."
+    ]
+  },
+  {
     "version": "1.3.106",
     "date": "2026-10-15",
     "changes": [
