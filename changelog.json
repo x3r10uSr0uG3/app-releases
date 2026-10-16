@@ -1,5 +1,16 @@
 [
   {
+    "version": "1.3.109",
+    "date": "2026-10-16",
+    "changes": [
+      "Legacy stress calculators: with no cash balance in the base month (and no balance typed for today), Supervivencia, Escenarios, Sensibilidad and the Prueba de estrés dashboard showed \"0 días · Crítico\" and a flat tornado; since v1.3.108 that fallback ran in exactly that case. They now show a \"Días de supervivencia: N/D\" notice that says what to load; the dashboard keeps the analyst notes. A base month with no revenue reads the same way. A cash balance of 0 is still a balance, and a balance typed for today still gives the cash-out date's days.",
+      "AI context: the stress section prints survival days, available cash and scenario days as N/D (no sensitivity ranking) instead of 0.",
+      "Release gate C: production-shape fails when the AI stress context shows survival days or available cash for a base month with no cash or no revenue (survival_from_missing, with a planted test).",
+      "v1.3.108 shipped a partial copy of this fix: the screens' N/D notice was in, the AI context and the dashboard's notes were not.",
+      "Efectivo #30: no figure changes (cash on file)."
+    ]
+  },
+  {
     "version": "1.3.108",
     "date": "2026-10-16",
     "changes": [
