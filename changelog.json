@@ -1,5 +1,19 @@
 [
   {
+    "version": "1.3.111",
+    "date": "2026-10-16",
+    "changes": [
+      "Ask VIRA states the screens' figures (F2, F3, F11):",
+      "Alerts on the screens' rows (F4, F9, F10):",
+      "No screen computes a figure itself (F6, F7):",
+      "MoM (Indicadores) on one series (lib/momSeries.js):",
+      "Named variants (A5-D5):",
+      "Cross-screen suite (G-02): src/lib/crossScreen.test.mjs checks, on golden A–D, that the following are equal on every surface's own entry point: 12 months, Z and cf/debt, DSO/DIO/DPO, base month, cash-out date. Each DSCR is checked against its definition, and a planted divergence is caught.",
+      "Reconciliation (G-06): Efectivo, v1.3.48 vs now; every difference above 1% maps to a finding (brief, Production reconciliation).",
+      "Review (G-08): the review found eight problems and all are resolved (seven fixed, one no longer applied). The golden reference spot-check passed 11 of 11 cells."
+    ]
+  },
+  {
     "version": "1.3.110",
     "date": "2026-10-16",
     "changes": [
