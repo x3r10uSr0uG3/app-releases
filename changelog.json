@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.3.110",
+    "date": "2026-10-16",
+    "changes": [
+      "Caja 13 semanas no longer crashes when the base month has no cash balance. Since v1.3.108 the engine (correctly) builds no weeks without a cash balance, but the screen still read the first and lowest week, so it showed \"Esta pantalla no se pudo mostrar\". The screen now shows the header, the opening-balance input, the tax panel and \"Fecha sin caja: N/D\" with its instruction; the summary cards, weekly grid and chart appear once a balance is loaded or typed. Found in the local click-through of v1.3.109 (client with no cash in its last month); with a cash balance nothing changes."
+    ]
+  },
+  {
     "version": "1.3.109",
     "date": "2026-10-16",
     "changes": [
