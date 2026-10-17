@@ -1,5 +1,13 @@
 [
   {
+    "version": "1.3.112",
+    "date": "2026-10-17",
+    "changes": [
+      "Portal parity covers every figure a client sees.",
+      "Three Workstation fixes the parity found:"
+    ]
+  },
+  {
     "version": "1.3.111",
     "date": "2026-10-16",
     "changes": [

@@ -1,6 +1,6 @@
 {
-  "version": "1.3.111",
-  "releaseDate": "2026-10-16",
-  "notes": "Una cifra, un camino (A5b)",
-  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.3.111/Analyst.Workstation-1.3.111-arm64.dmg"
+  "version": "1.3.112",
+  "releaseDate": "2026-10-17",
+  "notes": "Portal y Workstation dan la misma cifra (A5 G-05) — A5 cerrado",
+  "downloadUrl": "https://github.com/x3r10uSr0uG3/app-releases/releases/download/v1.3.112/Analyst.Workstation-1.3.112-arm64.dmg"
 }
